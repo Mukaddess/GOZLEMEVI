@@ -1,102 +1,66 @@
-/*.menu-card {
-    width: 250px;
-    background-color: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .menu-card img {
-    width: 100%;
-    height: 50px;
-    display: block;
-    width: 200px;
-    height: 300px;
-  }*/
-
-/*  Styles par défaut pour les écrans de bureau (desktop-first) */
-
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap");
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 16px; /* Taille du texte de base */
+  font-size: 16px;
   margin: 0;
+  overflow-x: hidden; /* Mobilde taşmayı önler */
 }
 .language-switcher {
   text-align: right;
   padding: 20px;
   background-color: #8b1e3f;
 }
-
 .site-header {
   background-color: #0c3432;
   padding: 15px 30px;
   color: white;
   font-family: "Open Sans", sans-serif;
 }
-
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .header-logo img {
   height: 150px;
   width: 150px;
- margin-left:100px;
+  margin-left: 100px;
 }
 .harf {
   font-family: "Poppins", sans-serif;
   font-size: 60px;
-  color:  #8b1e3f;
-  ;
-  
-  
-  
-  
+  color: #8b1e3f;
 }
-
-
 .header-text {
   text-align: center;
   flex-grow: 1;
 }
-
 .site-name {
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 48px;
   color: #d4a037;
 }
-
 .slogan {
   margin: 0;
   font-size: 32px;
   color: #d4a037;
   font-style: italic;
 }
-
 .header-contact {
   display: flex;
   align-items: center;
   gap: 5px;
   white-space: nowrap;
 }
-
 .phone-icon {
   font-size: 18px;
 }
-
 .command-text {
   color: white;
   font-size: 16px;
 }
-
 .phone-number {
   color: #ffd966;
   font-size: 16px;
@@ -137,7 +101,6 @@ body {
   font-size: 32px;
   font-weight: bold;
   border-radius: 20px;
-
   padding: 20px 20px;
   max-width: 2000px;
   margin: 30px auto;
@@ -147,9 +110,6 @@ body {
   background-color: #f5e9d1;
   padding: 10px;
 }
-
-
-
 .restaurant-text h1 {
   font-size: 80px;
   margin-bottom: 20px;
@@ -165,20 +125,22 @@ body {
   font-weight: bold;
   text-align: center;
   margin: 30px auto;
-  
 }
-.harf1{
-  color: #FFC107 ;
-  font-size: 100px; 
+.harf1 {
+  color: #FFC107;
+  font-size: 100px;
 }
-
-.anim-image  {
+.anim-image {
   position: relative;
-  width:95%;
-  height: 500px;
+  width: 85%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: 40px auto;
   border-radius: 20px;
   transition: transform 10s ease-in-out, filter 20s ease-in-out;
   animation: zoomGlow 20s infinite alternate;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 @keyframes zoomGlow {
   0% {
@@ -190,69 +152,13 @@ body {
     filter: brightness(1.08);
   }
 }
-
 .restaurant-image img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin:  0 60px;
+  margin: 0 auto;
   border-radius: 20px;
-
 }
-
-/* Styles pour la section de présentation */
-/*.presentation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 40px;
-
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-
-h2 {
-  display: flex;
-  flex-direction: column;
-  font-size: 80px;
-  margin-bottom: 20px;
-  text-align:center ;
-  font-family: "Poppins", sans-serif;
-  color: #8b1e3f;
-}
-
-.presentation p {
-  color: #8b1e3f;
-  text-align: center;
-  padding: 20px;
-  font-family: "Poppins", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  margin: 20px;
-  border-radius: 12px;
-  text-align: center;
-  padding: 20px 20px;
-  max-width: 1000px;
-  margin: 30px auto;
-  font-weight: 600;
-}
-
-.presentation img {
-  max-width: 100%;
-  height: 500px;
-  display: block;
-  margin:  auto;
-  border-radius: 20px;
-
-}*/
-
-#presentation { 
-  color: #8b1e3f;
-  padding: 50px 20px;
-}
-
 .presentation {
   display: flex;
   flex-direction: row;
@@ -261,25 +167,17 @@ h2 {
   padding: 40px;
   flex-wrap: wrap;
   gap: 40px;
-  
 }
-
-.presentation-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.presentation-text h2 {
+h2 {
   display: flex;
   flex-direction: column;
   font-size: 80px;
   margin-bottom: 20px;
-  text-align:center ;
+  text-align: center;
   font-family: "Poppins", sans-serif;
-  color: #8b1e3f;;
+  color: #8b1e3f;
 }
-
-.presentation-text p {
+.presentation p {
   color: #8b1e3f;
   text-align: center;
   padding: 20px;
@@ -287,49 +185,20 @@ h2 {
   font-size: 32px;
   font-weight: bold;
   border-radius: 12px;
-  text-align: center;
-  padding: 20px 20px;
   max-width: 1000px;
   margin: 30px auto;
-  
+  font-weight: 600;
 }
-
-.presentation-image {
-  max-width: 1000%;
-  height: 800px;
+.presentation img {
+  max-width: 100%;
+  height: auto;
   display: block;
-  margin:  auto;
+  margin: auto;
   border-radius: 20px;
 }
-
-.presentation-image img {
-  max-width: 1200px;
-  border-radius: 12px;
-  display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** Styles pour le pied de page */
 .footer {
-  background-color: #1d3724; 
- color: #d4a037; 
+  background-color: #1d3724;
+  color: #d4a037;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -337,10 +206,9 @@ h2 {
   flex-wrap: wrap;
   font-family: 'Open Sans', sans-serif;
 }
-
 .footer-section {
-  flex: 1 ;
- margin-left: 20px;
+  flex: 1;
+  margin-left: 20px;
   margin-right: 20px;
   padding: 20px;
   text-align: center;
@@ -348,24 +216,18 @@ h2 {
   font-size: 32px;
   font-weight: bold;
 }
-
 .footer-section h3 {
   font-size: 32px;
- 
 }
-
 .footer-section p {
   margin: 0;
   font-size: 24px;
- 
 }
-
 .footer-section a {
   color: #d4a037;
   text-decoration: underline;
   font-size: 24px;
 }
-
 .footer-section.legal {
   text-align: right;
   color: #d4a037;
@@ -373,38 +235,32 @@ h2 {
   font-size: 14px;
   margin-top: auto;
 }
-
 .footer-section.legal a {
   color: #d4a037;
   text-decoration: underline;
 }
-
-/** Styles pour les A la carte de buton */
 .menu-text p {
   color: #8b1e3f;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 32px;
   font-weight: normal;
- 
-  text-align: center;
   margin: 30px auto;
 }
-
-.menu-intro{
+.menu-intro {
   display: flex;
 }
 .tabs {
   display: flex;
-  flex-direction: column; /* Satır yerine sütun yapar */
-  gap: 70px; /* Butonlar arası boşluk */
+  flex-direction: column;
+  gap: 70px;
   padding: 50px;
   margin-left: 70px;
-  align-items: flex-start; /* Butonları ortala */
+  align-items: flex-start;
 }
 .tab {
   background-color: #d4a037;
-  color:  #0c3432;
+  color: #0c3432;
   font-weight: bold;
   border: none;
   padding: 12px 24px;
@@ -413,30 +269,24 @@ h2 {
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease;
-  width: 250px; /* Buton genişliği */
+  width: 250px;
 }
-
 .tab:hover {
-  background-color:  #0c3432;
+  background-color: #0c3432;
   color: #d4a037;
 }
-
-/** Styles pour les cartes  de img*/
 .content {
   display: none;
 }
-
 .content.active {
   display: block;
 }
-
 .menu-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   margin-bottom: 30px;
- 
 }
 .menu-item {
   width: 250px;
@@ -445,18 +295,14 @@ h2 {
   border-radius: 16px;
   margin: 50px;
 }
-.menu-item p{
+.menu-item p {
   color: #d4a037;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
-
 }
- 
-
-
 .menu-item img {
   width: 100%;
   height: 400px;
@@ -466,91 +312,71 @@ h2 {
 
 
 
-/* Ajustements pour les petits écrans (mobile) */
-
-@media (max-width: 767px ) {
+@media (max-width: 767px) {
   body {
     font-size: 14px;
+    overflow-x: hidden;
   }
-.language-switcher {
-    text-align: center;
-    padding: 10px;
-  }
-  h1 {
-    font-size: 24px;
-  }
-
-  .header-container {
+  .menu-intro {
     flex-direction: column;
-    gap: 15px;
-    text-align: center;
+    align-items: center;
   }
-
-  .header-logo img {
-    height: 150px;
-    width: 150px;
-    margin: 0;
+  .tabs {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px 10px;
+    align-items: center;
   }
-
-  .header-contact {
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* tüm linkleri yatayda ortalar */
-    gap: 10px;
-    padding: 10px 0;
-  }
-
-  .navbar a {
-    margin: 0;
-    padding: 10px 20px;
-    font-size: 16px;
-    width: auto; /* genişliği içerik kadar olur */
+  .tab {
+    font-size: 18px;
+    width: 90%;
     text-align: center;
   }
-
-  .banniere {
-    font-size: 14px;
-    padding: 6px 12px;
-    margin: 20px 10px;
+  .menu-item {
+    width: 90%;
+    margin: 20px auto;
   }
-  .restaurant-text h1 {
-    font-size: 32px;
-  }
-  
-  .restaurant-text p {
-    font-size: 16px;
-    padding: 10px;
-  }
-  
-  
-  .presentation {
+  .menu-grid {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
-
-  .presentation h2 {
-    font-size: 28px;
-    padding: 10px;
+  .menu-item img {
+    width: 100%;
+    height: auto;
   }
-
-  .presentation p {
-    font-size: 16px;
-  }
-
-
-  .presentation img {
-    height: 100px;
-  }
+  .presentation img,
   .restaurant-image img {
-    height: 100px;
+    width: 100%;
+    height: auto;
   }
 }
 
-@media (max-width: 1024px ) {
-  
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+  .menu-item {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .menu-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabs {
+    width: 100%;
+    margin-left: 0;
+    padding: 30px 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tab {
+    width: 90%;
+    font-size: 22px;
+    text-align: center;
+  }
+  .menu-item img {
+    width: 100%;
+    height: auto;
+  }
 }

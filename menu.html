@@ -1,11 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GÖZLEMEVI</title>
+   <link rel="stylesheet" href="CSS/stye.css" />
+    
+    <!-- Google Fonts link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome bağlantısı -->
+  </head>
+  <body>
+    <div class="language-switcher">
+      <select onchange="location = this.value;">
+        <option value="index.html" selected>Français</option>
+        <option value="index-tr.html">Türkçe</option>
+      </select>
+    </div>
+
+    <header class="site-header">
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="header-logo">
+          <img src="Assets/Img/logo-gozlemevi.jpg" alt="Logo GözlemEVi" />
+        </div>
+
+       <!-- Baslik-->
+       <div class="header-text">
+        <h1 class="site-name">GÖZLEM<span class="harf">E</span>Vi</h1>
+        <p class="slogan">L'authenticité turque dans chaque bouchée</p>
+      </div>
+
+        <!-- Siparis-->
+        <div class="header-contact">
+          <span class="phone-icon">📞</span>
+          <span class="command-text">Commande /</span>
+          <a href="tel:+33123456789" class="phone-number">01 23 45 67 89</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <nav class="navbar">
+        <a href="index.html">ACCUEIL</a>
+        <a href="menu.html">A LA CARTE</a>
+        <a href="apropos.html">À PROPOS</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </nav>
+
+    <!--main blok-->
+    <main class="main-content">
+      <div class="banniere">
+        Profitez de notre offre spéciale cette semaine : -10% sur toutes les
+        commandes !
+      </div>
+      <div class="banniere">
+       
+          **Commandez 5 gözlemes, le 6<sup>e</sup> est notre surprise pour vous !** 🎁<br> 🎉 Profitez-en dès maintenant !
+        
+       </div> 
+
+<!--A la carte -->
+<h2 class="menu-text">Découvrez nos délices<p>Notre menu est une célébration de la cuisine turque, offrant une variété de plats traditionnels et modernes. <br> Que vous soyez amateur de gözleme,
+  de salades fraîches ou de desserts sucrés, nous avons quelque chose pour chaque palais.</p> </h2>
+<div class="menu-intro">
+        
+   
+    <div class="tabs">
+      <button class="tab" data-target="gozlemeler">Gözlemes</button>
+      <button class="tab" data-target="salades">Salades</button>
+      <button class="tab" data-target="boissons">Boissons</button>
+      <button class="tab" data-target="desserts">Desserts</button>
+    </div>
+<!-- Gözlemes -->
+    <div id="gozlemeler" class="content active">
+      <div class="menu-grid">
+          <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Fromage.png" alt="Gözleme fromage"><p class="Prix">Prix  4,00 €</p></div>
+          <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Pommes de terree.png" alt="Gözleme aux pommes de terre"><p class="Prix">Prix  4,00 €</p></div>
+          <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Epinards.png" alt="Gözleme aux épinards"><p class="Prix">Prix  4,00 €</p></div>
+          <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Champignons.png" alt="Gözleme aux champignons"><p class="Prix">Prix  4,00 €</p></div>
+          <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Aubergines.png" alt="Gözleme à l'aubergine"><p class="Prix">Prix  4,00 €</p></div>
+          <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Viande.png" alt="Gözleme à la viande"><p class="Prix">Prix  4,00 €</p></div>
+          <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Poulet.png" alt="Gözleme au poulet"><p class="Prix">Prix  4,00 €</p></div> 
+        <div class="menu-item"><img src="" alt="Gözleme aux poireaux" ></div>
+        <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/ChatGPT Image 15 Nis 2025 14_49_25.png" alt="Gözleme au pommes de tere"><p>Prix  4,00 €</p></div>
+     
+        <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/viande hachee.png" alt="Gözleme à la viande hachée"></div>
+        
+        <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Chocolat.png" alt="Gözleme au chocolat"></div>
+        
+      
+        
+     
+     </div>
+    </div>
+
+ <!-- Salades -->
+    <div id="salades" class="content">
+      <div class="menu-grid">
+        <div class="menu-item"><img src="images/coban.jpg" alt="Salade du berger"><p>5,00€</p></div>
+        <div class="menu-item"><img src="images/gavurdagi.jpg" alt="Salade Gavurdağı"><p>5,50€</p></div>
+        <div class="menu-item"><img src="images/saison.jpg" alt="Salade de saison"><p>4,80€</p></div>
+        <div class="menu-item"><img src="images/taboule.jpg" alt="Taboulé"><p>5,20€</p></div>
+        <div class="menu-item"><img src="images/roquette.jpg" alt="Salade de roquette"><p>5,20€</p></div>
+        <div class="menu-item"><img src="images/verte.jpg" alt="Salade verte"><p>4,00€</p></div>
+        <div class="menu-item"><img src="images/carotte.jpg" alt="Salade de carottes"><p>4,50€</p></div>
+        <div class="menu-item"><img src="images/pourpier.jpg" alt="Pourpier au yaourt"><p>5,00€</p></div>
+      </div>
+    </div>
+    
+  <!-- Boissons -->
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+</main>
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="footer-section">
+    <h3>Adresse</h3>
+    <p>41 rue Monsieur Le Prince<br>67 000 Strasbourg, France</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Heures d'ouverture</h3>
+    <p>Ouvert tous les jours<br>08 h 00 - 00 h 00</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Nous suivre sur</h3>
+    <p><a href="#">Facebook</a><br><a href="#">Instagram</a></p>
+  </div>
+
+  <div class="footer-section legal">
+    <a href="mentions.html">MENTIONS LEGALES</a>
+  </div>
+</footer>
+
+<script src="JS/script.js"></script>
+
     
 </body>
 </html>
