@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GÖZLEMEVI</title>
-   - <link rel="stylesheet" href="CSS/stye.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="JS/script.js"></script>
+    
     
     <!-- Google Fonts link -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <!-- Font Awesome bağlantısı -->
+
   </head>
   <body>
     <div class="language-switcher">
-      <select onchange="location = this.value;">
+      <select onchange="location = this.value;" aria-label="Dil seçimi">
         <option value="index.html" selected>Français</option>
         <option value="index-tr.html">Türkçe</option>
       </select>
@@ -25,7 +26,7 @@
       <div class="header-container">
         <!-- Logo -->
         <div class="header-logo">
-          <img src="Assets/Img/logo-gozlemevi.jpg" alt="Logo GözlemEVi" />
+          <img src="Assets/Img/logo_gozlemevi.webp" alt="Logo GözlemEVi" />
       </div>
 
         <!-- Titre-->
@@ -41,7 +42,7 @@
           <a href="tel:+33123456789" class="phone-number">01 23 45 67 89</a>
         </div>
       </div>
-    </header>
+   
 
     <!-- Navigation -->
     
@@ -51,7 +52,7 @@
         <a href="apropos.html">À PROPOS</a>
         <a href="contact.html">CONTACT</a>
       </nav>
-  
+   </header>
 
     <!--main blok-->
     <main class="main-content">
@@ -66,11 +67,12 @@
       <!-- Section de img restaurant -->
       <section id="Hero">
       <div class="restaurant-text">
-        <h1><strong>Bienvenue chez  GÖZLEM<span class="harf1" >E</span>Vi</strong></h1>
+        <h2><strong>Bienvenue chez  GÖZLEM<span class="harf1" >E</span>Vi</strong></h2>
         <p>Des gözlemes faits maison, comme chez maman. Commandez dès maintenant !</p>
       </div>
         <div class="restaurant-image">
-          <img  class="anim-image" src="Assets/Img/Restaurant1.png" alt="Gözleme Evi Restoran" />
+          <img  class="anim-image" src="Assets/Img/Restaurant1.webp"  alt="Intérieur d’un restaurant Gözleme Evi avec murs en pierre et décor oriental traditionnel"
+          title="Décor authentique en pierre dans un restaurant Gözleme Evi" />
         </div>
       </section>
       <!-- Section de img restaurant -->
@@ -83,10 +85,12 @@
             Une femme, une pâte fine, une recette transmise de génération en génération...<br>
             Nos plats sont faits avec amour, dans le respect des traditions turques.<br>
             <br>
-            🍽️ Goûtez l'authenticité. Sentez la chaleur familiale. </p>
+            🍽️ Goûtez l'authenticité. Sentez la chaleur familiale. 
+          </p>
        </div>
         <div class="presentation-image"> 
-          <img src="Assets/Img/Gozleme.png" alt="Préparation de gözleme">
+          
+          <img    src="Assets/Img/Gozlemevi.webp" alt="Des femmes cheffes préparent des gözlemes de manière traditionnelle dans le restaurant Gözleme Evi"  title="Préparation traditionnelle de gözleme par des femmes dans le restaurant GözlemEVi">
         </div>
     </div>
       </section>
@@ -97,30 +101,28 @@
     <footer class="footer">
       <div class="footer-section">
         <h3>Adresse</h3>
-        <p>41 rue Monsieur Le Prince<br>67 000 Strasbourg, France</p>
+        <p><br>7 Rue de L'Esperance<br>67 115 Strasbourg, France</p>
       </div>
     
       <div class="footer-section">
         <h3>Heures d'ouverture</h3>
-        <p>Ouvert tous les jours<br>08 h 00 - 00 h 00</p>
+        <p><br>Ouvert tous les jours<br>08 h 00 - 00 h 00</p>
       </div>
     
       <div class="footer-section">
         <h3>Nous suivre sur</h3>
-        <p><a href="#">Facebook</a><br><a href="#">Instagram</a></p>
+        <p><br><a href="#">Facebook</a><br><a href="#">Instagram</a></p>
       </div>
     
       <div class="footer-section legal">
-        <a href="mentions.html">MENTIONS LEGALES</a>
+        <p>
+          <a href="mentionsLegales.html">Mentions légales</a> <br>
+          <a href="politique-donnees.html">Politique de protection des données</a> <br>
+          <a href="cgv.html">Conditions Générales de Vente</a>
+        </p>
       </div>
     </footer>
     
   </body>
 </html>
 
-<!--<div class="menu-card">
-    <img src="Assets/yaourt.png" alt="Gözleme aux yaourt">
-    <div class="menu-info">
-      
-    </div>
-  </div>*/-->

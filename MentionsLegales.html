@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GÖZLEMEVI</title>
-    <link rel="stylesheet" href="CSS/stye.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <script src="JS/script.js"></script>
+    
+
     <!-- Google Fonts link -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
@@ -14,7 +18,7 @@
   </head>
   <body>
     <div class="language-switcher">
-      <select onchange="location = this.value;">
+      <select onchange="location = this.value;" aria-label="Dil seçimi">
         <option value="index.html" selected>Français</option>
         <option value="index-tr.html">Türkçe</option>
       </select>
@@ -24,7 +28,7 @@
       <div class="header-container">
         <!-- Logo -->
         <div class="header-logo">
-          <img src="Assets/Img/logo-gozlemevi.jpg" alt="Logo GözlemEVi" />
+          <img src="Assets/Img/logo_gozlemevi.webp" alt="Logo GözlemEVi" />
         </div>
 
         <!-- Titre-->
@@ -40,7 +44,7 @@
           <a href="tel:+33123456789" class="phone-number">01 23 45 67 89</a>
         </div>
       </div>
-    </header>
+   
 
     <!-- Navigation -->
    
@@ -49,5 +53,58 @@
         <a href="menu.html">A LA CARTE</a>
         <a href="apropos.html">À PROPOS</a>
         <a href="contact.html">CONTACT</a>
-      </nav>
-  
+     </nav>
+   </header>
+
+     <main main class="main-content">
+       <section>
+         <h2 class="section-title">Propriétaire du site</h2>
+         <p class="section-text">Nom: GözlemEvi SARL<br>Adresse: 123 Rue du Soleil, 75000 Paris<br>Email: contact@gozlemevi.fr<br>Tél: 01 23 45 67 89</p>
+       </section>
+   
+       <section>
+         <h2 class="section-title" >Conditions générales d'utilisation</h2>
+         <p class="section-text" >L'utilisation de ce site implique l;acceptation pleine et entière des conditions générales d;utilisation décrites ci-après.</p>
+       </section>
+   
+       <section>
+         <h2 class="section-title">Politique de confidentialité</h2>
+         <p class="section-text" >Nous nous engageons à protéger la vie privée de nos utilisateurs. Aucune donnée personnelle ne sera transmise à des tiers sans votre consentement.</p>
+       </section>
+   
+       <section>
+         <h2 class="section-title">Cookies</h2>
+         <p class="section-text" >Ce site utilise des cookies pour améliorer l'expérience utilisateur. Vous pouvez les accepter ou les refuser dans les paramètres de votre navigateur.</p>
+       </section>
+   
+       <a href="index.html" class="btn-retour">⬅ Retour à l'accueil</a>
+     </main>
+
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="footer-section">
+    <h3>Adresse</h3>
+    <p><br>7 Rue de L'Esperance<br>67 115 Strasbourg, France</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Heures d'ouverture</h3>
+    <p><br>Ouvert tous les jours<br>08 h 00 - 00 h 00</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Nous suivre sur</h3>
+    <p><br><a href="#">Facebook</a><br><a href="#">Instagram</a></p>
+  </div>
+
+  <div class="footer-section legal">
+    <a href="MentionsLegales.html">MENTIONS LEGALES</a>
+  </div>
+</footer>
+
+
+
+
+   
+    </body>
+    </html>

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GÖZLEMEVI</title>
-    <link rel="stylesheet" href="CSS/stye.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="JS/script.js"></script>
     <!-- Google Fonts link -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
@@ -14,7 +16,7 @@
   </head>
   <body>
     <div class="language-switcher">
-      <select onchange="location = this.value;">
+      <select onchange="location = this.value;" aria-label="Dil seçimi">
         <option value="index.html" selected>Français</option>
         <option value="index-tr.html">Türkçe</option>
       </select>
@@ -24,7 +26,7 @@
       <div class="header-container">
         <!-- Logo -->
         <div class="header-logo">
-          <img src="Assets/Img/logo-gozlemevi.jpg" alt="Logo GözlemEVi" />
+          <img src="Assets/Img/logo_gozlemevi.webp" alt="Logo GözlemEVi" />
         </div>
 
         <!-- Titre-->
@@ -40,7 +42,7 @@
           <a href="tel:+33123456789" class="phone-number">01 23 45 67 89</a>
         </div>
       </div>
-    </header>
+
 
     <!-- Navigation -->
    
@@ -50,4 +52,34 @@
         <a href="apropos.html">À PROPOS</a>
         <a href="contact.html">CONTACT</a>
       </nav>
-   
+       </header>
+
+
+
+       
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-section">
+    <h3>Adresse</h3>
+    <p><br>7 Rue de L'Esperance<br>67 115 Strasbourg, France</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Heures d'ouverture</h3>
+    <p><br>Ouvert tous les jours<br>08 h 00 - 00 h 00</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Nous suivre sur</h3>
+    <p><br><a href="#">Facebook</a><br><a href="#">Instagram</a></p>
+  </div>
+
+  <div class="footer-section legal">
+    <a href="mentions.html">MENTIONS LEGALES</a>
+  </div>
+</footer>
+
+
+      </body>
+      </html>

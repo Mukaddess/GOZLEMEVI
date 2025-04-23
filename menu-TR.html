@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GÖZLEMEVI</title>
-    <link rel="stylesheet" href="CSS/stye.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="JS/script.js"></script>
+
      <!-- Google Fonts link -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome bağlantısı -->    
@@ -12,7 +15,7 @@
 </head>
 <body>
     <div class="language-switcher" >
-        <select onchange="location = this.value;">
+        <select onchange="location = this.value;" aria-label="Dil seçimi">
             
           <option value="index.html" > Français</option>
           <option value="index-tr.html" selected> Türkçe</option>
@@ -24,7 +27,7 @@
         <div class="header-container">
           <!-- Logo -->
           <div class="header-logo">
-            <img src="Assets/Img/logo-gozlemevi.jpg" alt="Logo GözlemEVi">
+            <img src="Assets/Img/logo_gozlemevi.webp" alt="Logo GözlemEVi" />
           </div>
       
           <!-- Titre-->
@@ -41,7 +44,7 @@
           </div>
         </div>
         
-      </header> 
+    
 
  <!-- Navigation -->
       
@@ -51,7 +54,7 @@
           <a href="apropos-tr.html">HAKKIMIZDA</a>
           <a href="contact-tr.html">İLETİŞİM</a>
         </nav>
-      
+        </header> 
     <!-- Ana içerik bloğu -->
     <main class="main-content">
       <div class="banniere">
@@ -65,10 +68,19 @@
     <!-- Menü bölümü -->
 
    
-<h2 class="menu-text">Lezzetlerimizin tadına bakın
-  <p>Menümüz, geleneksel ve modern yemek çeşitleri sunan Türk mutfağının bir kutlamasıdır. <br> İster gözleme tutkunu olun,
-    ister taze salataları ya da tatlıları seven biri, her damak zevkine uygun bir şeyimiz var.</p>
-</h2>
+<h2 class="menu-text">Lezzetlerimizin tadına bakın</h2>
+  <p class="menu-text_description">Menümüz, geleneksel Türk mutfağının vazgeçilmez lezzeti olan gözlemelerin zengin bir yelpazesini sunan özel bir seçkidir.
+      Peynirli, ıspanaklı, patatesli gibi klasik tariflerden; mantarlı, kabaklı ya da çikolatalı gibi özgün tatlara kadar her damak zevkine hitap eden gözleme çeşitlerimizle, Türk mutfağının sıcaklığını ve sadeliğini yaşatıyoruz.
+
+    <br>Ayrıca, mevsim sebzeleriyle hazırlanan taze salatalarımız, hafif ama doyurucu bir seçenek arayan misafirlerimiz için idealdir.
+    
+   <br>Tatlılarımız, Türk mutfağına özgü tariflerle hazırlanmakta olup, geleneksel lezzetleri modern bir dokunuşla sunmaktadır.
+    
+    <br>Tüm içeceklerimiz özenle seçilmiş malzemelerle hazırlanmakta olup, menümüzde taze sıkılmış meyve suları ve ev yapımı doğal içecekler yer almaktadır.
+    Her lokmada gelenek, her yudumda tazelik hissini yaşayın.
+    
+    </p>
+
 <div class="menu-intro">
 
   <div class="tabs">
@@ -79,44 +91,460 @@
   </div>
  
 <!-- Gözlemeler -->
- <div id="gozlemeler" class="content active">
+<div id="gozlemeler" class="content active">
   <div class="menu-grid">
-    <div class="menu-item"><img src="Assets/Img/Gozlemeler  TR/Kiymali.png" alt="Kiymali Gözleme"> <p> Kiymali gözleme<br>Fiyat: 80 ₺</p></div>
-    <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Epinards.png" alt="Ispanaklı Gözleme"><p>Fiyat: 80 ₺</p></div>
-    <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/viande hachee.png" alt="Kıymalı Gözleme"><p>Fiyat: 80 ₺</p></div>
-    <div class="menu-item"> <img src="Assets/Img/Aubergines.png" alt="Patlıcanlı Gözleme"><p>Fiyat: 80 ₺</p></div>
-    <div class="menu-item"> <img src="Assets/Img/Gozlemeler FR/Chocolat.png" alt="Çikolatalı Gözleme"><p>Fiyat: 80 ₺</p></div>
-    <div class="menu-item"><img src="Assets/Img/Poireaux.png" alt="Pırasalı Gözleme"><p>Fiyat: 80 ₺</p></div>
-    <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Fromage.png" alt="Peynirli Gözleme"><p>Fiyat: 80 ₺</p></div>
-    <div class="menu-item"><img src="Assets/Img/Gozlemeler FR/Champignons.png" alt="Mantarlı Gözleme"><p>Fiyat: 80 ₺</p></div>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Yoğurtlu Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Yogurtlu.webp"
+           alt="Ev yapımı yoğurt, eritilmiş tereyağı ve domates sos ile servis edilen gözleme"
+           title="Yoğurtlu gözleme, tereyağlı ve domates soslu">
+      <p class="prix">Prix 5,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Seçtiğiniz gözleme, tam yağlı süt ve tuzla hazırlanmış ev yapımı yoğurt, eritilmiş tereyağı ve hafif acılı domates sos ile servis edilir.
+        <span class="highlight">Gerçek bir Türk lezzeti.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Lahmacun</h3>
+      <img src="Assets/Img/Menu_TR/Lahmacun.webp"
+           alt="Kıyma, domates, biberler, soğan ve baharatlarla hazırlanmış lahmacun"
+           title="Lahmacun">
+      <p class="prix">Prix 6,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>İnce hamur üzerine kıyma, domates, yeşil ve kırmızı biber, soğan, sarımsak, maydanoz ve doğu baharatlarından oluşan karışım.
+        <span class="highlight">Damakları uyandıran baharatlı bir klasik.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Peynirli Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Peynirli_gozleme.webp"
+           alt="Beyaz peynir ve taze maydanozla doldurulmuş el açması gözleme"
+           title="Beyaz peynirli gözleme">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>El açması hamurun içinde beyaz peynir ve taze maydanoz.
+        <span class="highlight">Sade ama her zaman lezzetli.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Patatesli Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Patatesli.webp"
+           alt="Patates püresi, karamelize soğan ve tatlı biber içeren gözleme"
+           title="Patatesli gözleme">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Patates püresi, karamelize soğan, tatlı biber ve baharatlarla hazırlanmış iç harç.
+        <span class="highlight">Her lokmada doyurucu ve lezzetli.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Çikolatalı Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Cikolatali.webp"
+           alt="Eritilmiş çikolata dolgulu çıtır gözleme"
+           title="Cikolatalı gözleme">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>İnce hamura sarılmış, erimiş çikolata parçaları ile sıcak servis edilir.
+        <span class="highlight">Hem çıtır hem içi akışkan tatlı bir kaçamak.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Tavuklu Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Tavuklu.webp"
+           alt="Baharatlarla marine edilip ızgarada pişirilmiş tavuklu gözleme"
+           title="Tavuklu gözleme">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Yoğurt, kimyon, paprika ve sarımsakla marine edilmiş tavuk fileto, özenle ızgaralanır.
+        <span class="highlight">Et sevenler için baharatlı bir seçenek.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Kabaklı Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Kabakli.webp"
+           alt="Rendelenmiş balkabağı, karamelize soğan ve baharatlarla hazırlanmış gözleme"
+           title="Balkabaklı gözleme">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Rendelenmiş kabak, karamelize soğan ve hafif tatlı baharat karışımı.
+        <span class="highlight">Beklenmedik tatlı bir dokunuş.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Mantarlı Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Mantarli.webp"
+           alt="Zeytinyağında sotelenmiş mantar, sarımsak ve otlarla hazırlanan gözleme"
+           title=" Mantarlı gözleme">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Zeytinyağında sarımsak ile  sotelenmiş mantar dolgusu.
+        <span class="highlight">Her lokmada topraksı ve doyurucu.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Ispanaklı Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Ispanakli.webp"
+           alt="Ispanak, soğan ve tatlı biber içeren hafif gözleme"
+           title=" Ispanaklı gözleme">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Hafif sotelenmiş ıspanak, soğan ve tatlı biber.
+        <span class="highlight">Tat ve hafifliğin dengesi.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Kıymalı Gözleme</h3>
+      <img src="Assets/Img/Menu_TR/Kiymali.webp"
+           alt="Kıyma, soğan, biber ve domatesle hazırlanmış gözleme"
+           title="Kıymalı gözleme">
+      <p class="prix">Prix 5,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Kıyma, soğan, biber, domates ve baharatlarla yavaşça kavrulmuş iç harç.
+        <span class="highlight">Her lokmada yoğun ve cömert bir tat.</span></p>
+      </details>
+    </article>
+
+  </div>
+</div>
+
+<!-- Salatalar -->
+<div id="salades" class="content">
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3 class="sr-only">Çoban salatası</h3>
+      <img src="Assets/Img/Menu_TR/Coban.webp"
+           alt="Domates, salatalık, kırmızı soğan, maydanoz ve zeytinyağı ile hazırlanan çoban salatası"
+           title="Coban salatası">
+      <p class="prix">Prix 3,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Domates, salatalık, kırmızı soğan, maydanoz ve zeytinyağı karışımı. 
+          <span class="highlight">Basit ama her zaman lezzetli.</span>
+        </p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Nurdağı salatası</h3>
+      <img src="Assets/Img/Menu_TR/Nurdagi.webp"
+           alt="Ceviz, domates, soğan, maydanoz ve nar ekşili sos ile hazırlanmış Nurdağı salatası"
+           title=" Nurdağı salatası">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Çıtır ceviz, taze domates, soğan, maydanoz ve nar ekşili sos. 
+          <span class="highlight">Kaçırılmayacak bir Türk klasiği.</span>
+        </p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Mevsim salatası</h3>
+      <img src="Assets/Img/Menu_TR/Mevsim.webp"
+           alt="Mevsim sebzeleriyle hazırlanan marul, havuç, domates ve salatalıklı salata"
+           title="Mevsim  salata">
+      <p class="prix">Prix 3,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Marul, havuç, domates, salatalık ve hafif ev yapımı sos. Mevsim sebzelerine göre seçilir. 
+          <span class="highlight">Tazeliği tabağınızda hissedin.</span>
+        </p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Roka salatası</h3>
+      <img src="Assets/Img/Menu_TR/roquette.webp"
+           alt="Roka, limon, zeytinyağı ve sumak ile hazırlanmış salata"
+           title="Roka salatası">
+      <p class="prix">Prix 3,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Roka, taze limon, zeytinyağı ve bir tutam sumak. 
+          <span class="highlight">Damakları uyandıran keskin bir lezzet.</span>
+        </p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Yeşil salata</h3>
+      <img src="Assets/Img/Menu_TR/verte.webp"
+           alt="Marul, salatalık, maydanoz ve limon sosuyla hazırlanan yeşil salata"
+           title="Yeşilliklerle hazırlanan salata">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Taze marul, salatalık, maydanoz, limon sosu. 
+          <span class="highlight">Sadelik içinde yeşilin gücü.</span>
+        </p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Havuç salatası</h3>
+      <img src="Assets/Img/Menu_TR/carotte.jpg"
+           alt="Rendelenmiş havuç, sarımsaklı yoğurt ve zeytinyağı ile yapılan salata"
+           title="Yoğurtlu havuç salatası">
+      <p class="prix">Prix 3,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Rendelenmiş havuç, sarımsaklı yoğurt, zeytinyağı. 
+          <span class="highlight">Yumuşak ve kremsi, harika bir eşlikçi.</span>
+        </p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Yoğurtlu semizotu</h3>
+      <img src="Assets/Img/Menu_TR/pourpier.webp"
+           alt="Taze semizotu ve sarımsaklı yoğurtla hazırlanan hafif salata"
+           title="Yoğurtlu semizotu salatası">
+      <p class="prix">Prix 3,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Taze semizotu, sarımsaklı yoğurt. Hafif ve ferahlatıcı bir tabak. 
+          <span class="highlight">Yazın sağlıklı ve serin seçeneği.</span>
+        </p>
+      </details>
+    </article>
+
+  </div>
+</div>
+
+<!-- Icecekler -->
+<div id="boissons" class="content">
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3 class="sr-only">Ayran</h3>
+      <img src="Assets/Img/Menu_TR/Ayran.webp"
+           alt="Yoğurt, su ve tuzla yapılan geleneksel Türk içeceği"
+           title=" Ayran">
+      <p class="prix">Prix 2,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Yoğurt, soğuk su ve tuzla hazırlanan geleneksel Türk içeceği. 
+        <span class="highlight">Sıcak yemeklerin yanında ferahlatıcı bir eşlikçi.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Vişne suyu</h3>
+      <img src="Assets/Img/Menu_TR/Visne suyu.webp"
+           alt="Doğal, katkısız vişne suyu"
+           title="Vişne suyu">
+      <p class="prix">Prix 2,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Katkı maddesi içermeyen %100 doğal vişne suyu, hafif ekşi ve tatlı bir tat. 
+        <span class="highlight">Anadolu'nun meyveli ve serin lezzeti.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Portakal suyu</h3>
+      <img src="Assets/Img/Menu_TR/Portakal_suyu.webp"
+           alt="Taze sıkılmış portakal suyu"
+           title="Şeker ilavesiz portakal suyu">
+      <p class="prix">Prix 2,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Taze sıkılmış portakal suyu, ilave şeker içermez, C vitamini açısından zengindir. 
+        <span class="highlight">Bir bardakta sağlıklı sadelik.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Şalgam</h3>
+      <img src="Assets/Img/Menu_TR/Salgam_suyu.webp"
+           alt="Turp ve baharatlarla fermente edilmiş geleneksel şalgam suyu"
+           title="Şalgam suyu">
+      <p class="prix">Prix 2,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Turp, tuz, baharat ve bazen acı biberle hazırlanan geleneksel fermente içecek. 
+        <span class="highlight">Otantik Türk şalgamının gerçek tadı.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Demirhindi şerbeti</h3>
+      <img src="Assets/Img/Menu_TR/Demirhindi_serbeti.webp"
+           alt="Demirhindi özü, şeker ve limonla yapılan Osmanlı şerbeti"
+           title="Demirhindi şerbeti">
+      <p class="prix">Prix 3,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Demirhindi özü, şeker, limon ve soğuk su ile hazırlanır. 
+        <span class="highlight">Tatlı-ekşi, serinletici bir Osmanlı içeceği.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Siyah çay</h3>
+      <img src="Assets/Img/Menu_TR/siyah_cay.webp"
+           alt="Çift demlikte hazırlanmış klasik Türk siyah çayı"
+           title="Siyah çay">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Çift demlikli çaydanlıkta yavaşça demlenen siyah çay. 
+        <span class="highlight">Bir küçük bardakta Türk misafirperverliğinin simgesi.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Türk kahvesi</h3>
+      <img src="Assets/Img/Menu_TR/Turk_kahvesi.webp"
+           alt="Cezvede pişirilmiş geleneksel Türk kahvesi"
+           title="Türk kahvesi">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>İncecik çekilmiş kahve, soğuk su ile cezvede pişirilir, süzülmez. 
+        <span class="highlight">Kadifemsi yoğunlukta, Osmanlı’dan miras bir tat.</span></p>
+      </details>
+    </article>
+
+  </div>
+</div>
+
+<!-- Tatlılar -->
+
+<div id="desserts" class="content">
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3 class="sr-only">Baklava</h3>
+      <img src="Assets/Img/Menu_TR/Baklava.webp"
+           alt="Cevizli ve şerbetli geleneksel baklava"
+           title="Baklava">
+      <p class="prix">Prix 1,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>İncecik yufkaların cevizle buluştuğu, şerbetle tatlandırılmış geleneksel bir Türk tatlısı. 
+        <span class="highlight">Vazgeçilmez bir lezzet klasiği.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Fırında sütlaç</h3>
+      <img src="Assets/Img/Menu_TR/Sutlac.webp"
+           alt="Fırında pişmiş ve üzeri kızarmış sütlaç"
+           title="Fırında sütlaç">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Üzeri hafif karamelize edilmiş, fırında pişmiş klasik sütlü tatlı. 
+        <span class="highlight">Soğuk servis edilir, yumuşacık bir tat.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Höşmerim</h3>
+      <img src="Assets/Img/Menu_TR/Hosmerim.webp"
+           alt="İrmik, peynir ve şekerle yapılan geleneksel höşmerim tatlısı"
+           title="Höşmerim">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Peynir, irmik ve şeker ile hazırlanan, Konya’ya özgü geleneksel bir tatlı. 
+        <span class="highlight">Ağızda dağılan kıvamıyla nostaljik bir lezzet.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Kabak tatlısı</h3>
+      <img src="Assets/Img/Menu_TR/Kabak_tatlisi.webp"
+           alt="Şekerle pişirilmiş kabak tatlısı, ceviz veya tahinle servis edilir"
+           title="Kabak tatlısı">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Şekerle pişirilmiş kabak dilimleri; isteğe göre ceviz veya tahin ile servis edilir. 
+        <span class="highlight">Sonbaharın en sevilen tatlılarından.</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Künefe</h3>
+      <img src="Assets/Img/Menu_TR/Kunefe.webp"
+           alt="Tel kadayıf arasında eriyen peynirli sıcak tatlı"
+           title="Künefe">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>Tel kadayıf arasında eriyen peynir ile hazırlanan sıcak şerbetli tatlı. 
+        <span class="highlight">İçindeki peynirle sizi şaşırtacak!</span></p>
+      </details>
+    </article>
+
+    <article class="menu-item">
+      <h3 class="sr-only">Revani</h3>
+      <img src="Assets/Img/Menu_TR/Revani.webp"
+           alt="İrmikli, şerbetli ve limon aromalı revani tatlısı"
+           title="Revani">
+      <p class="prix">Prix 4,00 €</p>
+      <details class="voir-plus">
+        <summary>Daha fazla</summary>
+        <p>İrmikle hazırlanan limon aromalı hafif kek, şerbetle tatlandırılır. 
+        <span class="highlight">Yemekten sonra hafif bir seçenek.</span></p>
+      </details>
+    </article>
+
+    
+
   </div>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
+</main>
 
 
-  
+<!-- Footer -->
+<footer class="footer">
+ <div class="footer-section">
+   <h3>Adres</h3>
+   <p><br>7 rue de L'Esperance<br>67 115 Strasbourg, France</p>
+ </div>
+
+ <div class="footer-section">
+   <h3>Calisma saatleri</h3>
+   <p><br>Ouvert tous les jours<br>08 h 00 - 00 h 00</p>
+ </div>
+
+ <div class="footer-section">
+   <h3>Bizi takip Edin</h3>
+   <p><br><a href="#">Facebook</a><br><a href="#">Instagram</a></p>
+ </div>
+
+ <div class="footer-section legal">
+   <a href="mentionsLegales-TR.html">MENTIONS LEGALES</a>
+ </div>
+</footer>
+
+
+</body>
+</html>
