@@ -1,21 +1,3 @@
-/*.menu-card {
-    width: 250px;
-    background-color: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .menu-card img {
-    width: 100%;
-    height: 50px;
-    display: block;
-    width: 200px;
-    height: 300px;
-  }*/
 
 /*  Styles par défaut pour les écrans de bureau (desktop-first) */
 
@@ -31,7 +13,9 @@ body {
   background-color: #8b1e3f;
   color: #d4a037;
 }
-
+.titre_alt{
+  color:  #d4a037;
+}
 .site-header {
   background-color: #0c3432;
   padding: 15px 30px;
@@ -78,28 +62,48 @@ body {
   font-style: italic;
 }
 
-.header-contact {
+.phone-container {
   display: flex;
   align-items: center;
-  gap: 5px;
-  
-
-}
+  gap: 8px;
+} 
 
 .phone-icon {
-  font-size: 18px;
+  font-size: 32px;
+  display: inline-block;
+  animation: ring 1s infinite;
+  transform-origin: center;
 }
 
-.command-text {
-  color: white;
-  font-size: 16px;
+@keyframes ring {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-10deg); }
+  30% { transform: rotate(10deg); }
+  40% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  60% { transform: rotate(-3deg); }
+  70% { transform: rotate(3deg); }
+  80% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
+
+
 
 .phone-number {
-  color: #ffd966;
-  font-size: 16px;
-  text-decoration: underline;
+  color: #d4a037;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  animation: pulse 1.5s infinite;
 }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 .navbar {
   background-color: #d4a037;
   display: flex;
@@ -147,6 +151,15 @@ body {
   padding: 10px;
 }
 
+.lale-emoji {
+  font-size: 30px;
+  margin-right: 5px;
+  display: inline-block;
+  margin-left: 100px ;
+  
+  
+}
+
 
 
 .restaurant-text h2                                                                                                {
@@ -173,14 +186,15 @@ body {
 
 .anim-image  {
   position: relative;
-  width:95%;
-  height: 500px;
-  border-radius: 20px;
+  width:100%;
+  height: 100%;
+  
+
   transition: transform 10s ease-in-out, filter 20s ease-in-out;
   animation: zoomGlow 20s infinite alternate;
 }
 @keyframes zoomGlow {
-  0% {
+  100% {
     transform: scale(1);
     filter: brightness(1);
   }
@@ -191,74 +205,71 @@ body {
 }
 
 .restaurant-image img {
-  max-width: 100%;
-  height: auto;
+  max-width: 95%;
+  height: 1000px;
   display: block;
-  margin:  0 60px;
-  border-radius: 20px;
+  padding: 95px ;
+
+
+
 
 }
 
 /* Styles pour la section de présentation */
 
-#presentation { 
-  color: #8b1e3f;
-  padding: 50px 20px;
-}
-
-.presentation {
+.presentation-section {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 40px;
-  flex-wrap: wrap;
-  gap: 40px;
-  
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 100px 20px 50px 20px; /* Ajout de padding pour le haut et le bas */
+  margin-bottom: 40px; 
 }
 
-.presentation-text {
+
+.text-content {
   flex: 1;
-  min-width: 300px;
 }
 
-.presentation-text h2 {
-  display: flex;
-  flex-direction: column;
-  font-size: 80px;
+
+.text-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 48px;
+  color: #0c3432; 
   margin-bottom: 20px;
-  text-align:center ;
-  font-family: "Poppins", sans-serif;
-  color: #8b1e3f;;
 }
 
-.presentation-text p {
+
+
+.text-content p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6; /* Espacement entre les lignes */
+  font-size: 24px;
+  font-weight: bold;
+  color:#8b1e3f;
+  margin-bottom: 15px;
+}
+
+
+.text-content p.signature-line {
+  font-style: italic;
   color: #8b1e3f;
-  text-align: center;
-  padding: 20px;
-  font-family: "Poppins", sans-serif;
   font-size: 32px;
   font-weight: bold;
-  border-radius: 12px;
+  margin-top: 20px;
+}
+
+
+.image-content {
+  flex: 1;
   text-align: center;
-  padding: 20px 20px;
-  max-width: 1000px;
-  margin: 30px auto;
-  
 }
 
-.presentation-image {
-  position: relative;
-  display: inline-block;
-  transition: transform 0.10s ease;
- 
-}
-
-.presentation-image img {
-  max-width: 800px;
-  border-radius: 12px;
-  display: block;
-  transform: scale(1.08);
+.image-content img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
 }
 
 
@@ -274,16 +285,13 @@ body {
   margin: 30px auto;
 }
 .menu-text_description {
-  color: #8b1e3f;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6; /* Espacement entre les lignes */
+  font-size: 16px;
   font-weight: bold;
-  text-align: center;
-  margin: 30px auto;
+  color:#8b1e3f;
+  margin-bottom: 15px;
 }
-
-
 
 .menu-intro{
   display: flex;
@@ -340,6 +348,7 @@ body {
   margin: 50px;
 }
 
+
 .menu-item img {
   width: 100%;
   height: 400px;
@@ -366,8 +375,6 @@ body {
   white-space: nowrap;
   border: 0;
 }
-
-
 
 .voir-plus summary {
   cursor: pointer;
@@ -396,7 +403,7 @@ body {
   margin-top: 10px;
   font-style: italic;
   font-weight: bold;
-  color: #dfb1a1;
+  color:#d4a037;
   font-size: 1em;
 }
 
@@ -411,16 +418,71 @@ body {
   margin-top: 30px;
 }
 
+
+/** Styles pour le pied de page */
+
+footer {
+  background-color:#0c3432;
+  color:#d4a037;
+  font-family: 'Arial', sans-serif;
+
+}
+.footer-container {
+  display: flex;
+  justify-content:space-between ;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.footer-section {
+  flex: 1 ;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-family: 'Arial', sans-serif;
+  color:#e7d1a4;
+  font-weight: bold;
+  
+}
+
+.footer-section p, .footer-section a {
+  color: #f0b640;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-section a:hover {
+  color: #d85e83;
+  text-decoration: underline;
+}
+
+
 /* Styles pour le bouton Politique Conditions */
+.section.legal{
+  background-color: #6b1515;
+  color: #d4a037;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 30px;
+}
 .section-text {
   background-color:  /*#6b1515*/#8b1e3f;
   color: #d4a037;
   font-size: 24px;
-  font-weight: bold;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  
 }
 
 .section-title{
@@ -438,66 +500,7 @@ body {
 
 
 
-
-
-/** Styles pour le pied de page */
-.footer {
-  background-color:#1d3724/*#0c3432*/; 
- color: #d4a037; 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  flex-wrap: wrap;
-  font-family: 'Open Sans', sans-serif;
-}
-
-
-.footer-section {
-  flex: 1 ;
- margin-left: 20px;
-  margin-right: 20px;
-  padding: 20px;
-  text-align: center;
-  color: #d4a037;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.footer-section h3 {
-  font-size: 32px;
- 
-}
-
-.footer-section p {
-  margin: 0;
-  font-size: 24px;
- 
-}
-
-.footer-section a {
-  color: #d4a037;
-  text-decoration: underline;
-  font-size: 24px;
-}
-
-.footer-section.legal {
-  margin-bottom: auto;
-  text-align: right;
-  color: #d4a037;
-  font-weight: bold;
-  font-size: 14px;
-  margin-top: auto;
-}
-
-.footer-section.legal a {
-  color: #d4a037;
-  text-decoration: underline;
-}
-
-
-
-/* Ajustements pour les petits écrans (mobile) */
+/*******************MOBIL***********************************************/
 
 @media (max-width: 768px) {
   body {
@@ -509,28 +512,30 @@ body {
   }
   .header-container {
     flex-direction: column;
+    align-items: center;
     gap: 15px;
-    text-align: center;
   }
+
   .header-logo img {
     height: 100px;
     width: 100px;
-    margin: 0 auto;
+    margin: 0 auto;;
   }
-  .harf {
-    font-size: 32px;
-  }
+  
   .header-text h1,
   .site-name {
     font-size: 28px;
   }
+.harf {
+    font-size: 36px;
+  }
   .slogan {
-    font-size: 16px;
+    font-size: 20px;
   }
   .header-contact {
     justify-content: center;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     margin-top: 10px;
   }
   .navbar {
@@ -541,70 +546,93 @@ body {
     padding: 5px 0;
   }
   .navbar a {
-    font-size: 16px;
-    margin: 0;
-    padding: 8px 16px;
+    margin: 5px;
+    font-size: 18px;
+    padding: 8px 10px;
   }
+
   .banniere {
     font-size: 14px;
     padding: 6px 12px;
     margin: 10px;
   }
+
   .restaurant-text h2 {
-    font-size: 16px;
+    font-size: 24px;
+    margin: 10px 0;
+    
+    
   }
   .harf1 {
-    font-size: 24px;
+    font-size: 30px;
   }
+  .lale-emoji {
+    font-size: 20px;
+    margin-right: 5px;
+    display: inline-block;
+    
+    
+  }
+  
   .restaurant-text p {
-    font-size: 12px;
-   ;
+    font-size: 16px;
+    margin: 20px 10px;
   }
   .restaurant-image img {
     width: 100%;
     height: auto;
-    margin: 0;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
   }
-  .presentation {
-    flex-direction: column;
-    padding: 10px;
-    text-align: center;
+  
+  .presentation-section {
+    display: block; 
+   
   }
-  .presentation-text h2 {
-    margin-right: 30px;
+  .text-content h1 {
     font-size: 24px;
   }
-  .presentation-text p {
-    margin-right: 30px;
-    font-size: 12px;
-  }
-  .presentation-image img {
-    width: 100%;
-    height: auto;
-    margin:auto ;
-  }
-  .menu-intro {
-    flex-direction: column;
-    align-items: center;
+
+
+  .text-content p {
+    font-size: 12px; 
+
   }
 
-  .menu-text  {
-    font-size: 20px;
+  .text-content p.signature-line {
+    font-size: 16px;
   }
+
+  .image-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+/** Styles pour les cartes de menu */
+
+
+  .menu-text {
+    font-size: 24px;
+  }
+
   .menu-text_description {
     font-size: 12px;
   }
 
-
-
-  .tabs {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    margin: 0;
+  .menu-intro {
+  flex-direction: column;
+  align-items: center;
+}
+ .tabs {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  margin: 0;
   }
+
   .tab {
     width: 45%;
     font-size: 16px;
@@ -625,68 +653,146 @@ body {
 
   }
   .prix {
-    font-size: 18px;
+    font-size: 12px;
   }
+
   .voir-plus p {
-    font-size: 14px;
+    font-size: 12px;
   }
-  .footer {
+
+  .footer-container {
     flex-direction: column;
-    text-align: center;
+    padding: 30px;
   }
+
   .footer-section {
-    font-size: 20px;
-    padding: 10px;
+    margin: 10px 0;
   }
-  .footer-section p,
-  .footer-section a {
+
+  .footer-section h3 {
     font-size: 16px;
   }
-}
 
-/* ========================= TABLET GÖRÜNÜM ========================= */
-@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-section p, .footer-section a {
+    font-size: 12px;
+  }
+  
+}
+ 
+
+/* Styles pour les écrans de taille intermédiaire (tablettes) */
+ @media (min-width: 769px) and (max-width: 1024px) {
+
   .header-logo img {
     height: 120px;
     width: 120px;
+    margin-left: 20px;
   }
+
   .site-name {
     font-size: 36px;
   }
+
   .slogan {
-    font-size: 20px;
+    font-size: 24px;
   }
+
   .navbar a {
+    margin: 10px;
     font-size: 20px;
+    padding: 10px 15px;
   }
+
+  .banniere {
+    font-size: 28px;
+    padding: 15px;
+  }
+  .lale-emoji {
+    font-size: 30px;
+    margin-right: 5px;
+    display: inline-block;
+    
+    
+  }
+  
   .restaurant-text h2 {
+    font-size: 50px;
+  }
+
+  .restaurant-text p {
+    font-size: 24px;
+    margin: 20px auto;
+  }
+
+  .presentation-section {
+    flex-direction: column;
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+
+  .image-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .text-content h1 {
     font-size: 36px;
   }
-  .restaurant-text p {
+
+  .text-content p {
     font-size: 20px;
   }
-  .presentation-text h2 {
-    font-size: 32px;
+
+  .text-content p.signature-line {
+    font-size: 24px;
   }
-  .presentation-text p {
-    font-size: 20px;
+
+ 
+  .tabs {
+    padding: 30px;
+    gap: 40px;
   }
+
   .tab {
-    font-size: 20px;
-    width: 200px;
+    font-size: 24px;
+    width: 100%;
   }
+
+  .menu-text {
+    font-size: 36px;
+  }
+
+  .menu-text_description {
+    font-size: 20px;
+  }
+
   .menu-item {
     width: 45%;
     margin: 20px;
   }
-  .prix {
+
+  .menu-item img {
+    height: auto;
+  }
+  .voir-plus p {
+    font-size: 12px;
+  }
+ .footer-container {
+    flex-direction: row;
+    padding: 50px;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+  }
+
+  .footer-section h3 {
+    font-size: 28px;
+  }
+
+  .footer-section p, .footer-section a {
     font-size: 20px;
   }
-  .footer-section {
-    font-size: 24px;
-  }
-  .footer-section p,
-  .footer-section a {
-    font-size: 18px;
-  }
+
 }

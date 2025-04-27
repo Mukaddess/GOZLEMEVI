@@ -1,0 +1,359 @@
+.footer {
+  background-color:#1d3724/*#0c3432*/; 
+ color: #d4a037; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  flex-wrap: wrap;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.footer-section {
+  flex: 1 ;
+ margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  color: #d4a037;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.footer-section h3 {
+  font-size: 32px;
+ 
+}
+
+.footer-section p {
+  margin: 0;
+  font-size: 24px;
+ 
+}
+
+.footer-section a {
+  color: #d4a037;
+  text-decoration: underline;
+  font-size: 24px;
+}
+
+.footer-section.legal {
+  margin-bottom: auto;
+  text-align: right;
+  color: #d4a037;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.footer-section.legal a {
+  display: block; /* alt alta sıralamak için */
+  margin-bottom: 8px; /* bağlantılar arasında boşluk */
+  text-align: left; /* sola hizalama */
+}
+
+
+
+
+
+
+#presentation { 
+  color: #8b1e3f;
+  padding: 50px 20px;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+  
+}
+
+.presentation-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.presentation-text h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 80px;
+  margin-bottom: 20px;
+  text-align:center ;
+  font-family: 'Playfair Display', serif;
+  color: #0c3432;;
+}
+
+.presentation-text p {
+  color: #8b1e3f;
+  text-align: center;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6; /* Espacement entre les lignes */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.presentation-text  .signature-line {
+  font-size: 1.2em;
+  color: #9b2c5d;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+
+
+.presentation-image {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.10s ease;
+ 
+}
+
+.presentation-image img {
+  max-width: 800px;
+  border-radius: 12px;
+  display: block;
+  transform: scale(1.08);
+}
+
+
+
+
+
+
+
+
+/*  ECRAN MOBIL */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .language-switcher {
+    text-align: center;
+    padding: 10px;
+  }
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .header-logo img {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+  }
+  .harf {
+    font-size: 32px;
+  }
+  .header-text h1,
+  .site-name {
+    font-size: 28px;
+  }
+  .slogan {
+    font-size: 16px;
+  }
+  .header-contact {
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  .phone-icon {
+    font-size: 12px;
+  }
+  
+  .command-text {
+    color: white;
+    font-size: 14px;
+  }
+  
+  .phone-number {
+    color: #ffd966;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+  }
+  .navbar a {
+    font-size: 16px;
+    margin: 0;
+    padding: 8px 16px;
+  }
+  .banniere {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 10px;
+  }
+  .restaurant-text h2 {
+    font-size: 16px;
+  }
+  .harf1 {
+    font-size: 24px;
+  }
+  .restaurant-text p {
+    font-size: 12px;
+   ;
+  }
+  .restaurant-image img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  
+
+  .presentation-section {
+    display: block; 
+  }
+  .text-content h1 {
+   
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .text-content p {
+    margin-right: 30px;
+    font-size: 12px;
+  }
+  .text-content p.signature-line {
+    font-size: 16px;
+  }
+
+
+  .image-content {
+    margin-top: 30px;
+    margin-bottom: 20px; /* Footer'a yaklaş */
+  }
+
+  .image-content img {
+    width: 90%;
+    max-width: 100%;
+  }
+  }
+  
+  .menu-intro {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-text  {
+    font-size: 20px;
+  }
+  .menu-text_description {
+    font-size: 16px;
+  }
+
+
+
+  .tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+  }
+  .tab {
+    width: 45%;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+  }
+  .menu-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-item {
+    width: 40%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .menu-item img {
+    height: auto;
+
+  }
+  .prix {
+    font-size: 18px;
+  }
+  .voir-plus p {
+    font-size: 14px;
+  }
+
+ 
+
+
+
+
+
+
+
+/* ========================= TABLET GÖRÜNÜM ========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-logo img {
+    height: 120px;
+    width: 120px;
+  }
+  .site-name {
+    font-size: 36px;
+  }
+  .slogan {
+    font-size: 20px;
+  }
+  .navbar a {
+    font-size: 20px;
+  }
+  .restaurant-text h2 {
+    font-size: 36px;
+  }
+  .restaurant-text p {
+    font-size: 20px;
+  }
+
+ .presentation-section {
+    display: block; 
+  }
+
+  .image-content {
+    margin-top: 30px;
+    margin-bottom: 20px; 
+  }
+
+  .image-content img {
+    width: 90%;
+    max-width: 100%;
+  }
+  .tab {
+    font-size: 20px;
+    width: 200px;
+  }
+  .menu-item {
+    width: 45%;
+    margin: 20px;
+  }
+  .prix {
+    font-size: 20px;
+  }
+  .footer-section h3 {
+    font-size: 24px;
+   
+  }
+  .footer-section {
+    font-size: 16px;
+    padding: 5px;
+  }
+  .footer-section p,
+  .footer-section a {
+    font-size: 12px;
+  }
+}
