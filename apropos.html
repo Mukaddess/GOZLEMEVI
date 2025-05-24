@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GÖZLEMEVI – À propos</title>
+    <meta
+      name="description"
+      content="En savoir plus sur Gözlemevi : notre histoire, notre équipe et notre passion pour vous faire découvrir l'authenticité turque."
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/apropos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   <!-- Lien d'accessibilité pour permettre aux utilisateurs clavier de passer directement au contenu principal -->
+<a href="#main-content" class="visually-hidden focusable">Passer au contenu</a>
+
+<!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
+<div class="top-bar">
+  <!--  Bouton hamburger pour menu mobile -->
+  <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+
+  <!--  Sélecteur de langue accessible -->
+  <div class="language-switcher" role="region" aria-label="Sélecteur de langue">
+    <label for="lang-switch" class="visually-hidden">Choisir la langue</label>
+    <select
+      id="lang-switch"
+      onchange="window.location.href = this.value;"
+      aria-label="Sélection de la langue"
+    >
+      <option value="index.html" selected>Français</option>
+      <option value="index_tr.html">Türkçe</option>
+    </select>
+
+    <!-- Affichage alternatif si JavaScript est désactivé -->
+    <noscript>
+      <p>
+        JavaScript est désactivé. Veuillez utiliser les liens ci-dessous pour
+        choisir une langue :
+      </p>
+      <a href="index.html">Français</a> |
+      <a href="index_tr.html">Türkçe</a>
+    </noscript>
+  </div>
+</div>
+        <header class="site-header" role="banner">
+  <div class="header-container">
+    <!-- Logo et lien vers la page d'accueil -->
+    <div class="header-logo">
+      <a href="index.html" aria-label="Accueil">
+        <img
+          src="assets/img/commun/logo_gozlemevi.webp"
+          alt="Logo Gözlemevi"
+          width="200"
+          height="60"
+        />
+      </a>
+    </div>
+
+    <!-- Nom du site et slogan -->
+    <div class="header-text">
+      <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
+      <p class="slogan">L'authenticité turque dans chaque bouchée</p>
+    </div>
+
+    <!-- Coordonnées téléphoniques -->
+    <div class="phone-container">
+      <span class="phone-icon" aria-hidden="true">📞</span>
+      <a
+        href="tel:+33761079668"
+        class="phone-number"
+        aria-label="Appeler Gözlemevi au +33 7 61 07 96 68"
+        >+33 7 61 07 96 68</a
+      >
+    </div>
+  </div>
+ 
+  <!-- Navigation principale -->
+  <nav class="navbar" aria-label="Menu principal">
+    <ul id="menu" class="navbar__list">
+      <li class="navbar__item">
+        <a href="index.html" aria-current="page">Accueil</a>
+      </li>
+      <li class="navbar__item"><a href="menu.html">À la carte</a></li>
+      <li class="navbar__item"><a href="apropos.html">À propos</a></li>
+      <li class="navbar__item"><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+    <!-- Contenu principal -->
+    <main id="main-content" class="main-content" role="main">
+      <!-- Hero Video Banner -->
+      <section class="hero-banner" aria-label="Présentation du Gözlemevi">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-video"
+          src="assets/videos/gozleme.mp4"
+          type="video/mp4"
+          aria-label="Vidéo de présentation du Gözlemevi"
+        ></video>
+      </section>
+
+      <!-- Section Histoire du Gözleme / Gözlemenin Tarihi -->
+      <!-- 1. Le mot “Gözlemevi” -->
+
+      <section
+        id="name-meaning"
+        class="meaning-section"
+        role="region"
+        aria-labelledby="meaning-title"
+      >
+        <h2 id="meaning-title">Le mot « Gözlemevi »</h2>
+        <p>
+          <strong>
+            Le terme turc <span lang="tr">« gözleme »</span> désigne une fine
+            galette :</strong
+          >
+          pâte étirée à la main et cuite sur plaque, souvent garnie de fromage,
+          d'épinards, de viande ou d'ingrédients locaux. Le suffixe
+          <span lang="tr">« -evi »</span> signifie « maison de… », littéralement
+          « maison de galettes ». <strong>Gözleme</strong> joue également sur la
+          proximité phonétique avec les verbes français
+          <strong>observer</strong> et <strong>regarder</strong>, suggérant un
+          lieu où l'on « observe » et « savoure » chaque nuance de cette
+          tradition culinaire.
+        </p>
+      </section>
+
+      <!-- 2. Histoire du gözleme -->
+      <section
+        id="history"
+        class="history-section"
+        role="region"
+        aria-labelledby="history-title"
+      >
+        <h2 id="history-title">Histoire du <span lang="tr">gözleme</span></h2>
+
+        <figure class="history-figure">
+          <img
+            src="assets/img/commun/history.png"
+            alt="Quatre étapes : nomade, ottomane, <strong>UNESCO</strong>, moderne"
+            class="history-illustration"
+          />
+          <figcaption>
+            Évolution du <span lang="tr">gözleme</span> : époque nomade -
+            intégration ottomane - reconnaissance <strong>UNESCO</strong> -
+            gastronomie moderne.
+          </figcaption>
+        </figure>
+
+        <div class="history-text">
+          <p>
+            <strong
+              >Le <span lang="tr">gözleme</span> puise ses origines dans les
+              sociétés nomades d'Asie centrale :</strong
+            >
+            de fines galettes (<span lang="tr">yufka</span>) composées de
+            farine, d'eau et de sel, faciles à transporter et à cuire sur un
+            <span lang="tr">sac</span>. Avec le temps, ces galettes ont évolué
+            en <span lang="tr">gözleme</span>, où la pâte est garnie (fromage,
+            épinards, viande…) puis pliée et cuite à même la plaque chaude. La
+            <span lang="tr">yufka</span> est aujourd'hui reconnue par
+            <strong>l'UNESCO</strong> comme patrimoine culturel immatériel de la
+            Turquie. Les <span lang="tr">Yörüks</span> d'Anatolie, véritables
+            passeurs de cette tradition, l'ont intégrée à la cuisine ottomane et
+            rurale, transmettant leurs recettes de génération en génération.
+            Plusieurs régions (<span lang="tr">Bartın</span>,
+            <span lang="tr">Bolu</span>, <span lang="tr">Mudurnu</span>…)
+            bénéficient désormais de l'indication géographique protégée pour
+            leurs variantes locales de <span lang="tr">gözleme</span>. De nos
+            jours, des petits-déjeuners aux marchés de rue, le
+            <span lang="tr">gözleme</span> reste un symbole gourmand et
+            convivial.
+          </p>
+        </div>
+      </section>
+
+      <section class="mission-section" aria-labelledby="mission-title">
+        <h2 id="mission-title">Notre Mission & Vision</h2>
+        <p>
+          <strong>Mission :</strong> Faire découvrir l'authenticité du gözleme
+          aux Strasbourgeois, grâce à un service simple et chaleureux.
+        </p>
+        <p>
+          <strong>Vision :</strong> Devenir l'Observatoire du Gözleme en France,
+          en partageant traditions, ateliers et recettes familiales.
+        </p>
+      </section>
+      <!-- 3. Nos valeurs -->
+      <section class="values-section" aria-labelledby="values-title">
+        <h3 id="values-title">Nos valeurs</h3>
+        <ul>
+          <li>
+            <strong>Authenticité</strong>
+            Nous préservons les recettes transmises de génération en génération,
+            pour offrir un véritable goût d'Anatolie à Strasbourg.
+          </li>
+          <li>
+            <strong>Qualité & Localité</strong>
+            Chaque ingrédient est sélectionné avec soin — fromages d'Alsace,
+            herbes fraîches, produits artisanaux — en priorité issus de
+            producteurs voisins.
+          </li>
+          <li>
+            <strong>Simplicité & Chaleur</strong>
+            Un seul numéro de téléphone, un accueil toujours chaleureux et un
+            service sans prise de tête.
+          </li>
+          <li>
+            <strong>Partage & Communauté</strong>
+            Ateliers de fabrication, dégustations et rencontres : nous croyons
+            qu'un bon repas rapproche les gens.
+          </li>
+          <li>
+            <strong>Soutenabilité</strong>
+            Zéro gaspillage, emballages recyclables et soutien constant aux
+            filières responsables.
+          </li>
+        </ul>
+      </section>
+      <!--  Notre équipe -->
+      <section class="team-section" aria-labelledby="team-title">
+        <h3 id="team-title">Notre Équipe</h3>
+        <div class="team-grid">
+          <div class="member">
+            <img
+              src="assets/img/equipe/mukaddes.png"
+              alt="Mukaddes KUCUK - Fondatrice & Cheffe"
+            />
+            <h4>Mukaddes KUCUK</h4>
+            <p>
+              Fondatrice & Cheffe
+              <span class="team-description"
+                >Passionnée de traditions familiales</span
+              >
+            </p>
+          </div>
+          <div class="member">
+            <img
+              src="assets/img/equipe/vedat.png"
+              alt="Vedat KUCUK - Responsable Logistique"
+            />
+            <h4>Vedat KUCUK</h4>
+            <p>
+              Responsable Logistique
+              <span class="team-description">
+                Garant de la qualité et de la fraîcheur</span
+              >
+            </p>
+          </div>
+          <div class="member">
+            <img
+              src="assets/img/equipe/ayse.png"
+              alt="Ayse KUCUK - Community Manager"
+            />
+            <h4>Ayse KUCUK</h4>
+            <p>
+              Community Manager
+              <span class="team-description"
+                >Ambassadrice de notre passion sur les réseaux</span
+              >
+            </p>
+          </div>
+
+          <div class="member">
+            <img
+              src="assets/img/equipe/zeynepp.png"
+              alt="Zeynep KUCUK - Chef de Production"
+            />
+            <h4>Zeynep KUCUK</h4>
+            <p>
+              Chef de Production <span class="team-description"
+                >Maître du façonnage et de la cuisson</span
+              >
+            </p>
+          </div>
+
+          <div class="member">
+            <img
+              src="assets/img/equipe/fatmanur.png"
+              alt="Zeynep KUCUK - Chef de Production"
+            />
+            <h4>Fatmanur KUCUK</h4>
+            <p>
+              Chef de Production
+              <span class="team-description">Maître du façonnage et de la cuisson</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      </div>
+      <div> 
+        <a href="index_tr.html" class="btn-retour">⬅ Retour à l'accueil</a>
+      </div>
+    </main>
+
+    <!-- Footer du site -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- 1) Logo -->
+        <div class="footer__logo">
+          <a href="index.html" aria-label="Accueil">
+            <img
+              src="assets/img/commun/logo_gozlemevi.webp"
+              alt="Logo Gözlemevi"
+            />
+          </a>
+        </div>
+        <!-- 2) Adresse -->
+        <address class="footer__section">
+          <h3>Adresse</h3>
+          <p>7 Rue de l’Espérance</p>
+          <p>67115 Strasbourg, France</p>
+        </address>
+        <!-- 3) Heures d’ouverture -->
+        <div class="footer__section">
+          <h3>Heures d'ouverture</h3>
+          <p>Ouvert tous les jours</p>
+          <p>08h00 - 00h00</p>
+        </div>
+        <!-- 4) Nous suivre sur -->
+        <div class="footer__section">
+          <h3>Nous suivre sur</h3>
+          <ul class="footer__list">
+            <!-- target="_blank" ile yeni sekmede açılır, rel öznitelikleri güvenlik ve SEO için önemli -->
+            <li>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Page Facebook de Gözlemevi"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Page Instagram de Gözlemevi"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- 5) Informations légales -->
+        <div class="footer__section footer__section--legal">
+          <h3>Informations légales</h3>
+          <ul class="footer__list">
+            <li>
+              <a href="mentions_legales.html" aria-current="page"
+                >Mentions légales</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- 6) Téléphone -->
+        <div class="footer__phone">
+          <span class="phone-icon" aria-hidden="true">📞</span>
+          <a
+            href="tel:+33761079668"
+            class="phone-number"
+            aria-label="Appeler Gözlemevi au +33 7 61 07 96 68"
+            >+33 7 61 07 96 68</a
+          >
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>
+          &copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tous droits
+          réservés.
+        </p>
+      </div>
+    </footer>
+    
+    <!-- Script JavaScript pour le menu hamburger -->
+
+    <script src="assets/js/hamburger_menu.js" type="module"></script>
+  </body>
+</html>

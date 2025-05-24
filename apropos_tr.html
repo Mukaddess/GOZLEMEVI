@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GÖZLEMEVİ – Hakkımızda</title>
+    <meta
+      name="description"
+      content="Gözlemevi hakkında daha fazla bilgi edinin: hikayemiz, ekibimiz ve Türk özgünlüğünü keşfetme tutkumuz."
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/apropos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Klavye kullanıcıları için erişilebilirlik bağlantısı -->
+    <a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
+
+    <!-- Üst çubuk: hamburger menü butonu + dil seçici -->
+    <div class="top-bar">
+      <!-- Mobil menü için hamburger butonu -->
+      <button
+        class="hamburger"
+        aria-label="Menüyü aç"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        ☰
+      </button>
+
+      <!--Erişilebilir dil seçici -->
+      <div class="language-switcher" role="region" aria-label="Dil seçici">
+        <label for="lang-switch" class="visually-hidden">Dil seç</label>
+        <select
+          id="lang-switch"
+          onchange="window.location.href = this.value;"
+          aria-label="Dil seçimi"
+        >
+          <option value="index.html">Français</option>
+          <option value="index_tr.html" selected>Türkçe</option>
+        </select>
+
+        <!-- JavaScript kapalıysa gösterilecek alternatif -->
+        <noscript>
+          <p>
+            JavaScript devre dışı. Lütfen aşağıdaki bağlantıları kullanarak dil
+            seçin:
+          </p>
+          <a href="index.html">Français</a> |
+          <a href="index_tr.html">Türkçe</a>
+        </noscript>
+      </div>
+    </div>
+
+    <!-- Başlık bölümü -->
+    <header class="site-header" role="banner">
+      <div class="header-container">
+        <!-- Logo ve ana sayfa bağlantısı -->
+        <div class="header-logo">
+          <a href="index_tr.html" aria-label="Ana Sayfa">
+            <img
+              src="assets/img/commun/logo_gozlemevi.webp"
+              alt="Gözlemevi Logosu"
+              width="200"
+              height="60"
+            />
+          </a>
+        </div>
+
+        <!-- Site adı ve slogan -->
+        <div class="header-text">
+          <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
+          <p class="slogan">Her lokmada Türk mutfağının özgün lezzeti</p>
+        </div>
+
+        <!-- Telefon bilgisi -->
+        <div class="phone-container">
+          <span class="phone-icon" aria-hidden="true">📞</span>
+          <a
+            href="tel:+33761079668"
+            class="phone-number"
+            aria-label="Gözlemevi'ni arayın: +33 7 61 07 96 68"
+            >+33 7 61 07 96 68</a
+          >
+        </div>
+      </div>
+
+      <!-- Ana navigasyon -->
+      <nav class="navbar" aria-label="Ana Menü">
+        <ul id="menu" class="navbar__list">
+          <li class="navbar__item">
+            <a href="index_tr.html" aria-current="page">Ana Sayfa</a>
+          </li>
+          <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
+          <li class="navbar__item"><a href="apropos_tr.html">Hakkımızda</a></li>
+          <li class="navbar__item"><a href="contact_tr.html">İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Ana içerik -->
+    <main id="main-content" class="main-content" role="main">
+      <!-- Hero Video Banner -->
+      <section class="hero-banner" aria-label="Gözlemevi tanıtım videosu">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-video"
+          src="assets/videos/gozleme.mp4"
+          type="video/mp4"
+          aria-label="Gözlemevi tanıtım videosu"
+        ></video>
+      </section>
+
+      <!-- 1. "Gözlemevi" isminin anlamı -->
+      <section
+        id="name-meaning"
+        class="meaning-section"
+        role="region"
+        aria-labelledby="meaning-title"
+      >
+        <h2 id="meaning-title">"Gözlemevi" ismi</h2>
+        <p>
+          <strong>
+            Türkçe <span lang="tr">"gözleme"</span> kelimesi, ince bir galeteyi
+            ifade eder:</strong
+          >
+          elde açılan ve sac üzerinde pişirilen, genellikle peynir, ıspanak, et
+          veya yöresel malzemelerle doldurulan bir hamur. Sondaki
+          <span lang="tr">"-evi"</span> eki ise "...evi" anlamına gelir, yani
+          kelimenin tam anlamıyla "galete evi". Ayrıca <strong>Gözleme</strong>,
+          Fransızca <strong>observer</strong> ve <strong>regarder</strong>
+          fiilleriyle akustik benzerlik kurarak, her ayrıntıyı "gözlemek" ve
+          "tatmak" fikrini çağrıştırır.
+        </p>
+      </section>
+
+      <!-- 2. Gözleme Tarihi -->
+      <section
+        id="history"
+        class="history-section"
+        role="region"
+        aria-labelledby="history-title"
+      >
+        <h2 id="history-title">Gözleme Tarihi</h2>
+
+        <figure class="history-figure">
+          <img
+            src="assets/img/commun/history.png"
+            alt="Göçebe dönemi, Osmanlı entegrasyonu, UNESCO tanınırlığı, modern çağ"
+            class="history-illustration"
+          />
+          <figcaption>
+            Gözlemenin evrimi: Göçebe toplumlar - Osmanlı mutfağı - UNESCO
+            kültürel mirası - modern gastronomi.
+          </figcaption>
+        </figure>
+
+        <div class="history-text">
+          <p>
+            <strong> Gözleme, Orta Asya göçebe topluluklarından gelir:</strong>
+            un, su ve tuzdan yapılan <span lang="tr">yufka</span> adı verilen
+            ince galeteler kolayca taşınır ve sac üzerinde pişirilirdi. Zamanla
+            bu galeteler; peynir, ıspanak, et gibi malzemelerle doldurularak
+            <span lang="tr">gözleme</span> adını aldı. UNESCO, Türk yufkasını
+            somut olmayan kültürel miras olarak tescilledi. Anadolu'nun Yörük
+            toplulukları, bu geleneği Osmanlı ve kırsal mutfaklarla
+            bütünleştirip nesilden nesile aktardı. Bartın, Bolu, Mudurnu gibi
+            bölgeler, yöresel gözleme çeşitleri için korumalı coğrafi işaret
+            kazanmıştır. Günümüzde pazarlar ve kahvaltı sofralarında hala samimi
+            ve lezzetli bir deneyim sunar.
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. Misyon & Vizyon -->
+      <section class="mission-section" aria-labelledby="mission-title">
+        <h2 id="mission-title">Misyonumuz & Vizyonumuz</h2>
+        <p>
+          <strong>Misyon:</strong> Strasbourglulara gözlemenin özünü, samimi bir
+          hizmetle tattırmak.
+        </p>
+        <p>
+          <strong>Vizyon:</strong> Fransa'da Gözlemevi olarak tanınan,
+          gelenekleri paylaşan ve atölyeler düzenleyen bir buluşma noktası
+          olmak.
+        </p>
+      </section>
+
+      <!-- 4. Değerlerimiz -->
+      <section class="values-section" aria-labelledby="values-title">
+        <h3 id="values-title">Değerlerimiz</h3>
+        <ul>
+          <li>
+            <strong>Özgünlük</strong>
+            Kuşaktan kuşağa aktarılan tariflerle Anadolu'nun gerçek lezzetini
+            yaşatmak.
+          </li>
+          <li>
+            <strong>Kalite & Yerellik</strong>
+            Peynirden taze otlara kadar tüm malzemeleri yerel üreticilerden
+            seçmek.
+          </li>
+          <li>
+            <strong>Sadelik & Sıcaklık</strong>
+            Tek bir telefon numarasıyla her zaman samimi ve sorunsuz bir hizmet
+            sunmak.
+          </li>
+          <li>
+            <strong>Paylaşım & Topluluk</strong>
+            Atölyeler, tadım etkinlikleri ve buluşmalarla insanları bir araya
+            getirmek.
+          </li>
+          <li>
+            <strong>Sürdürülebilirlik</strong>
+            Sıfır atık, geri dönüştürülebilir ambalajlar ve sorumlu tedarik.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 5. Ekibimiz -->
+      <section class="team-section" aria-labelledby="team-title">
+        <h3 id="team-title">Ekibimiz</h3>
+        <div class="team-grid">
+          <div class="member">
+            <img
+              src="assets/img/equipe/mukaddes.png"
+              alt="Mukaddes KUCUK - Kurucu & Şef"
+            />
+            <h4>Mukaddes KUCUK</h4>
+            <p>
+              Kurucu & Şef
+              <span class="team-description"
+                >Aile geleneklerine tutkulu bir aşçı</span
+              >
+            </p>
+          </div>
+          <div class="member">
+            <img
+              src="assets/img/equipe/vedat.png"
+              alt="Vedat KUCUK - Lojistik Sorumlusu"
+            />
+            <h4>Vedat KUCUK</h4>
+            <p>
+              Lojistik Sorumlusu
+              <span class="team-description">Kalite ve tazelik garantörü</span>
+            </p>
+          </div>
+          <div class="member">
+            <img
+              src="assets/img/equipe/ayse.png"
+              alt="Ayşe KUCUK - Sosyal Medya Yöneticisi"
+            />
+            <h4>Ayşe KUCUK</h4>
+            <p>
+              Sosyal Medya Yöneticisi
+              <span class="team-description"
+                >Tutkumuzu dijital dünyaya taşıyan elçi</span
+              >
+            </p>
+          </div>
+          <div class="member">
+            <img
+              src="assets/img/equipe/zeynep.png"
+              alt="Zeynep KUCUK - Üretim Şefi"
+            />
+            <h4>Zeynep KUCUK</h4>
+            <p>
+              Üretim Şefi
+              <span class="team-description"
+                >Hamuru şekillendiren ve pişiren usta</span
+              >
+            </p>
+          </div>
+          <div class="member">
+            <img
+              src="assets/img/equipe/fatmanur.png"
+              alt="Fatmanur KUCUK - Üretim Şefi"
+            />
+            <h4>Fatmanur KUCUK</h4>
+            <p>
+              Üretim Şefi
+              <span class="team-description"
+                >Lezzeti garantileyen mutfak ustası</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <div> <a href="index.html" class="btn-retour">⬅ Anasayfaya Dön</a></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="index_tr.html" aria-label="Ana Sayfa">
+            <img
+              src="assets/img/commun/logo_gozlemevi.webp"
+              alt="Gözlemevi Logosu"
+            />
+          </a>
+        </div>
+        <address class="footer__section">
+          <h3>Adres</h3>
+          <p>7 Rue de l’Espérance</p>
+          <p>67115 Strasbourg, France</p>
+        </address>
+        <div class="footer__section">
+          <h3>Çalışma Saatleri</h3>
+          <p>Her gün açıktır</p>
+          <p>08:00 - 00:00</p>
+        </div>
+        <div class="footer__section">
+          <h3>Bizi Takip Edin</h3>
+          <ul class="footer__list">
+            <li>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Gözlemevi Facebook sayfası"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Gözlemevi Instagram sayfası"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__section footer__section--legal">
+          <h3>Yasal Bilgiler</h3>
+          <ul class="footer__list">
+            <li>
+              <a href="mentions_legales_tr.html" aria-current="page"
+                >Yasal Uyarılar</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__phone">
+          <span class="phone-icon" aria-hidden="true">📞</span>
+          <a
+            href="tel:+33761079668"
+            class="phone-number"
+            aria-label="Gözlemevi'ni +33 7 61 07 96 68 numarasından ara"
+            >+33 7 61 07 96 68</a
+          >
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>
+          &copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tüm hakları
+          saklıdır.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Script JavaScript pour le menu hamburger -->
+
+    <script src="assets/js/hamburger_menu.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- Belge türü ve HTML5 standardı tanımlanır -->
+<html lang="tr">
+<head>
+  <!-- Belgenin karakter seti UTF-8 olarak belirlenir -->
+  <meta charset="UTF-8" />
+  <!-- Sayfanın mobil uyumlu olması ve başlangıç zoom seviyesi ayarlanır -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Sayfa açıklaması -->  
+  <meta name="description" content="Gözlemevi'nin Türk lezzetlerini keşfedin: taze gözlemeler, salatalar ve tatlılar. " />
+  <title>GÖZLEMEVİ - Ana Sayfa</title>
+
+  <!-- Reset CSS: Tarayıcı varsayılan stillerini sıfırlar -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <!-- Ana stil dosyası: Tüm özel CSS kuralları -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Google Fonts: Open Sans ve Poppins fontları import edilir -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+ <!-- Klavye kullanıcıları için erişilebilirlik bağlantısı -->
+<a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
+
+<!-- Üst çubuk: hamburger menü butonu + dil seçici -->
+<div class="top-bar">
+  <!-- Mobil menü için hamburger butonu -->
+  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu">☰</button>
+
+  <!--Erişilebilir dil seçici -->
+  <div class="language-switcher" role="region" aria-label="Dil seçici">
+    <label for="lang-switch" class="visually-hidden">Dil seç</label>
+    <select id="lang-switch"  onchange="window.location.href = this.value;"  aria-label="Dil seçimi">
+      <option value="index.html">Français</option>
+      <option value="index_tr.html" selected>Türkçe</option>
+    </select>
+
+    <!-- JavaScript kapalıysa gösterilecek alternatif -->
+    <noscript>
+      <p>
+        JavaScript devre dışı. Lütfen aşağıdaki bağlantıları kullanarak dil
+        seçin:
+      </p>
+      <a href="index.html">Français</a> |
+      <a href="index_tr.html">Türkçe</a>
+    </noscript>
+  </div>
+</div>
+
+
+  <!-- Başlık bölümü -->
+  <header class="site-header" role="banner">
+  <div class="header-container">
+    <!-- Logo ve ana sayfa bağlantısı -->
+    <div class="header-logo">
+      <a href="index_tr.html" aria-label="Ana Sayfa">
+        <img
+          src="assets/img/commun/logo_gozlemevi.webp"
+          alt="Gözlemevi Logosu"
+          width="200"
+          height="60"
+        />
+      </a>
+    </div>
+
+    <!-- Site adı ve slogan -->
+    <div class="header-text">
+      <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
+      <p class="slogan">Her lokmada Türk mutfağının özgün lezzeti</p>
+    </div>
+
+    <!-- Telefon bilgisi -->
+    <div class="phone-container">
+      <span class="phone-icon" aria-hidden="true">📞</span>
+      <a
+        href="tel:+33761079668"
+        class="phone-number"
+        aria-label="Gözlemevi'ni arayın: +33 7 61 07 96 68"
+        >+33 7 61 07 96 68</a
+      >
+    </div>
+  </div>
+
+  <!-- Ana navigasyon -->
+  <nav class="navbar" aria-label="Ana Menü">
+    <ul id="menu" class="navbar__list">
+      <li class="navbar__item">
+        <a href="index_tr.html" aria-current="page">Ana Sayfa</a>
+      </li>
+      <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
+      <li class="navbar__item"><a href="apropos_tr.html">Hakkımızda</a></li>
+      <li class="navbar__item"><a href="contact_tr.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Ana içerik -->
+  <main id="main-content" class="main-content" role="main">
+     <!-- Promosyonlar bölümü -->
+     <section class="promotions" aria-label="Promosyonlar">
+      <h2 class="visually-hidden">Promotions</h2>
+      <article class="banniere">
+        <p>Bu hafta %10 indirim fırsatından yararlanın!</p>
+      </article>
+      </div>
+      <article class="banniere">
+        <p>5 gözleme sipariş edin, 6. gözleme bizden hediye! <span aria-hidden="true">🎁</span> </p>
+        <p><span aria-hidden="true">🎉 </span>Hemen faydalanın!</p>
+      </div>
+    </section>
+ 
+    <!-- 6) Hero tanıtım bölümü -->
+    <section id="hero" aria-label="Restoran Tanıtımı">
+      <div class="restaurant-text">
+        <h2>GÖZLEM<span class="lettre1">E</span>Vi'ne Hoş Geldiniz</h2>
+        <p>Anne tarifiyle sevgiyle hazırlanan el yapımı gözlemelerimizin tadına bakın. Hemen sipariş verin, Türk otantikliğini yaşayın!</p>
+      </div>
+      <div class="restaurant-image">
+        <img
+          src="assets/img/commun/restaurant.webp"
+          alt="Intérieur du restaurant décoré dans un style traditionnel en pierre"
+          loading="lazy"                     
+          class="anim-image" /> 
+          <!-- lazy : chargement différé pour performance -->
+       
+      </div>
+    </section>
+<!-- Tanıtım Bölümü -->
+<section class="presentation-section" aria-labelledby="presentation-heading-tr">
+  <div class="text-content">
+    <h2 id="presentation-heading-tr" class="presentation-heading">
+      Sıcak bir atmosferle <span>GözlemEvi</span>'ne Hoş Geldiniz
+    </h2>
+    <ul class="presentation-features">
+      <li>
+        <span aria-hidden="true">🌷</span>
+        Her lokmada annenizin mutfağından çıkan otantik lezzetleri keşfedin.
+      </li>
+      <li>
+        <span aria-hidden="true">🌷</span>
+        El emeği ile hazırlanan <span>gözlemelerimiz</span> sevgi ve samimiyetle yapılır.
+      </li>
+      <li>
+        <span aria-hidden="true">🌷</span>
+        Geleneksel Türk mutfağının sıcaklığını ev yapımı tariflerimizle tadın.
+      </li>
+    </ul>
+    <p class="signature-line">
+      <span aria-hidden="true">🍽️</span>
+      Geleneklerin tadı, paylaşmanın keyfi.
+    </p>
+  </div>
+
+  <figure class="image-content">
+    <img
+      src="assets/img/commun/gozlemevi.webp" width="600" height="400"
+      alt="Gözlemeler geleneksel yöntemlerle hazırlanıyor"
+      loading="lazy"
+      class="rounded-image"
+    />
+    <figcaption class="presentation-caption" aria-hidden="true">
+      Gözlemeler geleneksel yöntemlerle hazırlanıyor
+    </figcaption>
+  </figure>
+</section>
+
+
+    <!-- 8) Geri dönüş butonu -->
+   <div> <a href="index.html" class="btn-retour">⬅ Anasayfaya Dön</a></div>
+  </main>
+
+ <!-- FOOTER -->
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__logo">
+        <a href="index_tr.html" aria-label="Ana Sayfa">
+          <img src="assets/img/commun/logo_gozlemevi.webp" alt="Gözlemevi Logosu" />
+        </a>
+      </div>
+      <address class="footer__section">
+        <h3>Adres</h3>
+        <p>7 Rue de l'Espérance</p>
+        <p>67115 Strasbourg, France</p>
+      </address>
+      <div class="footer__section">
+        <h3>Çalışma Saatleri</h3>
+        <p>Her gün açıktır</p>
+        <p>08:00 - 00:00</p>
+      </div>
+   <div class="footer__section">
+  <h3>Bizi Takip Edin</h3>
+  <ul class="footer__list">
+    <!-- target="_blank" ile yeni sekmede açılır, rel öznitelikleri güvenlik ve SEO için önemli -->
+    <li>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook sayfamıza git">Facebook</a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram sayfamıza git">Instagram</a>
+    </li>
+  </ul>
+</div>
+
+      <div class="footer__section footer__section--legal">
+        <h3>Yasal Bilgiler</h3>
+        <ul class="footer__list">
+          <li><a href="mentions_legales_tr.html" aria-current="page">Yasal Uyarılar</a></li>
+        </ul>
+      </div>
+      <div class="footer__phone">
+        <span class="phone-icon" aria-hidden="true">📞</span>
+        <a href="tel:+33761079668" class="phone-number" aria-label="Gözlemevi'ni +33 7 61 07 96 68 numarasından ara">+33 7 61 07 96 68</a>
+      </div>
+    
+    <div class="footer__copyright">
+      <p>&copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tüm hakları saklıdır.</p>
+    </div>
+  </div>
+  </footer>
+
+  <!-- Script JavaScript pour le menu hamburger -->
+
+    <script src="assets/js/hamburger_menu.js" type="module"></script>
+
+</body>
+</html>

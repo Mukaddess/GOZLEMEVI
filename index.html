@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- Définit le type de document et la norme HTML5 -->
+<html lang="fr">
+  <head>
+    <!-- Spécifie le jeu de caractères du document en UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Rend la page responsive sur mobile et contrôle le zoom initial -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sayfa açıklaması -->
+    <meta
+      name="description"
+      content="Découvrez nos gözlemes faits maison, salés ou sucrés, dans une ambiance chaleureuse et authentique."
+    />
+    <!-- Titre affiché dans l'onglet du navigateur -->
+    <title>GÖZLEMEVI -Accueil</title>
+
+    <!-- Reset CSS : annule les styles par défaut du navigateur -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <!-- Style principal : toutes les règles CSS personnalisées -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Google Fonts : importe les polices Open Sans et Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   <!-- Lien d'accessibilité pour permettre aux utilisateurs clavier de passer directement au contenu principal -->
+<a href="#main-content" class="visually-hidden focusable">Passer au contenu</a>
+
+<!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
+<div class="top-bar">
+  <!--  Bouton hamburger pour menu mobile -->
+  <button
+    class="hamburger"
+    aria-label="Ouvrir le menu"
+    aria-expanded="false"
+    aria-controls="menu"
+  >
+    ☰
+  </button>
+
+  <!--  Sélecteur de langue accessible -->
+  <div class="language-switcher" role="region" aria-label="Sélecteur de langue">
+    <label for="lang-switch" class="visually-hidden">Choisir la langue</label>
+    <select
+      id="lang-switch"
+      onchange="window.location.href = this.value;"
+      aria-label="Sélection de la langue"
+    >
+      <option value="index.html" selected>Français</option>
+      <option value="index_tr.html">Türkçe</option>
+    </select>
+
+    <!-- Affichage alternatif si JavaScript est désactivé -->
+    <noscript>
+      <p>
+        JavaScript est désactivé. Veuillez utiliser les liens ci-dessous pour
+        choisir une langue :
+      </p>
+      <a href="index.html">Français</a> |
+      <a href="index_tr.html">Türkçe</a>
+    </noscript>
+  </div>
+</div>
+
+    <header class="site-header" role="banner">
+  <div class="header-container">
+    <!-- Logo et lien vers la page d'accueil -->
+    <div class="header-logo">
+      <a href="index.html" aria-label="Accueil">
+        <img
+          src="assets/img/commun/logo_gozlemevi.webp"
+          alt="Logo Gözlemevi"
+          width="200"
+          height="60"
+        />
+      </a>
+    </div>
+
+    <!-- Nom du site et slogan -->
+    <div class="header-text">
+      <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
+      <p class="slogan">L'authenticité turque dans chaque bouchée</p>
+    </div>
+
+    <!-- Coordonnées téléphoniques -->
+    <div class="phone-container">
+      <span class="phone-icon" aria-hidden="true">📞</span>
+      <a
+        href="tel:+33761079668"
+        class="phone-number"
+        aria-label="Appeler Gözlemevi au +33 7 61 07 96 68"
+        >+33 7 61 07 96 68</a
+      >
+    </div>
+  </div>
+ 
+  <!-- Navigation principale -->
+  <nav class="navbar" aria-label="Menu principal">
+    <ul id="menu" class="navbar__list">
+      <li class="navbar__item">
+        <a href="index.html" aria-current="page">Accueil</a>
+      </li>
+      <li class="navbar__item"><a href="menu.html">À la carte</a></li>
+      <li class="navbar__item"><a href="apropos.html">À propos</a></li>
+      <li class="navbar__item"><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <!--MAIN BLOK-->
+    <main id="main-content" class="main-content" role="main">
+      <!-- Section Promotions -->
+      <section class="promotions" aria-label="Promotions">
+        <h2 class="visually-hidden">Promotions</h2>
+        <article class="banniere">
+          <p>
+            Profitez de notre offre spéciale cette semaine :
+            <strong>-10%</strong> sur toutes les commandes !
+          </p>
+        </article>
+        <article class="banniere">
+          <p>
+            <span aria-hidden="true">🎁</span> Commandez 5
+            <span lang="tr"><em>gözleme</em></span> et obtenez le 6<sup>e</sup>
+            offert !
+          </p>
+          <p>
+            <span aria-hidden="true">🎉 </span> Profitez-en dès maintenant !
+          </p>
+        </article>
+      </section>
+
+      <!-- Section hero de présentation -->
+      <section id="hero" aria-label="Présentation du restaurant">
+        <!-- id utilisé en CSS et JS -->
+        <div class="restaurant-text">
+          <h2>Bienvenue chez GÖZLEM<span class="lettre1">E</span>Vi</h2>
+          <p>
+            Savourez nos gözlemes artisanales préparées avec amour selon la
+            tradition de maman. Commandez dès maintenant et profitez pleinement
+            de l’authenticité turque !
+          </p>
+        </div>
+        <div class="restaurant-image">
+          <img
+            src="assets/img/commun/restaurant.webp"
+            width="600"
+            height="300"
+            alt="Intérieur du restaurant décoré dans un style traditionnel en pierre"
+            loading="lazy"
+            class="anim-image"
+          />
+          <!-- lazy : chargement différé pour performance -->
+        </div>
+      </section>
+
+      <!--  Introduction de presentation-->
+      <section
+        class="presentation-section"
+        aria-labelledby="presentation-heading"
+      >
+        <div class="text-content">
+          <h2 id="presentation-heading" class="presentation-heading">
+            Bienvenue dans l'univers chaleureux de
+            <span lang="tr">Gözlemevi</span>
+          </h2>
+          <ul class="presentation-features">
+            <li>
+              <span aria-hidden="true">🌷</span>
+              À chaque bouchée, découvrez les saveurs authentiques comme chez
+              maman.
+            </li>
+            <li>
+              <span aria-hidden="true">🌷</span>
+              Nos <span lang="tr">gözleme</span> faits main sont préparés avec
+              amour et convivialité.
+            </li>
+            <li>
+              <span aria-hidden="true">🌷</span>
+              Savourez la chaleur de la tradition turque à travers nos recettes
+              maison.
+            </li>
+          </ul>
+          <p class="signature-line">
+            <span aria-hidden="true">🍽️</span>
+            Le goût des traditions, le plaisir du partage.
+          </p>
+        </div>
+
+        <figure class="image-content">
+          <img
+            class="rounded-image"
+            src="assets/img/commun/gozlemevi.webp"
+            width="600"
+            height="400"
+            alt="Cheffes préparant des gözleme de manière traditionnelle"
+            loading="lazy"
+          />
+          <figcaption class="presentation-caption">
+            Cheffes préparant des <span lang="tr">gözleme</span> de manière
+            traditionnelle
+          </figcaption>
+        </figure>
+      </section>
+     <!-- Bouton de retour -->
+      <div><a href="index.html" class="btn-retour">⬅ Retour à l'accueil</a></div>
+      
+    </main>
+
+    <!-- Footer du site -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- 1) Logo -->
+        <div class="footer__logo">
+          <a href="index.html" aria-label="Accueil">
+            <img  src="assets/img/commun/logo_gozlemevi.webp" alt="Logo Gözlemevi" width="200" height="60" />
+          </a>
+        </div>
+
+  
+        <!-- 2) Adresse -->
+        <address class="footer__section">
+          <h3>Adresse</h3>
+          <p>7 Rue de l'Espérance</p>
+          <p>67115 Strasbourg, France</p>
+        </address>
+        <!-- 3) Heures d’ouverture -->
+        <div class="footer__section">
+          <h3>Heures d'ouverture</h3>
+          <p>Ouvert tous les jours</p>
+          <p>08h00 - 00h00</p>
+        </div>
+        <!-- 4) Nous suivre sur -->
+        <div class="footer__section">
+          <h3>Nous suivre sur</h3>
+          <ul class="footer__list">
+            <!-- target="_blank" ile yeni sekmede açılır, rel öznitelikleri güvenlik ve SEO için önemli -->
+            <li>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"  aria-label="Page Facebook de Gözlemevi">Facebook</a>
+            </li>
+            <li>
+             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"  aria-label="Page Instagram de Gözlemevi">Instagram</a>  
+            </li>
+          </ul>
+        </div>
+        <!-- 5) Informations légales -->
+        <div class="footer__section footer__section--legal">
+          <h3>Informations légales</h3>
+          <ul class="footer__list">
+            <li>
+              <a href="mentions_legales.html" aria-current="page">Mentions légales</a>
+            </li>
+          </ul>
+        </div>
+        <!-- 6) Téléphone -->
+        <div class="footer__phone">
+          <span class="phone-icon" aria-hidden="true">📞</span>
+          <a href="tel:+33761079668" class="phone-number" aria-label="Appeler Gözlemevi au +33 7 61 07 96 68">+33 7 61 07 96 68</a>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>
+          &copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tous droits
+          réservés.
+        </p>
+      </div>
+       </div>
+    </footer>
+
+    <!-- Script JavaScript pour le menu hamburger -->
+
+    <script src="assets/js/hamburger_menu.js" type="module"></script>
+  </body>
+</html>
