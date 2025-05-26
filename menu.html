@@ -6,34 +6,24 @@
   <meta charset="UTF-8" />
   <!-- Rend la page responsive sur mobile et contrôle le zoom initial -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <!-- Sayfa açıklaması -->
-   <meta name="description" content="Découvrez notre carte de gözleme : classiques (fromage, épinards) et créations originales (champignons, chocolat)." />
-  <!-- Titre affiché dans l'onglet du navigateur -->
-  <title>GÖZLEMEVI - A la carte</title>
+ <title>GÖZLEMEVI - Carte de GözlemEvi à Strasbourg | Commande par téléphone</title>
+<meta name="description"
+  content="GÖZLEMEVI à Strasbourg : savourez nos gözleme traditionnels (fromage, épinards) et nos créations originales (champignons, chocolat). Commande uniquement par téléphone au +33 7 61 07 96 68." />
 
-  <!-- Reset CSS : annule les styles par défaut du navigateur -->
-  <link rel="stylesheet" href="assets/css/reset.css" />
-  <!-- Style principal : toutes les règles CSS personnalisées -->
-  <link rel="stylesheet" href="assets/css/menu.css" />
+  <link rel="stylesheet" href="assets/css/reset.css"/>
+  <link rel="stylesheet" href="assets/css/menu.css"/>
 
   <!-- Google Fonts : importe les polices Open Sans et Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-  <body>
+   <body>
    <!-- Lien d'accessibilité pour permettre aux utilisateurs clavier de passer directement au contenu principal -->
 <a href="#main-content" class="visually-hidden focusable">Passer au contenu</a>
 
 <!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
 <div class="top-bar">
   <!--  Bouton hamburger pour menu mobile -->
-  <button
-    class="hamburger"
-    aria-label="Ouvrir le menu"
-    aria-expanded="false"
-    aria-controls="menu"
-  >
-    ☰
-  </button>
+  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
 
   <!--  Sélecteur de langue accessible -->
   <div class="language-switcher" role="region" aria-label="Sélecteur de langue">
@@ -95,9 +85,9 @@
   <nav class="navbar" aria-label="Menu principal">
     <ul id="menu" class="navbar__list">
       <li class="navbar__item">
-        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="index.html">Accueil</a>
       </li>
-      <li class="navbar__item"><a href="menu.html">À la carte</a></li>
+      <li class="navbar__item"><a href="menu.html" aria-current="page">À la carte</a></li>
       <li class="navbar__item"><a href="apropos.html">À propos</a></li>
       <li class="navbar__item"><a href="contact.html">Contact</a></li>
     </ul>
@@ -546,7 +536,7 @@
       <details class="voir-plus">
         <summary aria-expanded="false">Voir plus</summary>
         <p>
-          Boisson traditionnelle turque à base de yaourt, d’eau fraîche et de sel.
+          Boisson traditionnelle turque à base de yaourt, d'eau fraîche et de sel.
           <span class="highlight">Parfaite pour accompagner un plat chaud.</span>
         </p>
       </details>
@@ -809,13 +799,14 @@
     </article>
   </div>
 </section>
-      >
+      
  </div> 
 </div><div> <a href="index_tr.html" class="btn-retour">⬅ Retour à l'accueil</a></div>
    
 </main>
-   
-<!-- Footer du site -->
+
+
+    <!-- Footer du site -->
 <footer class="footer" role="contentinfo">
     <div class="footer__container">
       <!-- 1) Logo -->
@@ -853,7 +844,7 @@
     <div class="footer__section footer__section--legal">
       <h3>Informations légales</h3>
       <ul class="footer__list">
-        <li><a href="mentions_legales.html" aria-current="page">Mentions légales</a></li>
+        <li><a href="mentions_legales.html">Mentions légales</a></li>
        
       </ul>
       

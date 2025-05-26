@@ -7,12 +7,9 @@
     <!-- Rend la page responsive sur mobile et contrôle le zoom initial -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Sayfa açıklaması -->
-    <meta
-      name="description"
-      content="Découvrez nos gözlemes faits maison, salés ou sucrés, dans une ambiance chaleureuse et authentique."
-    />
-    <!-- Titre affiché dans l'onglet du navigateur -->
-    <title>GÖZLEMEVI -Accueil</title>
+     <title>GÖZLEMEVI - Accueil | Gözleme Maison à Strasbourg | Salés & Sucrés</title>
+<meta name="description"
+  content="Bienvenue chez GÖZLEMEVI à Strasbourg : dégustez nos gözleme faits maison, salés ou sucrés, dans un cadre chaleureux. Commandez par téléphone au +33 7 61 07 96 68." />
 
     <!-- Reset CSS : annule les styles par défaut du navigateur -->
     <link rel="stylesheet" href="assets/css/reset.css" />
@@ -32,14 +29,7 @@
 <!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
 <div class="top-bar">
   <!--  Bouton hamburger pour menu mobile -->
-  <button
-    class="hamburger"
-    aria-label="Ouvrir le menu"
-    aria-expanded="false"
-    aria-controls="menu"
-  >
-    ☰
-  </button>
+  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
 
   <!--  Sélecteur de langue accessible -->
   <div class="language-switcher" role="region" aria-label="Sélecteur de langue">
@@ -211,66 +201,65 @@
     </main>
 
     <!-- Footer du site -->
-    <footer class="footer">
-      <div class="footer__container">
-        <!-- 1) Logo -->
-        <div class="footer__logo">
-          <a href="index.html" aria-label="Accueil">
-            <img  src="assets/img/commun/logo_gozlemevi.webp" alt="Logo Gözlemevi" width="200" height="60" />
-          </a>
-        </div>
-
-  
-        <!-- 2) Adresse -->
-        <address class="footer__section">
-          <h3>Adresse</h3>
-          <p>7 Rue de l'Espérance</p>
-          <p>67115 Strasbourg, France</p>
-        </address>
-        <!-- 3) Heures d’ouverture -->
-        <div class="footer__section">
-          <h3>Heures d'ouverture</h3>
-          <p>Ouvert tous les jours</p>
-          <p>08h00 - 00h00</p>
-        </div>
-        <!-- 4) Nous suivre sur -->
-        <div class="footer__section">
-          <h3>Nous suivre sur</h3>
-          <ul class="footer__list">
-            <!-- target="_blank" ile yeni sekmede açılır, rel öznitelikleri güvenlik ve SEO için önemli -->
-            <li>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"  aria-label="Page Facebook de Gözlemevi">Facebook</a>
-            </li>
-            <li>
-             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"  aria-label="Page Instagram de Gözlemevi">Instagram</a>  
-            </li>
-          </ul>
-        </div>
-        <!-- 5) Informations légales -->
-        <div class="footer__section footer__section--legal">
-          <h3>Informations légales</h3>
-          <ul class="footer__list">
-            <li>
-              <a href="mentions_legales.html" aria-current="page">Mentions légales</a>
-            </li>
-          </ul>
-        </div>
-        <!-- 6) Téléphone -->
-        <div class="footer__phone">
-          <span class="phone-icon" aria-hidden="true">📞</span>
-          <a href="tel:+33761079668" class="phone-number" aria-label="Appeler Gözlemevi au +33 7 61 07 96 68">+33 7 61 07 96 68</a>
-        </div>
+<footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <!-- 1) Logo -->
+      <div class="footer__logo">
+        <a href="index.html" aria-label="Accueil">
+          <img src="assets/img/commun/logo_gozlemevi.webp" alt="Logo Gözlemevi" />
+        </a>
       </div>
-      <div class="footer__copyright">
-        <p>
-          &copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tous droits
-          réservés.
-        </p>
+      <!-- 2) Adresse -->
+      <address class="footer__section">
+        <h3>Adresse</h3>
+        <p>7 Rue de l’Espérance</p>
+        <p>67115 Strasbourg, France</p>
+      </address>
+      <!-- 3) Heures d’ouverture -->
+      <div class="footer__section">
+        <h3>Heures d'ouverture</h3>
+        <p>Ouvert tous les jours</p>
+        <p>08h00 - 00h00</p>
       </div>
-       </div>
-    </footer>
+      <!-- 4) Nous suivre sur -->
+      <div class="footer__section">
+        <h3>Nous suivre sur</h3>
+         <ul class="footer__list">
+    <!-- target="_blank" ile yeni sekmede açılır, rel öznitelikleri güvenlik ve SEO için önemli -->
+    <li>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Page Facebook de Gözlemevi">Facebook</a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Page Instagram de Gözlemevi">Instagram</a>
+    </li>
+  </ul>
+      </div>
+   <!-- 5) Informations légales -->
+    <div class="footer__section footer__section--legal">
+      <h3>Informations légales</h3>
+      <ul class="footer__list">
+        <li><a href="mentions_legales.html">Mentions légales</a></li>
+       
+      </ul>
+      
+    </div>
+    <!-- 6) Téléphone -->
+    <div class="footer__phone ">
+      <span class="phone-icon" aria-hidden="true">📞</span>
+      <a href="tel:+33761079668" class="phone-number" aria-label="Appeler Gözlemevi au +33 7 61 07 96 68">+33 7 61 07 96 68</a>
 
-    <!-- Script JavaScript pour le menu hamburger -->
+    </div>
+   
+  </div>
+   <div class="footer__copyright">
+     <p>&copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tous droits réservés.</p>
+
+     </div>
+</footer>
+
+  <script src="assets/js/menu_tabs.js" type="module"></script>
+
+   <!-- Script JavaScript pour le menu hamburger -->
 
     <script src="assets/js/hamburger_menu.js" type="module"></script>
   </body>

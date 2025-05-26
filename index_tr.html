@@ -6,16 +6,12 @@
   <meta charset="UTF-8" />
   <!-- Sayfanın mobil uyumlu olması ve başlangıç zoom seviyesi ayarlanır -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Sayfa açıklaması -->  
-  <meta name="description" content="Gözlemevi'nin Türk lezzetlerini keşfedin: taze gözlemeler, salatalar ve tatlılar. " />
-  <title>GÖZLEMEVİ - Ana Sayfa</title>
+ <title>GÖZLEMEVİ - Anasayfa | Ev Yapımı Gözleme Strasbourg'da | Tuzlu & Tatlı</title>
+<meta name="description"
+  content="Strasbourg'daki GÖZLEMEVİ’e hoş geldiniz: ev yapımı tuzlu ve tatlı gözlemelerimizi samimi bir ortamda tadın. Siparişler yalnızca telefonla: +33 7 61 07 96 68." />
 
-  <!-- Reset CSS: Tarayıcı varsayılan stillerini sıfırlar -->
   <link rel="stylesheet" href="assets/css/reset.css" />
-  <!-- Ana stil dosyası: Tüm özel CSS kuralları -->
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Google Fonts: Open Sans ve Poppins fontları import edilir -->
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
     rel="stylesheet"
@@ -29,7 +25,7 @@
 <!-- Üst çubuk: hamburger menü butonu + dil seçici -->
 <div class="top-bar">
   <!-- Mobil menü için hamburger butonu -->
-  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu">☰</button>
+  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
 
   <!--Erişilebilir dil seçici -->
   <div class="language-switcher" role="region" aria-label="Dil seçici">
@@ -88,9 +84,7 @@
   <!-- Ana navigasyon -->
   <nav class="navbar" aria-label="Ana Menü">
     <ul id="menu" class="navbar__list">
-      <li class="navbar__item">
-        <a href="index_tr.html" aria-current="page">Ana Sayfa</a>
-      </li>
+      <li class="navbar__item"><a href="index_tr.html" aria-current="page">Ana Sayfa</a></li>
       <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
       <li class="navbar__item"><a href="apropos_tr.html">Hakkımızda</a></li>
       <li class="navbar__item"><a href="contact_tr.html">İletişim</a></li>
@@ -175,56 +169,81 @@
 
  <!-- FOOTER -->
 
-  <footer class="footer" role="contentinfo">
-    <div class="footer__container">
-      <div class="footer__logo">
-        <a href="index_tr.html" aria-label="Ana Sayfa">
-          <img src="assets/img/commun/logo_gozlemevi.webp" alt="Gözlemevi Logosu" />
-        </a>
+  
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="index_tr.html" aria-label="Ana Sayfa">
+            <img
+              src="assets/img/commun/logo_gozlemevi.webp"
+              alt="Gözlemevi Logosu"
+            />
+          </a>
+        </div>
+        <address class="footer__section">
+          <h3>Adres</h3>
+          <p>7 Rue de l’Espérance</p>
+          <p>67115 Strasbourg, France</p>
+        </address>
+        <div class="footer__section">
+          <h3>Çalışma Saatleri</h3>
+          <p>Her gün açıktır</p>
+          <p>08:00 - 00:00</p>
+        </div>
+        <div class="footer__section">
+          <h3>Bizi Takip Edin</h3>
+          <ul class="footer__list">
+            <li>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Gözlemevi Facebook sayfası"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Gözlemevi Instagram sayfası"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__section footer__section--legal">
+          <h3>Yasal Bilgiler</h3>
+          <ul class="footer__list">
+            <li>
+              <a href="mentions_legales_tr.html" aria-current="page"
+                >Yasal Uyarılar</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__phone">
+          <span class="phone-icon" aria-hidden="true">📞</span>
+          <a
+            href="tel:+33761079668"
+            class="phone-number"
+            aria-label="Gözlemevi'ni +33 7 61 07 96 68 numarasından ara"
+            >+33 7 61 07 96 68</a
+          >
+        </div>
       </div>
-      <address class="footer__section">
-        <h3>Adres</h3>
-        <p>7 Rue de l'Espérance</p>
-        <p>67115 Strasbourg, France</p>
-      </address>
-      <div class="footer__section">
-        <h3>Çalışma Saatleri</h3>
-        <p>Her gün açıktır</p>
-        <p>08:00 - 00:00</p>
+      <div class="footer__copyright">
+        <p>
+          &copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tüm hakları
+          saklıdır.
+        </p>
       </div>
-   <div class="footer__section">
-  <h3>Bizi Takip Edin</h3>
-  <ul class="footer__list">
-    <!-- target="_blank" ile yeni sekmede açılır, rel öznitelikleri güvenlik ve SEO için önemli -->
-    <li>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook sayfamıza git">Facebook</a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram sayfamıza git">Instagram</a>
-    </li>
-  </ul>
-</div>
+    </footer>
 
-      <div class="footer__section footer__section--legal">
-        <h3>Yasal Bilgiler</h3>
-        <ul class="footer__list">
-          <li><a href="mentions_legales_tr.html" aria-current="page">Yasal Uyarılar</a></li>
-        </ul>
-      </div>
-      <div class="footer__phone">
-        <span class="phone-icon" aria-hidden="true">📞</span>
-        <a href="tel:+33761079668" class="phone-number" aria-label="Gözlemevi'ni +33 7 61 07 96 68 numarasından ara">+33 7 61 07 96 68</a>
-      </div>
-    
-    <div class="footer__copyright">
-      <p>&copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tüm hakları saklıdır.</p>
-    </div>
-  </div>
-  </footer>
-
-  <!-- Script JavaScript pour le menu hamburger -->
+    <!-- Script JavaScript pour le menu hamburger -->
 
     <script src="assets/js/hamburger_menu.js" type="module"></script>
-
 </body>
 </html>

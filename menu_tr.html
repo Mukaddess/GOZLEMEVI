@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<!-- Belge türü ve HTML5 standardı tanımlanır -->
+
 <html lang="tr">
 <head>
-  <!-- Belgenin karakter seti UTF-8 olarak belirlenir -->
+ 
   <meta charset="UTF-8" />
-  <!-- Sayfanın mobil uyumlu olması ve başlangıç zoom seviyesi ayarlanır -->
+ 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Sayfa açıklaması -->  
-  <meta name="description" content="Gözleme menümüzü keşfedin: klasik çeşitler (peynir, ıspanak) ve özgün kreasyonlar (mantar, çikolata)." />
-  <title>GÖZLEMEVİ - Menu</title>
-
-  <!-- Reset CSS: Tarayıcı varsayılan stillerini sıfırlar -->
+ <title>GÖZLEMEVİ - Strasbourg GözlemEvi Menüsü | Telefonla Sipariş</title>
+<meta name="description"
+  content="GÖZLEMEVİ Strasbourgگda: geleneksel gözlemelerimizi (peynir, ıspanak) ve özgün lezzetlerimizi (mantar, çikolata) tadın. Siparişler yalnızca telefonla alınmaktadır: +33 7 61 07 96 68." />
   <link rel="stylesheet" href="assets/css/reset.css" />
-  <!-- Ana stil dosyası: Tüm özel CSS kuralları -->
   <link rel="stylesheet" href="assets/css/menu.css" />
-
-  <!-- Google Fonts: Open Sans ve Poppins fontları import edilir -->
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
     rel="stylesheet"
@@ -23,13 +18,11 @@
 </head>
 
 <body>
- <!-- Klavye kullanıcıları için erişilebilirlik bağlantısı -->
-<a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
 
-<!-- Üst çubuk: hamburger menü butonu + dil seçici -->
+<a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
 <div class="top-bar">
   <!-- Mobil menü için hamburger butonu -->
-  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu">☰</button>
+ <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
 
   <!--Erişilebilir dil seçici -->
   <div class="language-switcher" role="region" aria-label="Dil seçici">
@@ -88,10 +81,8 @@
   <!-- Ana navigasyon -->
   <nav class="navbar" aria-label="Ana Menü">
     <ul id="menu" class="navbar__list">
-      <li class="navbar__item">
-        <a href="index_tr.html" aria-current="page">Ana Sayfa</a>
-      </li>
-      <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
+      <li class="navbar__item"><a href="index_tr.html">Ana Sayfa</a></li>
+      <li class="navbar__item"><a href="menu_tr.html" aria-current="page">Menü</a></li>
       <li class="navbar__item"><a href="apropos_tr.html">Hakkımızda</a></li>
       <li class="navbar__item"><a href="contact_tr.html">İletişim</a></li>
     </ul>
@@ -830,7 +821,7 @@
       <div class="footer__section footer__section--legal">
         <h3>Yasal Bilgiler</h3>
         <ul class="footer__list">
-          <li><a href="mentions_legales_tr.html" aria-current="page">Yasal Uyarılar</a></li>
+          <li><a href="mentions_legales_tr.html">Yasal Uyarılar</a></li>
         </ul>
       </div>
       <div class="footer__phone">

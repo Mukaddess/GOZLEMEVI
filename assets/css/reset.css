@@ -1,7 +1,5 @@
-/* http://meyerWeb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* === Global CSS Reset (meyer + form + modern tarayıcı uyumu) === */
+/* http://meyerweb.com/eric/tools/css/reset/ | v2.0 | 20110126 | License: public domain */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,4 +43,51 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* ====== FORM ELEMENTLERİ (input, label, button, checkbox, select, textarea) ====== */
+input, button, textarea, select, label {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    /* Tüm tarayıcılarda tutarlı boyut ve hizalama */
+    width: 16px;
+    height: 16px;
+    accent-color: #00332f; /* Dilersen tema rengine göre değiştir */
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+/* ====== LABEL VE RGPD KUTUSU (checkbox ile label yan yana ve wrap) ====== */
+.rgpd label {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+/* İsteğe bağlı: Linklerin rengini de sıfırlayabilirsin */
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Kutu modeli: her şeyde border-box kullanmak için */
+*, *::before, *::after {
+    box-sizing: border-box;
 }

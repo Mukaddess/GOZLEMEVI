@@ -1,205 +1,299 @@
 <!DOCTYPE html>
+<!-- Belge tipi: HTML5 -->
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    <title>GÖZLEMEVI – Strasbourg | Restaurant turc | Commandes & Contact</title>
+    <meta
+      name="description"
+      content="Gözlemevi Strasbourg ile iletişime geçin veya sipariş verin. Geleneksel Türk restoranı, 24 saat içinde yanıt."
+      name="description"
+      content="Gözlemevi Strasbourg ile iletişime geçin veya sipariş verin. Geleneksel Türk restoranı, 24 saat içinde yanıt."
+    />
 
-<html lang="fr">
-<head>
- 
-  <meta charset="UTF-8" />
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <!-- Sayfaya özel CSS -->
+    <link rel="stylesheet" href="assets/css/contact.css" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
-  <meta name="description" content="Gözlemevi ile iletişime geçin: sipariş, rezervasyon veya sorularınız için bize ulaşın." />
-   <title>GÖZLEMEVİ - İletişim</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- Erişilebilirlik için "içeriğe atla" bağlantısı -->
+    <a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
+    <div class="top-bar">
+      <!-- Mobil menü için hamburger butonu -->
+      <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
 
-  
-  <link rel="stylesheet" href="assets/css/reset.css" />
- 
-  <link rel="stylesheet" href="assets/css/contact.css" />
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"rel="stylesheet"/>
-</head>
-
-<body>
- <!-- Klavye kullanıcıları için erişilebilirlik bağlantısı -->
-<a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
-
-<!-- Üst çubuk: hamburger menü butonu + dil seçici -->
-<div class="top-bar">
-  <!-- Mobil menü için hamburger butonu -->
-  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu">☰</button>
-
-  <!--Erişilebilir dil seçici -->
-  <div class="language-switcher" role="region" aria-label="Dil seçici">
-    <label for="lang-switch" class="visually-hidden">Dil seç</label>
-    <select id="lang-switch"  onchange="window.location.href = this.value;"  aria-label="Dil seçimi">
-      <option value="index.html">Français</option>
-      <option value="index_tr.html" selected>Türkçe</option>
-    </select>
-
-    <!-- JavaScript kapalıysa gösterilecek alternatif -->
-    <noscript>
-      <p>
-        JavaScript devre dışı. Lütfen aşağıdaki bağlantıları kullanarak dil
-        seçin:
-      </p>
-      <a href="index.html">Français</a> |
-      <a href="index_tr.html">Türkçe</a>
-    </noscript>
-  </div>
-</div>
-
-
-   <!-- Başlık bölümü -->
-  <header class="site-header" role="banner">
-  <div class="header-container">
-    <!-- Logo ve ana sayfa bağlantısı -->
-    <div class="header-logo">
-      <a href="index_tr.html" aria-label="Ana Sayfa">
-        <img
-          src="assets/img/commun/logo_gozlemevi.webp"
-          alt="Gözlemevi Logosu"
-          width="200"
-          height="60"
-        />
-      </a>
-    </div>
-
-    <!-- Site adı ve slogan -->
-    <div class="header-text">
-      <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
-      <p class="slogan">Her lokmada Türk mutfağının özgün lezzeti</p>
-    </div>
-
-    <!-- Telefon bilgisi -->
-    <div class="phone-container">
-      <span class="phone-icon" aria-hidden="true">📞</span>
-      <a
-        href="tel:+33761079668"
-        class="phone-number"
-        aria-label="Gözlemevi'ni arayın: +33 7 61 07 96 68"
-        >+33 7 61 07 96 68</a
-      >
-    </div>
-  </div>
-
-  <!-- Ana navigasyon -->
-  <nav class="navbar" aria-label="Ana Menü">
-    <ul id="menu" class="navbar__list">
-      <li class="navbar__item">
-        <a href="index_tr.html" aria-current="page">Ana Sayfa</a>
-      </li>
-      <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
-      <li class="navbar__item"><a href="apropos_tr.html">Hakkımızda</a></li>
-      <li class="navbar__item"><a href="contact_tr.html">İletişim</a></li>
-    </ul>
-  </nav>
-</header>
-  <!-- Ana içerik -->
-  <main id="main-content" class="main-content" role="main">
-   <section class="section-form">
-  <form method="post" action="" class="form">
-    <h1>Bana Ulaşın!</h1>
-
-    <div class="nom-prenom">
-      <div class="nom">
-        <label for="name">Ad :</label>
-        <input class="item" type="text" id="name" name="name" placeholder="Adınız" autocomplete="off">
-        <div class="error-txt">Ad boş bırakılamaz</div>
-      </div>
-
-      <div class="lastname">
-        <label for="lastname">Soyad :</label>
-        <input class="item" type="text" id="lastname" name="lastname" placeholder="Soyadınız" autocomplete="off">
-        <div class="error-txt">Soyad boş bırakılamaz</div>
+      <!--Erişilebilir dil seçici -->
+      <div class="language-switcher" role="region" aria-label="Dil seçici">
+        <label for="lang-switch" class="visually-hidden">Dil seçin</label>
+        <select
+          id="lang-switch"
+          onchange="window.location.href = this.value;"
+          aria-label="Dil seçimi"
+        >
+          <option value="index.html">Français</option>
+          <option value="index_tr.html" selected>Türkçe</option>
+        </select>
+        <noscript>
+          <p>
+            JavaScript devre dışı. Aşağıdaki linklerle dil seçebilirsiniz:
+          </p>
+          <a href="index.html">Français</a> |
+          <a href="index_tr.html">Türkçe</a>
+        </noscript>
       </div>
     </div>
 
-    <div class="email-phone">
-      <div class="email">
-        <label for="email">E-posta Adresi :</label>
-        <input class="item" type="email" id="email" name="email" placeholder="ornek@alanadi.com" autocomplete="off">
-        <div class="error-txt">E-posta boş bırakılamaz</div>
+    <header class="site-header" role="banner">
+      <div class="header-container">
+        <div class="header-logo">
+          <a href="index_tr.html" aria-label="Ana Sayfa">
+            <img
+              src="assets/img/commun/logo_gozlemevi.webp"
+              alt="Gözlemevi Logosu"
+              width="200"
+              height="60"
+            />
+          </a>
+        </div>
+        <div class="header-text">
+          <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
+          <p class="slogan">Her lokmada geleneksel Türk lezzeti</p>
+        </div>
+        <div class="phone-container">
+          <span class="phone-icon" aria-hidden="true">📞</span>
+          <a
+            href="tel:+33761079668"
+            class="phone-number"
+            aria-label="Gözlemevi'ni ara: +33 7 61 07 96 68"
+            >+33 7 61 07 96 68</a
+          >
+        </div>
       </div>
-
-      <div class="phone">
-        <label for="number">Telefon Numarası :</label>
-        <input class="item" type="tel" id="number" name="number" placeholder="07********" autocomplete="off">
-        <div class="error-txt">Telefon numarası boş bırakılamaz</div>
-      </div>
-    </div>
-
-    <div class="message">
-      <label for="message">Mesaj :</label>
-      <textarea class="item" id="message" name="message" cols="30" rows="10" placeholder="Mesajınız…" autocomplete="off"></textarea>
-      <div class="error-txt">Mesaj boş bırakılamaz</div>
-    </div>
-
-    <div class="buttons">
-      <button type="submit" class="button-send">Gönder</button>
-      <button type="reset" class="button-cancel">İptal</button>
-    </div>
-  </form>
-</section>
-<div> <a href="index.html" class="btn-retour">⬅ Anasayfaya Dön</a></div>
-</main>
-<!-- FOOTER -->
-
-  <footer class="footer" role="contentinfo">
-    <div class="footer__container">
-      <div class="footer__logo">
-        <a href="index_tr.html" aria-label="Ana Sayfa">
-          <img src="assets/img/commun/logo_gozlemevi.webp" alt="Gözlemevi Logosu" />
-        </a>
-      </div>
-      <address class="footer__section">
-        <h3>Adres</h3>
-        <p>7 Rue de l'Espérance</p>
-        <p>67115 Strasbourg, France</p>
-      </address>
-      <div class="footer__section">
-        <h3>Çalışma Saatleri</h3>
-        <p>Her gün açıktır</p>
-        <p>08:00 - 00:00</p>
-      </div>
-      <div class="footer__section">
-  <h3>Bizi Takip Edin</h3>
-  <ul class="footer__list">
-    <!-- target="_blank" ile yeni sekmede açılır, rel öznitelikleri güvenlik ve SEO için önemli -->
-    <li>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook sayfamıza git">Facebook</a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram sayfamıza git">Instagram</a>
-    </li>
-  </ul>
-</div>
-
-      <div class="footer__section footer__section--legal">
-        <h3>Yasal Bilgiler</h3>
-        <ul class="footer__list">
-          <li><a href="mentions_legales_tr.html" aria-current="page">Yasal Uyarılar</a></li>
+      <nav class="navbar" aria-label="Ana menü">
+        <ul id="menu" class="navbar__list">
+          <li class="navbar__item"><a href="index_tr.html" >Anasayfa</a></li>
+          <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
+          <li class="navbar__item"><a href="apropos_tr.html">Hakkımızda</a></li>
+          <li class="navbar__item"><a href="contact_tr.html" aria-current="page">İletişim</a></li>
         </ul>
-      </div>
-      <div class="footer__phone">
-        <span class="phone-icon" aria-hidden="true">📞</span>
-        <a href="tel:+33761079668" class="phone-number" aria-label="Gözlemevi'ni +33 7 61 07 96 68 numarasından ara">+33 7 61 07 96 68</a>
-      </div>
-    </div>
-    <div class="footer__copyright">
-      <p>&copy; 2025 <strong lang="tr">GözlemEvi</strong>. Tüm hakları saklıdır.</p>
-    </div>
-  </footer>
-  </footer>
-  <!-- Yükleme sırasında kullanıcı deneyimini iyileştirmek için JavaScript -->
-  <script src="assets/js/contact_tr.js" type="module"></script>
-  
-  <!-- Script JavaScript pour le menu hamburger -->
+      </nav>
+    </header>
+    <main id="main-content" class="main-content" role="main">
+      <section class="section-form">
+        <form
+          method="POST"
+          action="https://formspree.io/f/xkgrlokd"
+          class="form"
+          autocomplete="off"
+          novalidate
+        >
+          <h2>Bize Ulaşın!</h2>
+          <div class="nom-prenom">
+            <div class="nom">
+              <label for="name">Adınız <span class="star">*</span></label>
+              <input
+                class="item"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Adınız"
+                minlength="2"
+                maxlength="30"
+                pattern="[A-Za-zÇçĞğİıÖöŞşÜü'\-\s]{2,30}"
+                required
+                autocomplete="off"
+              />
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
+            <div class="prenom">
+              <label for="lastname">Soyadınız <span class="star">*</span></label>
+              <input
+                class="item"
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Soyadınız"
+                minlength="2"
+                maxlength="30"
+                pattern="[A-Za-zÇçĞğİıÖöŞşÜü'\-\s]{2,30}"
+                required
+                autocomplete="off"
+              />
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="email-phone">
+            <div class="email">
+              <label for="email">E-posta adresi <span style="color:#8b1e3f; font-weight:bold;">(isteğe bağlı)</span></label>
+              <input
+                class="item"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ornek@alan.com"
+                maxlength="100"
+                autocomplete="off"
+              />
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
+            <div class="phone">
+              <label for="number">Telefon numarası <span class="star">*</span></label>
+              <input
+                class="item"
+                type="tel"
+                id="number"
+                name="number"
+                placeholder="07********"
+                minlength="10"
+                maxlength="14"
+                pattern="^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$"
+                required
+                autocomplete="off"
+              />
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="message">
+            <div class="order-info">
+              <label for="message">Mesajınız <span class="star">*</span></label>
+              <div class="order-hint">
+                <strong>Sipariş vermek için lütfen şunları belirtin:</strong>
+                <ul>
+                  <li>İstediğiniz ürün(ler)</li>
+                  <li>Adet</li>
+                  <li>Teslim alma veya teslimat için tarih/saat</li>
+                </ul>
+                <div class="order-example">
+                  <span style="color:#666;">Örnek:</span><br>
+                  Peynirli gözleme x2<br>
+                  Patatesli gözleme x1<br>
+                  23/06 saat 18:00'de alınacak
+                </div>
+                <textarea class="item" id="message" name="message" cols="30" rows="10"
+                  minlength="5" maxlength="500" required
+                  placeholder="Mesajınızı veya siparişinizi buraya yazın…"
+                  autocomplete="off"></textarea>
+                <div class="error-txt" aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
+          <div class="rgpd  rgpd-mobile">
+            <label class="rgpd-label rgpd-mobile-label" for="rgpd-checkbox">
+              <input class="rgdb__checkbox" type="checkbox" id="rgpd-checkbox" name="RGPD" required />
+              Kişisel verilerimin işlenmesini kabul ediyorum
+              <span style="font-weight: bold">
+                (sipariş ve faturalandırma için)</span>
+              <a
+                href="mentions_legales_tr.html#gizlilik-politikasi-basligi"
+                target="_blank"
+              >gizlilik politikasına</a> uygun olarak.
+            </label>
+            <div class="error-txt" aria-live="polite"></div>
+          </div>
+          <div class="buttons">
+            <button type="submit" class="button-send">Gönder</button>
+            <button type="reset" class="button-cancel">İptal</button>
+          </div>
+          <div id="form-status" aria-live="polite"></div>
+        </form>
+      </section>
 
+      <!-- Alternatif e-mail ile sipariş ve harita -->
+      <section class="contact-infos">
+        <div class="info-alt-mail">
+          <strong><span aria-hidden="true">⚠️</span> Formu doldurmak istemiyor musunuz?</strong><br>
+          Siparişinizi doğrudan e-posta ile de gönderebilirsiniz:
+          <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
+        </div>
+        <div class="carte-container">
+          <h2>Bizi Bulun</h2>
+          <iframe
+            src="https://www.google.com/maps?q=7+Rue+de+l%27Espérance,+67115+Strasbourg,+France&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Gözlemevi Adresi"></iframe>
+        </div>
+      </section>
+      <!-- KVKK/Politika kutusu ayrı sayfada olacak! -->
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="index_tr.html" aria-label="Ana Sayfa">
+            <img
+              src="assets/img/commun/logo_gozlemevi.webp"
+              alt="Gözlemevi Logosu"
+            />
+          </a>
+        </div>
+        <address class="footer__section">
+          <h3>Adres</h3>
+          <p>7 Rue de l’Espérance</p>
+          <p>67115 Strasbourg, Fransa</p>
+        </address>
+        <div class="footer__section">
+          <h3>Açık Olduğu Saatler</h3>
+          <p>Her gün açık</p>
+          <p>08:00 - 00:00</p>
+        </div>
+        <div class="footer__section">
+          <h3>Bizi Takip Edin</h3>
+          <ul class="footer__list">
+            <li>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Gözlemevi Facebook"
+                >Facebook</a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Gözlemevi Instagram"
+                >Instagram</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__section footer__section--legal">
+          <h3>Yasal Bilgiler</h3>
+          <ul class="footer__list">
+            <li>
+              <a href="mentions_legales_tr.html" aria-current="page"
+                >Yasal Uyarı</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__phone">
+          <span class="phone-icon" aria-hidden="true">📞</span>
+          <a
+            href="tel:+33761079668"
+            class="phone-number"
+            aria-label="Gözlemevi'ni ara: +33 7 61 07 96 68"
+            >+33 7 61 07 96 68</a
+          >
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>
+          &copy; 2025 <strong>Gözlemevi</strong>. Tüm hakları saklıdır.
+        </p>
+      </div>
+    </footer>
+    <!-- JS dosyaları -->
+    <script src="assets/js/contact_tr.js" type="module"></script>
     <script src="assets/js/hamburger_menu.js" type="module"></script>
-</body>
+  </body>
 </html>
-
-
-
 
 

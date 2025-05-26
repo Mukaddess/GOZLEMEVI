@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GÖZLEMEVİ – Hakkımızda</title>
-    <meta
-      name="description"
-      content="Gözlemevi hakkında daha fazla bilgi edinin: hikayemiz, ekibimiz ve Türk özgünlüğünü keşfetme tutkumuz."
-    />
+   <title>GÖZLEMEVİ - Hakkımızda | Strasbourg'daki Türk Restoranının Tarihi & Ekibi</title>
+<meta name="description"
+  content="Gözlemevi hakkında daha fazla bilgi edinin: hikayemiz, ekibimiz ve size Türk otantikliğini keşfetme tutkumuz." />
+
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/apropos.css" />
     <link
@@ -22,14 +21,7 @@
     <!-- Üst çubuk: hamburger menü butonu + dil seçici -->
     <div class="top-bar">
       <!-- Mobil menü için hamburger butonu -->
-      <button
-        class="hamburger"
-        aria-label="Menüyü aç"
-        aria-expanded="false"
-        aria-controls="menu"
-      >
-        ☰
-      </button>
+     <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
 
       <!--Erişilebilir dil seçici -->
       <div class="language-switcher" role="region" aria-label="Dil seçici">
@@ -39,8 +31,8 @@
           onchange="window.location.href = this.value;"
           aria-label="Dil seçimi"
         >
-          <option value="index.html">Français</option>
-          <option value="index_tr.html" selected>Türkçe</option>
+          <option value="apropos.html">Français</option>
+          <option value="apropos_tr.html" selected>Türkçe</option>
         </select>
 
         <!-- JavaScript kapalıysa gösterilecek alternatif -->
@@ -49,8 +41,8 @@
             JavaScript devre dışı. Lütfen aşağıdaki bağlantıları kullanarak dil
             seçin:
           </p>
-          <a href="index.html">Français</a> |
-          <a href="index_tr.html">Türkçe</a>
+          <a href="apropos.html">Français</a> |
+          <a href="apropos_tr.html">Türkçe</a>
         </noscript>
       </div>
     </div>
@@ -91,11 +83,9 @@
       <!-- Ana navigasyon -->
       <nav class="navbar" aria-label="Ana Menü">
         <ul id="menu" class="navbar__list">
-          <li class="navbar__item">
-            <a href="index_tr.html" aria-current="page">Ana Sayfa</a>
-          </li>
+          <li class="navbar__item"><a href="index_tr.html" >Ana Sayfa</a></li>
           <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
-          <li class="navbar__item"><a href="apropos_tr.html">Hakkımızda</a></li>
+          <li class="navbar__item"><a href="apropos_tr.html"aria-current="page">Hakkımızda</a></li>
           <li class="navbar__item"><a href="contact_tr.html">İletişim</a></li>
         </ul>
       </nav>

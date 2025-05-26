@@ -6,31 +6,36 @@ Vous pouvez nommer les variables comme vous le souhaitez, tant qu'elles commence
 
   --font-base: "Open Sans", sans-serif; /* Police principale / Ana metin fontu */
   --font-heading: "Poppins", sans-serif; /* Police des titres / Başlık fontu */
-  --color-vert:       #00332f; /* Couleur principale / Ana renk */
-  --color-accent:     #d4a037; /* Couleur d'accentuation / Vurgu rengi */
-  --color-bordeaux:   #8b1e3f; /* Couleur secondaire / İkincil vurgu rengi */
+  --color-vert: #00332f; /* Couleur principale / Ana renk */
+  --color-accent: #d4a037; /* Couleur d'accentuation / Vurgu rengi */
+  --color-bordeaux: #8b1e3f; /* Couleur secondaire / İkincil vurgu rengi */
   --color-blanccasse: #f5ebd8; /* Couleur de fond générale / Genel arka plan rengi */
-  --color-beige:      #f3d6b0; /* Couleur de fond des bannières / Afiş arka plan rengi */
+  --color-beige: #f3d6b0; /* Couleur de fond des bannières / Afiş arka plan rengi */
 }
 /* ====== 2. Reset & Base Styles ====== */
-*, *::before, *::after {
-   box-sizing: border-box; 
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--color-blanccasse);
-  font-family: var(--font-base); /* Applique la police principale / Ana fontu uygular */
+  font-family: var(
+    --font-base
+  ); /* Applique la police principale / Ana fontu uygular */
   font-size: 16px; /* Taille de base lisible / Okunabilir temel boyut */
   margin: 0; /* Supprime la marge par défaut / Varsayılan margin silinir */
   line-height: 1.5; /* FR: Hauteur de ligne pour un meilleur confort de lecture.   TR: Okuma konforu için satır yüksekliği. */
 }
 a {
-   text-decoration: none;
-    color: inherit; 
-  } /* FR: Supprime le soulignement des liens et hérite de la couleur du parent.   TR: Bağlantılardaki alt çizgiyi kaldırır ve ebeveyn rengini alır. */
-  
-  /* ====== 3. Utility Classes ====== */
-  
-  /* Classe utilitaire : label invisible visuellement mais accessible pour l'accessibilité */
+  text-decoration: none;
+  color: inherit;
+} /* FR: Supprime le soulignement des liens et hérite de la couleur du parent.   TR: Bağlantılardaki alt çizgiyi kaldırır ve ebeveyn rengini alır. */
+
+/* ====== 3. Utility Classes ====== */
+
+/* Classe utilitaire : label invisible visuellement mais accessible pour l'accessibilité */
 .visually-hidden {
   position: absolute !important;
   width: 1px;
@@ -81,12 +86,9 @@ select:focus {
   color: var(--color-accent);
   cursor: pointer;
   padding: 6px;
- margin-left: 10px;
+  margin-left: 10px;
   border-radius: 5px;
-
- 
 }
-
 
 /* ====== 5. Language Switcher ====== */
 .language-switcher {
@@ -98,7 +100,7 @@ select:focus {
 .language-switcher select {
   background: var(--color-blanccasse);
   color: var(--color-vert);
- border: 0.3rem solid var(--color-accent);
+  border: 0.3rem solid var(--color-accent);
   border-radius: 0.625rem;
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
@@ -106,7 +108,7 @@ select:focus {
 
 /* ====== 6. Site Header ====== */
 .site-header {
-   background: var(--color-vert);
+  background: var(--color-vert);
   padding: 0.5rem 2rem;
 }
 .header-container {
@@ -115,13 +117,13 @@ select:focus {
   /* FR: Espace égal entre premier et dernier / TR: İlk ve sonu kenara yaslar */
   align-items: center; /* FR: Aligne verticalement au centre / TR: Dikey ortala */
   flex-wrap: wrap; /* FR: Retour à la ligne sur petits écrans / TR: Küçük ekranda sarma */
-  padding: 0 5%;   
+  padding: 0 5%;
 }
 
 .header-logo img {
-    margin: 0;                /* sabit sol boşluk kalktı */
+  margin: 0; /* sabit sol boşluk kalktı */
   width: auto;
-  max-width: 150px;         /* gerekirse küçülsün */
+  max-width: 150px; /* gerekirse küçülsün */
   height: auto;
 }
 
@@ -139,13 +141,12 @@ select:focus {
 .lettre {
   font-size: 6rem;
   color: var(--color-beige);
-  
 }
 
 .slogan {
   margin: 0; /* Suppression de la marge / Varsayılan margin silinir */
   font-style: italic;
-  font-size: 3rem; /* Style italique / İtalik stil */
+  font-size: 2rem; /* Style italique / İtalik stil */
   color: var(--color-accent); /* Couleur d’accent / Vurgu rengi */
 }
 .phone-container {
@@ -155,7 +156,7 @@ select:focus {
 }
 
 .phone-icon {
-  font-size: 3rem; /* FR: Taille de l’icône en pixels pour garantir une visibilité suffisante.  
+  font-size: 2rem; /* FR: Taille de l’icône en pixels pour garantir une visibilité suffisante.  
                                      TR: İkonun yeterince büyük görünmesi için piksel cinsinden boyutu. */
   display: inline-block; /* FR: Permet à l’icône de se comporter comme un élément inline tout en acceptant largeur/hauteur.  
                                      TR: İkonun satır içi davranmasını sağlar, fakat genişlik/yükseklik ayarlarını korur. */
@@ -166,30 +167,53 @@ select:focus {
 }
 
 @keyframes ring {
-  0%,80%,100% { transform: rotate(0deg); }
-  10% { transform: rotate(15deg); }
-  20% { transform: rotate(-10deg); }
-  30% { transform: rotate(10deg); }
-  40% { transform: rotate(-5deg); }
-  50% { transform: rotate(5deg); }
-  60% { transform: rotate(-3deg); }
-  70% { transform: rotate(3deg); }
+  0%,
+  80%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
 }
 
 @keyframes pulse {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .phone-number {
   color: var(--color-accent);
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bolder;
   text-decoration: none; /* Suppression du soulignement / Alt çizgi kaldır */
   animation: pulse 1.5s infinite; /* FR: Animation de pulsation pour attirer l’œil en continu.TR: Sürekli dikkat çekmesi için ölçekli animasyon. */
 }
 
-          /* ====== 7. NAVIGATION ====== */
+/* ====== 7. NAVIGATION ====== */
 
 .navbar {
   background-color: var(--color-accent);
@@ -234,14 +258,14 @@ select:focus {
 /*************8. MAIN BLOK******************************************/
 .main-content {
   background-color: var(--color-blanccasse);
- 
+
   margin: 0 auto;
-  padding: 2rem 5%
+  padding: 2rem 5%;
 }
 /* ====== 9. BANNIERE(PROMOSYON) ====== */
 .promotions .banniere {
   background-color: var(--color-beige);
-  color: var(--color-bordeaux); 
+  color: var(--color-bordeaux);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   text-align: center;
   font-family: var(--font-base);
@@ -278,7 +302,7 @@ select:focus {
 .restaurant-text p {
   color: var(--color-bordeaux);
   font-family: var(--font-base);
-   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   font-size: 2rem;
   line-height: 1.6;
   text-align: center;
@@ -312,80 +336,80 @@ select:focus {
 
 /* Section de présentation / Sunum bölümü */
 .presentation-section {
-  display: flex;                    /* Affiche en mode flex / Flex kapsayıcı olarak gösterir */
-  justify-content: space-between;   /* Sépare le texte et l'image / Metin ve görsel arasında boşluk oluşturur */
-  align-items: flex-start;         /* Aligne les éléments en haut / Öğeleri üstte hizalar */
-  gap: 5%;                        /* Espace entre les éléments flex / Flex öğeleri arasındaki boşluk */
-  padding: 100px 20px 50px 20px;    /* Padding (haut droite bas gauche) / Dolgu (üst sağ alt sol) */
-  margin-bottom: 40px;             /* Espace sous la section / Bölüm alt boşluğu */
+  display: flex; /* Affiche en mode flex / Flex kapsayıcı olarak gösterir */
+  justify-content: space-between; /* Sépare le texte et l'image / Metin ve görsel arasında boşluk oluşturur */
+  align-items: flex-start; /* Aligne les éléments en haut / Öğeleri üstte hizalar */
+  gap: 5%; /* Espace entre les éléments flex / Flex öğeleri arasındaki boşluk */
+  padding: 100px 20px 50px 20px; /* Padding (haut droite bas gauche) / Dolgu (üst sağ alt sol) */
+  margin-bottom: 40px; /* Espace sous la section / Bölüm alt boşluğu */
 }
 
 /* Conteneur de texte / Metin kapsayıcı */
 .text-content {
-  flex: 1;          /* Prend l'espace disponible / Kalan alanı kaplar */
+  flex: 1; /* Prend l'espace disponible / Kalan alanı kaplar */
 }
 
 /* Titre de présentation / Sunum başlığı */
 .presentation-heading {
-  color: var(--color-vert);     
+  color: var(--color-vert);
   font-family: var(--font-heading);
-  font-weight: bold;               
-  font-size: 2rem;                 /* Taille du titre / Başlık boyutu */
-  margin-bottom: 20px;             /* Espace sous le titre / Başlık alt boşluğu */
+  font-weight: bold;
+  font-size: 2rem; /* Taille du titre / Başlık boyutu */
+  margin-bottom: 20px; /* Espace sous le titre / Başlık alt boşluğu */
 }
 
 /* Liste des fonctionnalités / Özellikler listesi */
 .presentation-features li {
-  list-style: none;                /* Supprime les puces / Nokta işaretlerini kaldırır */
-  padding: 0;                    
-  margin: 0 0 1rem 0;              
-  font-family: var(--font-base); 
-  font-size: 1.5rem;            
-  line-height: 1.6;                
-  color: var(--color-bordeaux);  
-   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  
+  list-style: none; /* Supprime les puces / Nokta işaretlerini kaldırır */
+  padding: 0;
+  margin: 0 0 1rem 0;
+  font-family: var(--font-base);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--color-bordeaux);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Légende de la figure / Figür başlığı */
 .presentation-caption {
-  font-family: var(--font-base);  
-  font-size: 1.5rem;                
-  line-height: 1.4;                
-  color: var(--color-bordeaux);   
-  margin-top: 0.5rem;              /* Espace au-dessus / Üst boşluk */
-  font-style: italic;              
+  font-family: var(--font-base);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--color-bordeaux);
+  margin-top: 0.5rem; /* Espace au-dessus / Üst boşluk */
+  font-style: italic;
 }
 
 /* Ligne de signature / Imza satırı */
 .signature-line {
-  font-family: var(--font-base);   
-  font-style: italic;             
-  font-size: 2rem;                
-  font-weight: bold;              
-  color: var(--color-bordeaux);    
-  margin-top: 1.5rem;              /* Espace au-dessus / Üst boşluk */
+  font-family: var(--font-base);
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-bordeaux);
+  margin-top: 1.5rem; /* Espace au-dessus / Üst boşluk */
 }
 
 /* Image et animation / Görsel ve animasyon */
 .image-content img {
-  width: 120%;               /* Largeur du conteneur / Konteyner genişliğini kaplar */
-  max-width: 200rem;         /* Largeur maximale / Maksimum genişlik sınırı */ 
-  border-radius: 20px;            
+  width: 120%; /* Largeur du conteneur / Konteyner genişliğini kaplar */
+  max-width: 200rem; /* Largeur maximale / Maksimum genişlik sınırı */
+  border-radius: 20px;
   animation: zoomGlow 5s ease-in-out infinite alternate; /* Animation de zoom / Döngüsel zoom animasyonu */
 }
-  
+
 /******12.BUTON RETOUR / Geri butonu */
 .btn-retour {
   display: inline-block; /* Affichage en ligne pour le bouton / Buton için satır içi gösterim */
-  background-color: var(--color-bordeaux); /* Couleur de fond / Arka plan rengi */
+  background-color: var(
+    --color-bordeaux
+  ); /* Couleur de fond / Arka plan rengi */
   color: var(--color-blanccasse); /* Couleur du texte / Metin rengi */
   padding: 10px 20px; /* Espacement interne / İç boşluk */
   border-radius: 5px; /* Coins arrondis / Yuvarlak köşeler */
   text-decoration: none; /* Supprime le soulignement / Alt çizgiyi kaldırır */
   margin-top: 30px; /* Espace au-dessus / Üst boşluk */
 }
-
-
 
 /* ====== 13.FOOTER ====== */
 .footer {
@@ -481,19 +505,18 @@ select:focus {
   color: var(--color-accent);
 }
 
-
-
 /* ====== 14.RESPONSIVE Breakpoints ====== */
 
 /* Tablet */
 @media (max-width: 1024px) {
-  body { font-size: 16px; }
+  body {
+    font-size: 16px;
+  }
   .header-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-
 
   .header-logo img {
     height: 120px;
@@ -504,67 +527,82 @@ select:focus {
     text-align: center;
     padding: 1.5rem;
   }
-  
+
   .site-name {
     font-size: 4rem;
   }
- 
-  .lettre { font-size: 5rem; }
-  .phone-container { gap: 1rem; }
-  .phone-icon { font-size: 1rem; }
-  .phone-number { font-size: 1.5rem; }
-  .slogan { font-size: 2rem; }
-  .navbar{
+
+  .lettre {
+    font-size: 5rem;
+  }
+  .phone-container {
+    gap: 1rem;
+  }
+  .phone-icon {
+    font-size: 1rem;
+  }
+  .phone-number {
+    font-size: 1.5rem;
+  }
+  .navbar {
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
     margin: 0 auto;
     padding: 0.5rem;
   }
-  .navbar__item a { font-size: 1.5rem; padding: 10px 20px; }
-  .navbar__item { margin: 0 2rem; }
-  .promotions .banniere { font-size: 2rem; }
-  .restaurant-text h2 { font-size: 3rem; }
-  .restaurant-text p { font-size: 2rem; margin-bottom: 40px; }
-  .presentation-section { flex-direction: column; gap: 3rem; }
-  .presentation-heading { font-size: 2rem; }
-  .presentation-features li { font-size: 1.2rem; }
+  .navbar__item a {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+  .navbar__item {
+    margin: 0 2rem;
+  }
+  .promotions .banniere {
+    font-size: 2rem;
+  }
+  .restaurant-text h2 {
+    font-size: 3rem;
+  }
+  .restaurant-text p {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .presentation-section {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .presentation-heading {
+    font-size: 2rem;
+  }
+  .presentation-features li {
+    font-size: 1.2rem;
+  }
   .image-content img {
     max-width: 100%;
     height: auto;
     margin-top: 40px;
   }
-.btn-retour {
-  display: inline-block;
-  background-color: var(--color-bordeaux);
-  color: var(--color-beige);
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 30px;
-}
+  .btn-retour {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 
   .footer__container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     text-align: left;
-    justify-items: start;
+    justify-items: auto;
   }
 
   .footer__logo {
-    grid-column: span 3;
-    justify-self: center;
+    grid-column: span 2;
+    justify-self: flex-start;
   }
 
   .footer__phone {
     grid-column: span 2;
-   
-    }
+  }
 }
-
-
-
-  
-
 
 @media (max-width: 768px) {
   body {
@@ -576,15 +614,13 @@ select:focus {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
-    
   }
 
   .hamburger {
-  display: block;
-  padding: 10px;
-  min-width: 44px;
-  min-height: 44px;
-
+    display: block;
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .language-switcher {
@@ -606,7 +642,7 @@ select:focus {
   }
 
   .site-name {
-    font-size:3rem;
+    font-size: 3rem;
   }
 
   .lettre {
@@ -623,7 +659,6 @@ select:focus {
     font-size: 1.5rem;
   }
 
-  
   .navbar__list {
     display: none;
     flex-direction: column;
@@ -670,14 +705,19 @@ select:focus {
   }
 
   .footer__container {
-    flex-direction: column;
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
+  }
+
+  .footer__logo {
+    grid-column: span 2;
+    justify-self: center;
   }
 
   .footer__logo img {
     max-width: 100px;
   }
-
- 
+  .footer__copyright {
+    font-size: 1rem;
+  }
 }

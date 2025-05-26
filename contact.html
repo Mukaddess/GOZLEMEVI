@@ -7,10 +7,12 @@
     <!-- Rend la page responsive sur mobile et contrôle le zoom initial -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Titre affiché dans l'onglet du navigateur -->
-    <title>GÖZLEMEVI - Contact</title>
+    <title>
+      GÖZLEMEVI - Contactez Gözlemevi à Strasbourg | Restaurant turc | Commande
+    </title>
     <meta
       name="description"
-      content="Contactez Gözlemevi pour commander, réserver ou poser vos questions. Nous sommes là pour vous répondre rapidement."
+      content="Contactez Gözlemevi à Strasbourg pour commander ou poser vos questions.réponse sous 24 h."
     />
 
     <!-- Fichier de reset CSS : supprime les styles par défaut du navigateur pour une apparence cohérente -->
@@ -24,15 +26,14 @@
       rel="stylesheet"
     />
   </head>
-   <body>
+  <body>
    <!-- Lien d'accessibilité pour permettre aux utilisateurs clavier de passer directement au contenu principal -->
 <a href="#main-content" class="visually-hidden focusable">Passer au contenu</a>
 
 <!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
 <div class="top-bar">
   <!--  Bouton hamburger pour menu mobile -->
-  <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
-
+  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
   <!--  Sélecteur de langue accessible -->
   <div class="language-switcher" role="region" aria-label="Sélecteur de langue">
     <label for="lang-switch" class="visually-hidden">Choisir la langue</label>
@@ -56,7 +57,8 @@
     </noscript>
   </div>
 </div>
-<header class="site-header" role="banner">
+
+    <header class="site-header" role="banner">
   <div class="header-container">
     <!-- Logo et lien vers la page d'accueil -->
     <div class="header-logo">
@@ -91,63 +93,166 @@
   <!-- Navigation principale -->
   <nav class="navbar" aria-label="Menu principal">
     <ul id="menu" class="navbar__list">
-      <li class="navbar__item">
-        <a href="index.html" aria-current="page">Accueil</a>
-      </li>
+      <li class="navbar__item"> <a href="index.html" >Accueil</a></li>
       <li class="navbar__item"><a href="menu.html">À la carte</a></li>
       <li class="navbar__item"><a href="apropos.html">À propos</a></li>
-      <li class="navbar__item"><a href="contact.html">Contact</a></li>
+      <li class="navbar__item"><a href="contact.html"aria-current="page">Contact</a></li>
     </ul>
   </nav>
 </header>
     <!-- Contenu principal -->
     <main id="main-content" class="main-content" role="main">
-<section class="section-form">
-  <form method="post" action="" class="form">
-    <h1>Contactez-moi !</h1>
+      <section class="section-form">
+        <form
+          method="POST"
+          action="https://formspree.io/f/xkgrlokd"
+          class="form"
+          autocomplete="off"
+          novalidate
+        >
+          <h2>Contactez-nous !</h2>
 
-    <div class="nom-prenom">
-      <div class="nom">
-        <label for="name">Prénom :</label>
-        <input class="item" type="text" id="name" name="name" placeholder="Votre prénom" autocomplete="off">
-        <div class="error-txt">Le prénom ne peut pas être vide</div>
-      </div>
+          <div class="nom-prenom">
+            <div class="nom">
+              <label for="name">Prénom<span class="star">*</span></label>
+              <input
+                class="item"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Votre prénom"
+                minlength="2"
+                maxlength="30"
+                pattern="[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}"
+                required
+                autocomplete="off"
+              />
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
+            <div class="prenom">
+              <label for="lastname">Nom de famille<span class="star">*</span></label>
+              <input
+                class="item"
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Votre nom de famille"
+                minlength="2"
+                maxlength="30"
+                pattern="[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}"
+                required
+                autocomplete="off"
+              />
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
+          </div>
 
-      <div class="lastname">
-        <label for="lastname">Nom de famille :</label>
-        <input class="item" type="text" id="lastname" name="lastname" placeholder="Votre nom de famille" autocomplete="off">
-        <div class="error-txt">Le nom de famille ne peut pas être vide</div>
-      </div>
+          <div class="email-phone">
+            <div class="email">
+              <label for="email">Adresse e-mail <span style="color:#8b1e3f; font-weight:bold;">(facultatif)</span></label>
+              <input
+                class="item"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="exemple@domaine.com"
+                maxlength="100"
+                autocomplete="off"
+              />
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
+            <div class="phone">
+              <label for="number">Numéro de téléphone <span class="star">*</span></label>
+              <input
+                class="item"
+                type="tel"
+                id="number"
+                name="number"
+                placeholder="07********"
+                minlength="10"
+                maxlength="14"
+                pattern="^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$"
+                required
+                autocomplete="off"
+              />
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="message">
+  <div class="order-info">
+  <label for="message">Message <span class="star">*</span></label>
+  <div class="order-hint">
+    <strong>Pour passer une commande, merci d’indiquer :</strong>
+    <ul>
+      <li>Le(s) produit(s) souhaité(s)</li>
+      <li>Quantité</li>
+      <li>Date/heure souhaitée pour le retrait ou la livraison</li>
+    </ul>
+    <div class="order-example">
+      <span style="color:#666;">Exemple :</span><br>
+      Gözleme fromage x2<br>
+      Gözleme pomme de terre x1<br>
+      À retirer le 23/06 à 18h
     </div>
 
-    <div class="email-phone">
-      <div class="email">
-        <label for="email">Adresse e-mail :</label>
-        <input class="item" type="email" id="email" name="email" placeholder="exemple@domaine.com" autocomplete="off">
-        <div class="error-txt">L'adresse e-mail ne peut pas être vide</div>
-      </div>
+    <textarea class="item" id="message" name="message" cols="30" rows="10"
+    minlength="5" maxlength="500" required
+    placeholder="Ecrivez votre message ou commande ici…"
+    autocomplete="off"></textarea>
+  <div class="error-txt" aria-live="polite"></div>
+  </div>
+  
+</div>
 
-      <div class="phone">
-        <label for="number">Numéro de téléphone :</label>
-        <input class="item" type="tel" id="number" name="number" placeholder="07********" autocomplete="off">
-        <div class="error-txt">Le numéro de téléphone ne peut pas être vide</div>
-      </div>
-    </div>
+          </div>
 
-    <div class="message">
-      <label for="message">Message :</label>
-      <textarea class="item" id="message" name="message" cols="30" rows="10" placeholder="Votre message…" autocomplete="off"></textarea>
-      <div class="error-txt">Le message ne peut pas être vide</div>
-    </div>
+          <div class="rgpd  rgpd-mobile">
+            <label class="rgpd-label rgpd-mobile-label" for="rgpd-checkbox">
+              <input class="rgdb__checkbox" type="checkbox" id="rgpd-checkbox" name="RGPD" required />
+              J'accepte le traitement de mes données personnelles
+              <span style="font-weight: bold">
+                (pour la gestion de la commande et la facturation) </span
+              >conformément à la
+              <a
+                href="mentions_legales.html#privacy-policy-heading"
+                target="_blank"
+              >
+                politique de confidentialité </a
+              >.
+            </label>
 
-    <div class="buttons">
-      <button type="submit" class="button-send">Envoyer</button>
-      <button type="reset" class="button-cancel">Annuler</button>
-    </div>
-  </form>
+            <div class="error-txt" aria-live="polite"></div>
+          </div>
+          </div>
+
+          <div class="buttons">
+            <button type="submit" class="button-send">Envoyer</button>
+            <button type="reset" class="button-cancel">Annuler</button>
+          </div>
+          <div id="form-status" aria-live="polite"></div>
+        </form>
+      </section>
+ <section class="contact-infos">
+  <!-- Alternatif e-mail ile sipariş alanı -->
+  <div class="info-alt-mail">
+    <strong><span aria-hidden="true">⚠️</span> Vous ne souhaitez pas remplir ce formulaire&nbsp;?</strong><br>
+    Vous pouvez aussi passer votre commande directement par e-mail :
+    <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
+  </div>
+
+  <!-- Harita ve adres başlığı -->
+  <div class="carte-container">
+    <h2>Nous trouver</h2>
+    <iframe
+      src="https://www.google.com/maps?q=7+Rue+de+l%27Espérance,+67115+Strasbourg,+France&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Adresse Gözlemevi"></iframe>
+  </div>
 </section>
 
-    </div><div> <a href="index_tr.html" class="btn-retour">⬅ Retour à l'accueil</a></div>  
     </main>
 
     <!-- Footer du site -->
@@ -165,7 +270,7 @@
         <!-- 2) Adresse -->
         <address class="footer__section">
           <h3>Adresse</h3>
-          <p>7 Rue de l’Espérance</p>
+          <p>7 Rue de l'Espérance</p>
           <p>67115 Strasbourg, France</p>
         </address>
         <!-- 3) Heures d’ouverture -->
@@ -231,9 +336,8 @@
 
     <!-- Fichier JavaScript : contient toutes les règles JS personnalisées -->
     <script src="assets/js/contact.js" type="module"></script>
-    
-    <!-- Script JavaScript pour le menu hamburger -->
 
+     <!-- Script JavaScript pour le menu hamburger -->
     <script src="assets/js/hamburger_menu.js" type="module"></script>
   </body>
 </html>
