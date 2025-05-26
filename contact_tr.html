@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-    <title>GÖZLEMEVI – Strasbourg | Restaurant turc | Commandes & Contact</title>
+      <title>GÖZLEMEVI – Strasbourg | Restaurant turc | Commandes & Contact
+    </title>
     <meta
       name="description"
       content="Gözlemevi Strasbourg ile iletişime geçin veya sipariş verin. Geleneksel Türk restoranı, 24 saat içinde yanıt."
@@ -19,14 +20,24 @@
     <link rel="stylesheet" href="assets/css/contact.css" />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Erişilebilirlik için "içeriğe atla" bağlantısı -->
     <a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
     <div class="top-bar">
       <!-- Mobil menü için hamburger butonu -->
-      <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
+      <button
+        class="hamburger"
+        aria-label="Menüyü aç"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
 
       <!--Erişilebilir dil seçici -->
       <div class="language-switcher" role="region" aria-label="Dil seçici">
@@ -40,9 +51,7 @@
           <option value="index_tr.html" selected>Türkçe</option>
         </select>
         <noscript>
-          <p>
-            JavaScript devre dışı. Aşağıdaki linklerle dil seçebilirsiniz:
-          </p>
+          <p>JavaScript devre dışı. Aşağıdaki linklerle dil seçebilirsiniz:</p>
           <a href="index.html">Français</a> |
           <a href="index_tr.html">Türkçe</a>
         </noscript>
@@ -77,10 +86,12 @@
       </div>
       <nav class="navbar" aria-label="Ana menü">
         <ul id="menu" class="navbar__list">
-          <li class="navbar__item"><a href="index_tr.html" >Anasayfa</a></li>
+          <li class="navbar__item"><a href="index_tr.html">Anasayfa</a></li>
           <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
           <li class="navbar__item"><a href="apropos_tr.html">Hakkımızda</a></li>
-          <li class="navbar__item"><a href="contact_tr.html" aria-current="page">İletişim</a></li>
+          <li class="navbar__item">
+            <a href="contact_tr.html" aria-current="page">İletişim</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -112,7 +123,9 @@
               <div class="error-txt" aria-live="polite"></div>
             </div>
             <div class="prenom">
-              <label for="lastname">Soyadınız <span class="star">*</span></label>
+              <label for="lastname"
+                >Soyadınız <span class="star">*</span></label
+              >
               <input
                 class="item"
                 type="text"
@@ -130,7 +143,12 @@
           </div>
           <div class="email-phone">
             <div class="email">
-              <label for="email">E-posta adresi <span style="color:#8b1e3f; font-weight:bold;">(isteğe bağlı)</span></label>
+              <label for="email"
+                >E-posta adresi
+                <span style="color: #8b1e3f; font-weight: bold"
+                  >(isteğe bağlı)</span
+                ></label
+              >
               <input
                 class="item"
                 type="email"
@@ -143,7 +161,9 @@
               <div class="error-txt" aria-live="polite"></div>
             </div>
             <div class="phone">
-              <label for="number">Telefon numarası <span class="star">*</span></label>
+              <label for="number"
+                >Telefon numarası <span class="star">*</span></label
+              >
               <input
                 class="item"
                 type="tel"
@@ -170,29 +190,46 @@
                   <li>Teslim alma veya teslimat için tarih/saat</li>
                 </ul>
                 <div class="order-example">
-                  <span style="color:#666;">Örnek:</span><br>
-                  Peynirli gözleme x2<br>
-                  Patatesli gözleme x1<br>
+                  <span style="color: #666">Örnek:</span><br />
+                  Peynirli gözleme x2<br />
+                  Patatesli gözleme x1<br />
                   23/06 saat 18:00'de alınacak
                 </div>
-                <textarea class="item" id="message" name="message" cols="30" rows="10"
-                  minlength="5" maxlength="500" required
+                <textarea
+                  class="item"
+                  id="message"
+                  name="message"
+                  cols="30"
+                  rows="10"
+                  minlength="5"
+                  maxlength="500"
+                  required
                   placeholder="Mesajınızı veya siparişinizi buraya yazın…"
-                  autocomplete="off"></textarea>
+                  autocomplete="off"
+                ></textarea>
                 <div class="error-txt" aria-live="polite"></div>
               </div>
             </div>
           </div>
-          <div class="rgpd  rgpd-mobile">
+          <div class="rgpd rgpd-mobile">
             <label class="rgpd-label rgpd-mobile-label" for="rgpd-checkbox">
-              <input class="rgdb__checkbox" type="checkbox" id="rgpd-checkbox" name="RGPD" required />
+              <input
+                class="rgdb__checkbox"
+                type="checkbox"
+                id="rgpd-checkbox"
+                name="RGPD"
+                required
+              />
               Kişisel verilerimin işlenmesini kabul ediyorum
               <span style="font-weight: bold">
-                (sipariş ve faturalandırma için)</span>
+                (sipariş ve faturalandırma için)</span
+              >
               <a
                 href="mentions_legales_tr.html#gizlilik-politikasi-basligi"
                 target="_blank"
-              >gizlilik politikasına</a> uygun olarak.
+                >gizlilik politikasına</a
+              >
+              uygun olarak.
             </label>
             <div class="error-txt" aria-live="polite"></div>
           </div>
@@ -207,7 +244,10 @@
       <!-- Alternatif e-mail ile sipariş ve harita -->
       <section class="contact-infos">
         <div class="info-alt-mail">
-          <strong><span aria-hidden="true">⚠️</span> Formu doldurmak istemiyor musunuz?</strong><br>
+          <strong
+            ><span aria-hidden="true">⚠️</span> Formu doldurmak istemiyor
+            musunuz?</strong
+          ><br />
           Siparişinizi doğrudan e-posta ile de gönderebilirsiniz:
           <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
         </div>
@@ -218,7 +258,8 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Gözlemevi Adresi"></iframe>
+            title="Gözlemevi Adresi"
+          ></iframe>
         </div>
       </section>
       <!-- KVKK/Politika kutusu ayrı sayfada olacak! -->
@@ -253,7 +294,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Gözlemevi Facebook"
-                >Facebook</a>
+                >Facebook</a
+              >
             </li>
             <li>
               <a
@@ -261,7 +303,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Gözlemevi Instagram"
-                >Instagram</a>
+                >Instagram</a
+              >
             </li>
           </ul>
         </div>
@@ -270,7 +313,8 @@
           <ul class="footer__list">
             <li>
               <a href="mentions_legales_tr.html" aria-current="page"
-                >Yasal Uyarı</a>
+                >Yasal Uyarı</a
+              >
             </li>
           </ul>
         </div>
@@ -285,9 +329,7 @@
         </div>
       </div>
       <div class="footer__copyright">
-        <p>
-          &copy; 2025 <strong>Gözlemevi</strong>. Tüm hakları saklıdır.
-        </p>
+        <p>&copy; 2025 <strong>Gözlemevi</strong>. Tüm hakları saklıdır.</p>
       </div>
     </footer>
     <!-- JS dosyaları -->
@@ -295,5 +337,3 @@
     <script src="assets/js/hamburger_menu.js" type="module"></script>
   </body>
 </html>
-
-

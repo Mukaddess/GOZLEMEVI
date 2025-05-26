@@ -26,9 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (value.startsWith("@") || value.endsWith("@")) {
       messageText = "L'adresse e-mail ne peut pas commencer ni finir par '@'.";
     } else if (value.startsWith(".") || value.endsWith(".")) {
-      messageText = "L'adresse e-mail ne peut pas commencer ni finir par un point.";
+      messageText =
+        "L'adresse e-mail ne peut pas commencer ni finir par un point.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-      messageText = "Format d'adresse e-mail non valide. Exemple : nom@domaine.com";
+      messageText =
+        "Format d'adresse e-mail non valide. Exemple : nom@domaine.com";
     } else if (value.length > 100) {
       messageText = "L'adresse e-mail ne doit pas dépasser 100 caractères.";
     } else {
@@ -40,12 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
       email.classList.add("error");
       email.setAttribute("aria-invalid", "true");
       email.setAttribute("title", messageText); // Tooltip
-      if (err) { err.textContent = messageText; err.style.display = "block"; }
+      if (err) {
+        err.textContent = messageText;
+        err.style.display = "block";
+      }
     } else {
       email.classList.remove("error");
       email.removeAttribute("aria-invalid");
       email.removeAttribute("title");
-      if (err) { err.textContent = ""; err.style.display = "none"; }
+      if (err) {
+        err.textContent = "";
+        err.style.display = "none";
+      }
     }
   }
 
@@ -65,27 +73,49 @@ document.addEventListener("DOMContentLoaded", function () {
     if (statusDiv) statusDiv.textContent = "";
 
     // Ad kontrol
-    if (!name.value.trim().match(/^[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}$/)) {
+    if (
+      !name.value
+        .trim()
+        .match(/^[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}$/)
+    ) {
       name.classList.add("error");
       name.setAttribute("aria-invalid", "true");
       let err = name.nextElementSibling;
-      if (err) { err.textContent = "Veuillez saisir uniquement des lettres (2-30 caractères)."; err.style.display = "block"; }
+      if (err) {
+        err.textContent =
+          "Veuillez saisir uniquement des lettres (2-30 caractères).";
+        err.style.display = "block";
+      }
       valid = false;
     }
     // Soyad kontrol
-    if (!lastname.value.trim().match(/^[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}$/)) {
+    if (
+      !lastname.value
+        .trim()
+        .match(/^[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}$/)
+    ) {
       lastname.classList.add("error");
       lastname.setAttribute("aria-invalid", "true");
       let err = lastname.nextElementSibling;
-      if (err) { err.textContent = "Veuillez saisir uniquement des lettres (2-30 caractères)."; err.style.display = "block"; }
+      if (err) {
+        err.textContent =
+          "Veuillez saisir uniquement des lettres (2-30 caractères).";
+        err.style.display = "block";
+      }
       valid = false;
     }
     // Telefon kontrol
-    if (!number.value.trim().match(/^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$/)) {
+    if (
+      !number.value.trim().match(/^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$/)
+    ) {
       number.classList.add("error");
       number.setAttribute("aria-invalid", "true");
       let err = number.nextElementSibling;
-      if (err) { err.textContent = "Veuillez saisir un numéro de téléphone français valide."; err.style.display = "block"; }
+      if (err) {
+        err.textContent =
+          "Veuillez saisir un numéro de téléphone français valide.";
+        err.style.display = "block";
+      }
       valid = false;
     }
 
@@ -102,7 +132,11 @@ document.addEventListener("DOMContentLoaded", function () {
       message.classList.add("error");
       message.setAttribute("aria-invalid", "true");
       let err = message.nextElementSibling;
-      if (err) { err.textContent = "Votre message doit comporter entre 5 et 500 caractères."; err.style.display = "block"; }
+      if (err) {
+        err.textContent =
+          "Votre message doit comporter entre 5 et 500 caractères.";
+        err.style.display = "block";
+      }
       valid = false;
     }
 
@@ -131,19 +165,21 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(form.action, {
       method: "POST",
       body: formData,
-      headers: { 'Accept': 'application/json' }
+      headers: { Accept: "application/json" },
     })
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           alert("Votre message a bien été envoyé ! Merci.");
           statusDiv.textContent = ""; // Kısa başarı mesajı da eklenebilir
           form.reset();
         } else {
-          statusDiv.textContent = "Une erreur s'est produite. Veuillez réessayer.";
+          statusDiv.textContent =
+            "Une erreur s'est produite. Veuillez réessayer.";
         }
       })
       .catch(() => {
-        statusDiv.textContent = "Une erreur s'est produite. Veuillez réessayer.";
+        statusDiv.textContent =
+          "Une erreur s'est produite. Veuillez réessayer.";
       });
   });
 });

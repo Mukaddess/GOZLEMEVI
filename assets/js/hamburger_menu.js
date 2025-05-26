@@ -1,12 +1,15 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerBtn = document.querySelector('.hamburger');
+  const menu         = document.getElementById('menu');
 
-  const hamburgerBtn = document.querySelector(".hamburger");
-const menu = document.getElementById("menu");
+  if (!hamburgerBtn || !menu) {
+    console.warn('Hamburger butonu veya menu elemanı bulunamadı.');
+    return;
+  }
 
-hamburgerBtn.addEventListener("click", function () {
-  const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
-  hamburgerBtn.setAttribute("aria-expanded", !expanded); // açık → kapalı, kapalı → açık
-  menu.classList.toggle("active");
+  hamburgerBtn.addEventListener('click', () => {
+    const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+    hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('active');
+  });
 });
-
-// Tıklanınca menüyü aç/kapatır ve erişilebilirlik (aria-expanded) durumunu günceller
-// Ouvre/ferme le menu au clic et met à jour l'état d'accessibilité (aria-expanded)

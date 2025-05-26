@@ -40,12 +40,18 @@ document.addEventListener("DOMContentLoaded", function () {
       email.classList.add("error");
       email.setAttribute("aria-invalid", "true");
       email.setAttribute("title", messageText); // Tooltip
-      if (err) { err.textContent = messageText; err.style.display = "block"; }
+      if (err) {
+        err.textContent = messageText;
+        err.style.display = "block";
+      }
     } else {
       email.classList.remove("error");
       email.removeAttribute("aria-invalid");
       email.removeAttribute("title");
-      if (err) { err.textContent = ""; err.style.display = "none"; }
+      if (err) {
+        err.textContent = "";
+        err.style.display = "none";
+      }
     }
   }
 
@@ -69,7 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
       name.classList.add("error");
       name.setAttribute("aria-invalid", "true");
       let err = name.nextElementSibling;
-      if (err) { err.textContent = "Lütfen sadece harf giriniz (2-30 karakter)."; err.style.display = "block"; }
+      if (err) {
+        err.textContent = "Lütfen sadece harf giriniz (2-30 karakter).";
+        err.style.display = "block";
+      }
       valid = false;
     }
     // Soyad kontrol
@@ -77,15 +86,24 @@ document.addEventListener("DOMContentLoaded", function () {
       lastname.classList.add("error");
       lastname.setAttribute("aria-invalid", "true");
       let err = lastname.nextElementSibling;
-      if (err) { err.textContent = "Lütfen sadece harf giriniz (2-30 karakter)."; err.style.display = "block"; }
+      if (err) {
+        err.textContent = "Lütfen sadece harf giriniz (2-30 karakter).";
+        err.style.display = "block";
+      }
       valid = false;
     }
     // Telefon kontrol
-    if (!number.value.trim().match(/^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$/)) {
+    if (
+      !number.value.trim().match(/^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$/)
+    ) {
       number.classList.add("error");
       number.setAttribute("aria-invalid", "true");
       let err = number.nextElementSibling;
-      if (err) { err.textContent = "Lütfen geçerli bir Fransız telefon numarası giriniz."; err.style.display = "block"; }
+      if (err) {
+        err.textContent =
+          "Lütfen geçerli bir Fransız telefon numarası giriniz.";
+        err.style.display = "block";
+      }
       valid = false;
     }
 
@@ -102,7 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
       message.classList.add("error");
       message.setAttribute("aria-invalid", "true");
       let err = message.nextElementSibling;
-      if (err) { err.textContent = "Mesajınız 5 ile 500 karakter arasında olmalıdır."; err.style.display = "block"; }
+      if (err) {
+        err.textContent = "Mesajınız 5 ile 500 karakter arasında olmalıdır.";
+        err.style.display = "block";
+      }
       valid = false;
     }
 
@@ -131,9 +152,9 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(form.action, {
       method: "POST",
       body: formData,
-      headers: { 'Accept': 'application/json' }
+      headers: { Accept: "application/json" },
     })
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           alert("Mesajınız başarıyla gönderildi! Teşekkür ederiz.");
           statusDiv.textContent = "";
