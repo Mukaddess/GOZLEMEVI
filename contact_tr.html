@@ -95,176 +95,162 @@
         </ul>
       </nav>
     </header>
-    <main id="main-content" class="main-content" role="main">
-      <section class="section-form">
-        <form
-          method="POST"
-          action="https://formspree.io/f/xkgrlokd"
-          class="form"
-          autocomplete="off"
-          novalidate
-        >
-          <h2>Bize Ulaşın!</h2>
-          <div class="nom-prenom">
-            <div class="nom">
-              <label for="name">Adınız <span class="star">*</span></label>
-              <input
-                class="item"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Adınız"
-                minlength="2"
-                maxlength="30"
-                pattern="[A-Za-zÇçĞğİıÖöŞşÜü'\-\s]{2,30}"
-                required
-                autocomplete="off"
-              />
-              <div class="error-txt" aria-live="polite"></div>
-            </div>
-            <div class="prenom">
-              <label for="lastname"
-                >Soyadınız <span class="star">*</span></label
-              >
-              <input
-                class="item"
-                type="text"
-                id="lastname"
-                name="lastname"
-                placeholder="Soyadınız"
-                minlength="2"
-                maxlength="30"
-                pattern="[A-Za-zÇçĞğİıÖöŞşÜü'\-\s]{2,30}"
-                required
-                autocomplete="off"
-              />
-              <div class="error-txt" aria-live="polite"></div>
-            </div>
-          </div>
-          <div class="email-phone">
-            <div class="email">
-              <label for="email"
-                >E-posta adresi
-                <span style="color: #8b1e3f; font-weight: bold"
-                  >(isteğe bağlı)</span
-                ></label
-              >
-              <input
-                class="item"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="ornek@alan.com"
-                maxlength="100"
-                autocomplete="off"
-              />
-              <div class="error-txt" aria-live="polite"></div>
-            </div>
-            <div class="phone">
-              <label for="number"
-                >Telefon numarası <span class="star">*</span></label
-              >
-              <input
-                class="item"
-                type="tel"
-                id="number"
-                name="number"
-                placeholder="07********"
-                minlength="10"
-                maxlength="14"
-                pattern="^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$"
-                required
-                autocomplete="off"
-              />
-              <div class="error-txt" aria-live="polite"></div>
-            </div>
-          </div>
-          <div class="message">
-            <div class="order-info">
-              <label for="message">Mesajınız <span class="star">*</span></label>
-              <div class="order-hint">
-                <strong>Sipariş vermek için lütfen şunları belirtin:</strong>
-                <ul>
-                  <li>İstediğiniz ürün(ler)</li>
-                  <li>Adet</li>
-                  <li>Teslim alma veya teslimat için tarih/saat</li>
-                </ul>
-                <div class="order-example">
-                  <span style="color: #666">Örnek:</span><br />
-                  Peynirli gözleme x2<br />
-                  Patatesli gözleme x1<br />
-                  23/06 saat 18:00'de alınacak
-                </div>
-                <textarea
-                  class="item"
-                  id="message"
-                  name="message"
-                  cols="30"
-                  rows="10"
-                  minlength="5"
-                  maxlength="500"
-                  required
-                  placeholder="Mesajınızı veya siparişinizi buraya yazın…"
-                  autocomplete="off"
-                ></textarea>
-                <div class="error-txt" aria-live="polite"></div>
-              </div>
-            </div>
-          </div>
-          <div class="rgpd rgpd-mobile">
-            <label class="rgpd-label rgpd-mobile-label" for="rgpd-checkbox">
-              <input
-                class="rgdb__checkbox"
-                type="checkbox"
-                id="rgpd-checkbox"
-                name="RGPD"
-                required
-              />
-              Kişisel verilerimin işlenmesini kabul ediyorum
-              <span style="font-weight: bold">
-                (sipariş ve faturalandırma için)</span
-              >
-              <a
-                href="mentions_legales_tr.html#gizlilik-politikasi-basligi"
-                target="_blank"
-                >gizlilik politikasına</a
-              >
-              uygun olarak.
-            </label>
-            <div class="error-txt" aria-live="polite"></div>
-          </div>
-          <div class="buttons">
-            <button type="submit" class="button-send">Gönder</button>
-            <button type="reset" class="button-cancel">İptal</button>
-          </div>
-          <div id="form-status" aria-live="polite"></div>
-        </form>
-      </section>
 
-      <!-- Alternatif e-mail ile sipariş ve harita -->
-      <section class="contact-infos">
-        <div class="info-alt-mail">
-          <strong
-            ><span aria-hidden="true">⚠️</span> Formu doldurmak istemiyor
-            musunuz?</strong
-          ><br />
-          Siparişinizi doğrudan e-posta ile de gönderebilirsiniz:
-          <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
+    <!--MAIN BLOCK-->
+   <main id="main-content" class="main-content">
+  <section class="section-form">
+    <form
+      method="POST"
+      action="https://formspree.io/f/xkgrlokd"
+      class="form"
+      autocomplete="off"
+    >
+      <h2>Bizimle İletişime Geçin!</h2>
+
+      <div class="nom-prenom">
+        <div class="nom">
+          <label for="name">Adınız<span class="star">*</span></label>
+          <input
+            class="item"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Adınız"
+            minlength="2"
+            maxlength="30"
+            pattern="[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}"
+            title="2 ila 30 karakter, sadece harf"
+            required
+          />
+          <div class="error-txt" aria-live="polite"></div>
         </div>
-        <div class="carte-container">
-          <h2>Bizi Bulun</h2>
-          <iframe
-            src="https://www.google.com/maps?q=7+Rue+de+l%27Espérance,+67115+Strasbourg,+France&output=embed"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Gözlemevi Adresi"
-          ></iframe>
+        <div class="prenom">
+          <label for="lastname">Soyadınız<span class="star">*</span></label>
+          <input
+            class="item"
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Soyadınız"
+            minlength="2"
+            maxlength="30"
+            pattern="[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}"
+            title="2 ila 30 karakter, sadece harf"
+            required
+          />
+          <div class="error-txt" aria-live="polite"></div>
         </div>
-      </section>
-      <!-- KVKK/Politika kutusu ayrı sayfada olacak! -->
-    </main>
-    <!-- Footer -->
+      </div>
+
+      <div class="email-phone">
+        <div class="email">
+          <label for="email">E-posta (isteğe bağlı)</label>
+          <input
+            class="item"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="ornek@domain.com"
+            maxlength="100"
+            title="örnek@domain.com formatı"
+          />
+          <div id="email-error" class="error-txt" aria-live="polite" role="alert"></div>
+        </div>
+        <div class="phone">
+          <label for="number">Telefon Numaranız<span class="star">*</span></label>
+          <input
+            class="item"
+            type="tel"
+            id="number"
+            name="number"
+            placeholder="07XXXXXXXX"
+            minlength="10"
+            maxlength="14"
+            pattern="^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$"
+            title="Format: 0XXXXXXXXX veya +33XXXXXXXXX"
+            required
+          />
+          <div class="error-txt" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="message">
+        <label for="message">Mesajınız veya Siparişiniz<span class="star">*</span></label>
+        <div class="order-hint">
+          <strong>Sipariş vermek için lütfen belirtin:</strong>
+          <ul>
+            <li>Ürün(ler)</li>
+            <li>Adet</li>
+            <li>Alış/veriş tarihi ve saati</li>
+          </ul>
+          <div class="order-example">
+            <span style="color: #666">Örnek:</span><br />
+            Gözleme peynir x2<br />
+            Gözleme patates x1<br />
+            Teslim: 23/06 saat 18:00
+          </div>
+        </div>
+        <textarea
+          class="item"
+          id="message"
+          name="message"
+          cols="30"
+          rows="10"
+          minlength="5"
+          maxlength="500"
+          required
+          placeholder="Mesajınızı veya sipariş detayı buraya yazın…"
+          title="5 ila 500 karakter"
+        ></textarea>
+        <div class="error-txt" aria-live="polite"></div>
+      </div>
+
+      <div class="rgpd rgpd-mobile">
+        <label class="rgpd-label rgpd-mobile-label" for="rgpd-checkbox">
+          <input
+            class="rgpd__checkbox"
+            type="checkbox"
+            id="rgpd-checkbox"
+            name="RGPD"
+            required
+            title="Gizlilik politikasını kabul etmelisiniz"
+          />
+          Kişisel verilerimin işlenmesini kabul ediyorum (sipariş ve faturalandırma işlemleri için)
+          <a href="mentions_legales.html#privacy-policy-heading" target="_blank" rel="noopener noreferrer">
+            gizlilik politikası</a>.
+        </label>
+        <div class="error-txt" aria-live="polite"></div>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="button-send">Gönder</button>
+        <button type="reset" class="button-cancel">İptal</button>
+      </div>
+      <div id="form-status" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <section class="contact-infos">
+    <div class="info-alt-mail">
+      <strong><span aria-hidden="true">⚠️</span> Formu doldurmak istemiyor musunuz?</strong><br />
+      Siparişinizi ayrıca e-posta ile de iletebilirsiniz:
+      <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
+    </div>
+
+    <div class="carte-container">
+      <h2>Bizi Bulun</h2>
+      <iframe
+        src="https://www.google.com/maps?q=7+Rue+de+l%27Espérance,+67115+Strasbourg,+France&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Gözlemevi Adresimiz"
+      ></iframe>
+    </div>
+  </section>
+</main>
+
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__logo">
@@ -333,7 +319,7 @@
       </div>
     </footer>
     <!-- JS dosyaları -->
-    <script src="assets/js/contact_tr.js" type="module"></script>
-    <script src="assets/js/hamburger_menu.js" type="module"></script>
+    <script src="assets/js/contact_tr.js"></script>
+    <script src="assets/js/hamburger_menu.js"></script>
   </body>
 </html>

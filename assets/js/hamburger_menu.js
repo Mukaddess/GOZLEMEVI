@@ -7,9 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  hamburgerBtn.addEventListener('click', () => {
-    const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-    hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
-    menu.classList.toggle('active');
-  });
+ hamburgerBtn.addEventListener('click', () => {
+  if (menu.classList.contains('active')) {
+    menu.classList.remove('active');
+  } else {
+    menu.classList.add('active');
+  }
+});
+
 });

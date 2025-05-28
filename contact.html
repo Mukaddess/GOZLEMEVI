@@ -27,88 +27,104 @@
     />
   </head>
   <body>
-   <!-- Lien d'accessibilité pour permettre aux utilisateurs clavier de passer directement au contenu principal -->
-<a href="#main-content" class="visually-hidden focusable">Passer au contenu</a>
-
-<!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
-<div class="top-bar">
-  <!--  Bouton hamburger pour menu mobile -->
-  <button class="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
-  <!--  Sélecteur de langue accessible -->
-  <div class="language-switcher" role="region" aria-label="Sélecteur de langue">
-    <label for="lang-switch" class="visually-hidden">Choisir la langue</label>
-    <select
-      id="lang-switch"
-      onchange="window.location.href = this.value;"
-      aria-label="Sélection de la langue"
+    <!-- Lien d'accessibilité pour permettre aux utilisateurs clavier de passer directement au contenu principal -->
+    <a href="#main-content" class="visually-hidden focusable"
+      >Passer au contenu</a
     >
-      <option value="index.html" selected>Français</option>
-      <option value="index_tr.html">Türkçe</option>
-    </select>
 
-    <!-- Affichage alternatif si JavaScript est désactivé -->
-    <noscript>
-      <p>
-        JavaScript est désactivé. Veuillez utiliser les liens ci-dessous pour
-        choisir une langue :
-      </p>
-      <a href="index.html">Français</a> |
-      <a href="index_tr.html">Türkçe</a>
-    </noscript>
-  </div>
-</div>
+    <!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
+    <div class="top-bar">
+      <!--  Bouton hamburger pour menu mobile -->
+      <button
+        class="hamburger"
+        aria-label="Menüyü aç"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+      <!--  Sélecteur de langue accessible -->
+      <div
+        class="language-switcher"
+        role="region"
+        aria-label="Sélecteur de langue"
+      >
+        <label for="lang-switch" class="visually-hidden"
+          >Choisir la langue</label
+        >
+        <select
+          id="lang-switch"
+          onchange="window.location.href = this.value;"
+          aria-label="Sélection de la langue"
+        >
+          <option value="index.html" selected>Français</option>
+          <option value="index_tr.html">Türkçe</option>
+        </select>
+
+        <!-- Affichage alternatif si JavaScript est désactivé -->
+        <noscript>
+          <p>
+            JavaScript est désactivé. Veuillez utiliser les liens ci-dessous
+            pour choisir une langue :
+          </p>
+          <a href="index.html">Français</a> |
+          <a href="index_tr.html">Türkçe</a>
+        </noscript>
+      </div>
+    </div>
 
     <header class="site-header" role="banner">
-  <div class="header-container">
-    <!-- Logo et lien vers la page d'accueil -->
-    <div class="header-logo">
-      <a href="index.html" aria-label="Accueil">
-        <img
-          src="assets/img/commun/logo_gozlemevi.webp"
-          alt="Logo Gözlemevi"
-          width="200"
-          height="60"
-        />
-      </a>
-    </div>
+      <div class="header-container">
+        <!-- Logo et lien vers la page d'accueil -->
+        <div class="header-logo">
+          <a href="index.html" aria-label="Accueil">
+            <img
+              src="assets/img/commun/logo_gozlemevi.webp"
+              alt="Logo Gözlemevi"
+              width="200"
+              height="60"
+            />
+          </a>
+        </div>
 
-    <!-- Nom du site et slogan -->
-    <div class="header-text">
-      <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
-      <p class="slogan">L'authenticité turque dans chaque bouchée</p>
-    </div>
+        <!-- Nom du site et slogan -->
+        <div class="header-text">
+          <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
+          <p class="slogan">L'authenticité turque dans chaque bouchée</p>
+        </div>
 
-    <!-- Coordonnées téléphoniques -->
-    <div class="phone-container">
-      <span class="phone-icon" aria-hidden="true">📞</span>
-      <a
-        href="tel:+33761079668"
-        class="phone-number"
-        aria-label="Appeler Gözlemevi au +33 7 61 07 96 68"
-        >+33 7 61 07 96 68</a
-      >
-    </div>
-  </div>
- 
-  <!-- Navigation principale -->
-  <nav class="navbar" aria-label="Menu principal">
-    <ul id="menu" class="navbar__list">
-      <li class="navbar__item"> <a href="index.html" >Accueil</a></li>
-      <li class="navbar__item"><a href="menu.html">À la carte</a></li>
-      <li class="navbar__item"><a href="apropos.html">À propos</a></li>
-      <li class="navbar__item"><a href="contact.html"aria-current="page">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-    <!-- Contenu principal -->
-    <main id="main-content" class="main-content" role="main">
+        <!-- Coordonnées téléphoniques -->
+        <div class="phone-container">
+          <span class="phone-icon" aria-hidden="true">📞</span>
+          <a
+            href="tel:+33761079668"
+            class="phone-number"
+            aria-label="Appeler Gözlemevi au +33 7 61 07 96 68"
+            >+33 7 61 07 96 68</a
+          >
+        </div>
+      </div>
+
+      <!-- Navigation principale -->
+      <nav class="navbar" aria-label="Menu principal">
+        <ul id="menu" class="navbar__list">
+          <li class="navbar__item"><a href="index.html">Accueil</a></li>
+          <li class="navbar__item"><a href="menu.html">À la carte</a></li>
+          <li class="navbar__item"><a href="apropos.html">À propos</a></li>
+          <li class="navbar__item">
+            <a href="contact.html" aria-current="page">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="main-content">
       <section class="section-form">
         <form
           method="POST"
           action="https://formspree.io/f/xkgrlokd"
           class="form"
           autocomplete="off"
-          novalidate
         >
           <h2>Contactez-nous !</h2>
 
@@ -124,13 +140,15 @@
                 minlength="2"
                 maxlength="30"
                 pattern="[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}"
+                title=" minlength 2 , maxlength 30, juste letters"
                 required
-                autocomplete="off"
               />
-              <div class="error-txt" aria-live="polite"></div>
+              <div id="name-error" class="error-txt" aria-live="polite"></div>
             </div>
             <div class="prenom">
-              <label for="lastname">Nom de famille<span class="star">*</span></label>
+              <label for="lastname"
+                >Nom de famille<span class="star">*</span></label
+              >
               <input
                 class="item"
                 type="text"
@@ -140,8 +158,8 @@
                 minlength="2"
                 maxlength="30"
                 pattern="[A-Za-zÇçĞğİıÖöŞşÜüÉéÈèÀàÂâÎîÔôÛûÊêËëÄäÖöÜüŸÿÑñ'\-\s]{2,30}"
+                title=" minlength 2 , maxlength 30, juste letters"
                 required
-                autocomplete="off"
               />
               <div class="error-txt" aria-live="polite"></div>
             </div>
@@ -149,7 +167,12 @@
 
           <div class="email-phone">
             <div class="email">
-              <label for="email">Adresse e-mail <span style="color:#8b1e3f; font-weight:bold;">(facultatif)</span></label>
+              <label for="email"
+                >Adresse e-mail
+                <span style="color: #8b1e3f; font-weight: bold"
+                  >(facultatif)</span
+                ></label
+              >
               <input
                 class="item"
                 type="email"
@@ -157,12 +180,13 @@
                 name="email"
                 placeholder="exemple@domaine.com"
                 maxlength="100"
-                autocomplete="off"
               />
-              <div class="error-txt" aria-live="polite"></div>
+              <divid="email-error" class="error-txt" aria-live="polite" role="alert"></div>
             </div>
             <div class="phone">
-              <label for="number">Numéro de téléphone <span class="star">*</span></label>
+              <label for="number"
+                >Numéro de téléphone <span class="star">*</span></label
+              >
               <input
                 class="item"
                 type="tel"
@@ -172,58 +196,68 @@
                 minlength="10"
                 maxlength="14"
                 pattern="^0[1-9][0-9]{8}$|^(\+33|0033)[1-9][0-9]{8}$"
+                title="Format : 0XXXXXXXXX ou +33XXXXXXXXX"
                 required
-                autocomplete="off"
               />
               <div class="error-txt" aria-live="polite"></div>
             </div>
           </div>
 
           <div class="message">
-  <div class="order-info">
-  <label for="message">Message <span class="star">*</span></label>
-  <div class="order-hint">
-    <strong>Pour passer une commande, merci d’indiquer :</strong>
-    <ul>
-      <li>Le(s) produit(s) souhaité(s)</li>
-      <li>Quantité</li>
-      <li>Date/heure souhaitée pour le retrait ou la livraison</li>
-    </ul>
-    <div class="order-example">
-      <span style="color:#666;">Exemple :</span><br>
-      Gözleme fromage x2<br>
-      Gözleme pomme de terre x1<br>
-      À retirer le 23/06 à 18h
-    </div>
-
-    <textarea class="item" id="message" name="message" cols="30" rows="10"
-    minlength="5" maxlength="500" required
-    placeholder="Ecrivez votre message ou commande ici…"
-    autocomplete="off"></textarea>
-  <div class="error-txt" aria-live="polite"></div>
-  </div>
-  
-</div>
-
+            <div class="order-info">
+              <label for="message">Message <span class="star">*</span></label>
+              <div class="order-hint">
+                <strong>Pour passer une commande, merci d'indiquer :</strong>
+                <ul>
+                  <li>Le(s) produit(s) souhaité(s)</li>
+                  <li>Quantité</li>
+                  <li>Date/heure souhaitée pour le retrait ou la livraison</li>
+                </ul>
+                <div class="order-example">
+                  <span style="color: #666">Exemple :</span><br />
+                  Gözleme fromage x2<br />
+                  Gözleme pomme de terre x1<br />
+                  À retirer le 23/06 à 18h
+                </div>
+              </div>
+              <textarea
+                class="item"
+                id="message"
+                name="message"
+                cols="30"
+                rows="10"
+                minlength="5"
+                maxlength="500"
+                required
+                placeholder="Écrivez votre message ou commande ici…"
+              ></textarea>
+              <div class="error-txt" aria-live="polite"></div>
+            </div>
           </div>
 
-          <div class="rgpd  rgpd-mobile">
+          <div class="rgpd rgpd-mobile">
             <label class="rgpd-label rgpd-mobile-label" for="rgpd-checkbox">
-              <input class="rgdb__checkbox" type="checkbox" id="rgpd-checkbox" name="RGPD" required />
+              <input
+                class="rgpd__checkbox"
+                type="checkbox"
+                id="rgpd-checkbox"
+                name="RGPD"
+                required
+              />
               J'accepte le traitement de mes données personnelles
               <span style="font-weight: bold">
-                (pour la gestion de la commande et la facturation) </span
-              >conformément à la
+                (pour la gestion de la commande et la facturation)
+              </span>
+              conformément à la
               <a
                 href="mentions_legales.html#privacy-policy-heading"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 politique de confidentialité </a
               >.
             </label>
-
             <div class="error-txt" aria-live="polite"></div>
-          </div>
           </div>
 
           <div class="buttons">
@@ -233,29 +267,31 @@
           <div id="form-status" aria-live="polite"></div>
         </form>
       </section>
- <section class="contact-infos">
-  <!-- Alternatif e-mail ile sipariş alanı -->
-  <div class="info-alt-mail">
-    <strong><span aria-hidden="true">⚠️</span> Vous ne souhaitez pas remplir ce formulaire&nbsp;?</strong><br>
-    Vous pouvez aussi passer votre commande directement par e-mail :
-    <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
-  </div>
 
-  <!-- Harita ve adres başlığı -->
-  <div class="carte-container">
-    <h2>Nous trouver</h2>
-    <iframe
-      src="https://www.google.com/maps?q=7+Rue+de+l%27Espérance,+67115+Strasbourg,+France&output=embed"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Adresse Gözlemevi"></iframe>
-  </div>
-</section>
+      <section class="contact-infos">
+        <div class="info-alt-mail">
+          <strong
+            ><span aria-hidden="true">⚠️</span> Vous ne souhaitez pas remplir ce
+            formulaire&nbsp;?</strong
+          ><br />
+          Vous pouvez aussi passer votre commande directement par e-mail&nbsp;:
+          <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
+        </div>
 
+        <div class="carte-container">
+          <h2>Nous trouver</h2>
+          <iframe
+            src="https://www.google.com/maps?q=7+Rue+de+l%27Espérance,+67115+Strasbourg,+France&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Adresse Gözlemevi"
+          ></iframe>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer du site -->
+    <!--Footer du site-->
     <footer class="footer">
       <div class="footer__container">
         <!-- 1) Logo -->
@@ -335,9 +371,9 @@
     </footer>
 
     <!-- Fichier JavaScript : contient toutes les règles JS personnalisées -->
-    <script src="assets/js/contact.js" type="module"></script>
+    <script src="assets/js/contact.js"></script>
 
-     <!-- Script JavaScript pour le menu hamburger -->
-    <script src="assets/js/hamburger_menu.js" type="module"></script>
+    <!-- Script JavaScript pour le menu hamburger -->
+    <script src="assets/js/hamburger_menu.js"></script>
   </body>
 </html>

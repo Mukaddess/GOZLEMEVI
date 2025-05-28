@@ -89,7 +89,9 @@ select:focus {
   margin-left: 10px;
   border-radius: 5px;
 }
-
+#menu.active {
+  display: block !important;
+}
 /* ====== 5. Language Switcher ====== */
 .language-switcher {
   text-align: right; /* FR: Aligne le sélecteur à droite / TR: Seçici sağa hizalar */
@@ -459,12 +461,14 @@ textarea {
 
 .error-txt {
   color: var(--color-bordeaux);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-align: left;
   margin-left: 5px;
   display: none;
 }
-
+.item.error + .error-txt {
+  display: block;
+}
 .error {
   border: 2px solid rgba(138, 67, 67, 0.137);
 }
@@ -597,9 +601,10 @@ textarea {
 .footer__logo {
   grid-column: 1;
   justify-self: center;
+  
 }
 .footer__logo img {
-  max-width: 200px;
+  max-width: 100px;
   height: auto;
   display: block;
 }
@@ -684,8 +689,8 @@ textarea {
   }
 
   .header-logo img {
-    height: 120px;
-    width: 120px;
+    height: 1000px;
+    width: 1000px;
     margin: 0 auto;
   }
   .language-switcher {
@@ -720,7 +725,7 @@ textarea {
     padding: 0.5rem;
   }
   .navbar__item a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px 20px;
   }
   .navbar__item {

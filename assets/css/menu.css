@@ -88,6 +88,9 @@ select:focus {
   margin-left: 10px;
   border-radius: 5px;
 }
+#menu.active {
+  display: block !important;
+}
 
 /* ====== 5. Language Switcher ====== */
 .language-switcher {
@@ -407,7 +410,10 @@ select:focus {
   padding: 20px;
   margin: 0 auto 24px auto;
   border-radius: 16px;
+
 }
+
+
 .menu-item img {
   width: 100%;
   height: 250px;
@@ -601,7 +607,7 @@ select:focus {
     padding: 0.5rem;
   }
   .navbar__item a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px 20px;
   }
   .navbar__item {

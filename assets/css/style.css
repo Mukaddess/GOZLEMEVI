@@ -13,17 +13,15 @@ Vous pouvez nommer les variables comme vous le souhaitez, tant qu'elles commence
   --color-beige: #f3d6b0; /* Couleur de fond des bannières / Afiş arka plan rengi */
 }
 /* ====== 2. Reset & Base Styles ====== */
-*,
-*::before,
-*::after {
+/* Applique le modèle border-box à tous les éléments et pseudo-éléments pour inclure padding et bordure dans leurs dimensions */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+
 body {
   background-color: var(--color-blanccasse);
-  font-family: var(
-    --font-base
-  ); /* Applique la police principale / Ana fontu uygular */
+  font-family: var(--font-base); /* Applique la police principale / Ana fontu uygular */
   font-size: 16px; /* Taille de base lisible / Okunabilir temel boyut */
   margin: 0; /* Supprime la marge par défaut / Varsayılan margin silinir */
   line-height: 1.5; /* FR: Hauteur de ligne pour un meilleur confort de lecture.   TR: Okuma konforu için satır yüksekliği. */
@@ -43,7 +41,7 @@ a {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0, 0, 0, 0); /*masque l’élément visuellement tout en restant accessible */
   white-space: nowrap;
 }
 .visually-hidden.focusable:focus {
@@ -89,7 +87,9 @@ select:focus {
   margin-left: 10px;
   border-radius: 5px;
 }
-
+#menu.active {
+  display: block !important;
+}
 /* ====== 5. Language Switcher ====== */
 .language-switcher {
   text-align: right; /* FR: Aligne le sélecteur à droite / TR: Seçici sağa hizalar */
@@ -552,7 +552,7 @@ select:focus {
     padding: 0.5rem;
   }
   .navbar__item a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px 20px;
   }
   .navbar__item {
