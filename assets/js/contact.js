@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
           statusDiv.textContent = '';
           form.reset();
         } else {
+
           statusDiv.textContent = "Une erreur s'est produite. Veuillez réessayer.";
         }
       })

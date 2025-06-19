@@ -1,269 +1,4 @@
-/* ====== 1. Root & Custom Properties ====== */
-:root {
-  /* Le sélecteur :root cible la racine du document pour définir des variables globales, accessibles partout. /  :root seçici — kök (html) elemanını hedefleyen bir CSS pseudo-class olduğu için başında iki nokta ":" bulunur.
-Vous pouvez nommer les variables comme vous le souhaitez, tant qu'elles commencent par "--".
-    Değişken isimlerini istediğiniz gibi belirleyebilirsiniz, yeter ki "--" ile başlasın.*/
 
-  --font-base: "Open Sans", sans-serif; /* Police principale / Ana metin fontu */
-  --font-heading: "Poppins", sans-serif; /* Police des titres / Başlık fontu */
-  --color-vert: #00332f; /* Couleur principale / Ana renk */
-  --color-accent: #d4a037; /* Couleur d'accentuation / Vurgu rengi */
-  --color-bordeaux: #8b1e3f; /* Couleur secondaire / İkincil vurgu rengi */
-  --color-blanccasse: #f5ebd8; /* Couleur de fond générale / Genel arka plan rengi */
-  --color-beige: #f3d6b0; /* Couleur de fond des bannières / Afiş arka plan rengi */
-}
-/* ====== 2. Reset & Base Styles ====== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--color-blanccasse);
-  font-family: var(
-    --font-base
-  ); /* Applique la police principale / Ana fontu uygular */
-  font-size: 16px; /* Taille de base lisible / Okunabilir temel boyut */
-  margin: 0; /* Supprime la marge par défaut / Varsayılan margin silinir */
-  line-height: 1.5; /* FR: Hauteur de ligne pour un meilleur confort de lecture.   TR: Okuma konforu için satır yüksekliği. */
-}
-a {
-  text-decoration: none;
-  color: inherit;
-} /* FR: Supprime le soulignement des liens et hérite de la couleur du parent.   TR: Bağlantılardaki alt çizgiyi kaldırır ve ebeveyn rengini alır. */
-
-/* ====== 3. Utility Classes ====== */
-
-/* Classe utilitaire : label invisible visuellement mais accessible pour l'accessibilité */
-.visually-hidden {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
-.visually-hidden.focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  clip: auto;
-  overflow: visible;
-  white-space: normal;
-  color: var(--color-accent);
-}
-
-/* ====== 4. Focus Outline ====== */
-/* Odak göstergesi: tüm interaktif öğelerde görünür outline */
-a:focus,
-button:focus,
-input:focus,
-select:focus {
-  outline: 3px solid var(--color-accent);
-  outline-offset: 2px; /* Outline ile öğe kenarı arasında küçük boşluk */
-}
-
-/* Barre supérieure contenant le bouton hamburger et le sélecteur de langue */
-.top-bar {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: var(--color-bordeaux);
-}
-
-/* Style du bouton hamburger */
-/* === hamburger button === */
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: var(--color-accent);
-  cursor: pointer;
-  padding: 6px;
-  margin-left: 10px;
-  border-radius: 5px;
-}
-#menu.active {
-  display: block !important;
-}
-/* ====== 5. Language Switcher ====== */
-.language-switcher {
-  text-align: right; /* FR: Aligne le sélecteur à droite / TR: Seçici sağa hizalar */
-  margin: 0; /* FR: Réinitialise la marge extérieure / TR: Dış boşluğu sıfırlar */
-  padding: 20px; /* FR: Crée un padding confortable / TR: İç boşluk ekler */
-  background-color: var(--color-bordeaux);
-}
-.language-switcher select {
-  background: var(--color-blanccasse);
-  color: var(--color-vert);
-  border: 0.3rem solid var(--color-accent);
-  border-radius: 0.625rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 1rem;
-}
-
-/* ====== 6. Site Header ====== */
-.site-header {
-  background: var(--color-vert);
-  padding: 0.5rem 2rem;
-}
-.header-container {
-  display: flex; /* FR: Flexbox pour aligner les enfants / TR: Flexbox düzeni */
-  justify-content: space-between;
-  /* FR: Espace égal entre premier et dernier / TR: İlk ve sonu kenara yaslar */
-  align-items: center; /* FR: Aligne verticalement au centre / TR: Dikey ortala */
-  flex-wrap: wrap; /* FR: Retour à la ligne sur petits écrans / TR: Küçük ekranda sarma */
-  padding: 0 5%;
-}
-
-.header-logo img {
-  margin: 0; /* sabit sol boşluk kalktı */
-  width: auto;
-  max-width: 150px; /* gerekirse küçülsün */
-  height: auto;
-}
-
-.header-text {
-  text-align: center; /* FR: Centre le texte / TR: Metni ortalar */
-  flex: 1; /* FR: Occupe l’espace restant / TR: Boş alanı kaplar */
-}
-.site-name {
-  margin: 0; /* Suppression de la marge par défaut / Varsayılan margin silinir */
-  font-family: var(--font-heading); /* Police des titres / Başlık fontu */
-  font-size: 5rem; /* Taille du titre / Başlık boyutu */
-  color: var(--color-accent);
-  font-weight: bolder; /* Couleur d’accent / Vurgu rengi */
-}
-.lettre {
-  font-size: 6rem;
-  color: var(--color-beige);
-}
-
-.slogan {
-  margin: 0; /* Suppression de la marge / Varsayılan margin silinir */
-  font-style: italic;
-  font-size: 2rem; /* Style italique / İtalik stil */
-  color: var(--color-accent); /* Couleur d’accent / Vurgu rengi */
-}
-.phone-container {
-  display: flex; /* FR: Flexbox pour icône et lien / TR: İkon ve numarayı flex yapar */
-  align-items: center; /* FR: Centre verticalement / TR: Dikey ortalar */
-  gap: 1rem; /* FR: Espace entre icône et numéro / TR: İkon-numara arası boşluk */
-}
-
-.phone-icon {
-  font-size: 2rem; /* FR: Taille de l’icône en pixels pour garantir une visibilité suffisante.  
-                                     TR: İkonun yeterince büyük görünmesi için piksel cinsinden boyutu. */
-  display: inline-block; /* FR: Permet à l’icône de se comporter comme un élément inline tout en acceptant largeur/hauteur.  
-                                     TR: İkonun satır içi davranmasını sağlar, fakat genişlik/yükseklik ayarlarını korur. */
-  animation: ring 1s infinite; /* FR: Applique l’animation “ring” en boucle toutes les 1 seconde.  
-                                     TR: “ring” animasyonunu her saniyede bir tekrarlanacak şekilde uygular. */
-  transform-origin: center; /* FR: Point de pivot de la rotation placé au centre de l’icône.  
-                                    TR: Döndürme işleminin merkez noktası ikonun ortası olarak ayarlanır. */
-}
-
-@keyframes ring {
-  0%,
-  80%,
-  100% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(15deg);
-  }
-  20% {
-    transform: rotate(-10deg);
-  }
-  30% {
-    transform: rotate(10deg);
-  }
-  40% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  60% {
-    transform: rotate(-3deg);
-  }
-  70% {
-    transform: rotate(3deg);
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-.phone-number {
-  color: var(--color-accent);
-  font-size: 2rem;
-  font-weight: bolder;
-  text-decoration: none; /* Suppression du soulignement / Alt çizgi kaldır */
-  animation: pulse 1.5s infinite; /* FR: Animation de pulsation pour attirer l’œil en continu.TR: Sürekli dikkat çekmesi için ölçekli animasyon. */
-}
-
-/* ====== 7. NAVIGATION ====== */
-
-.navbar {
-  background-color: var(--color-accent);
-  display: flex; /* FR: Flexbox pour disposer les liens horizontalement. TR: Bağlantıları yatayda flexbox ile düzenler. */
-  flex-wrap: wrap; /* FR: Passage à la ligne si trop d’éléments. TR: Çok öğe sığmazsa alt satıra kaydırır. */
-  justify-content: center; /* FR: Centre horizontalement les liens.    TR: Bağlantıları yatayda ortalar. */
-  gap: 2rem; /* FR: Espace uniforme entre chaque lien. TR: Her bağlantı arasında eşit boşluk. */
-  padding: 20px; /* FR: Padding interne autour de la barre.   TR: Navbar etrafında iç boşluk. */
-}
-
-.navbar__list {
-  list-style: none; /* FR: Retire les puces de liste.  TR: Liste işaretlerini kaldırır. */
-  margin: 0; /* FR: Supprime la marge par défaut. TR: Varsayılan dış boşluk sıfırlar. */
-  padding: 0; /* FR: Supprime le padding par défaut. TR: Varsayılan iç boşluk sıfırlar. */
-  display: flex; /* FR: Affiche les items en ligne. TR: Öğeleri yatayda flex yapar. */
-  gap: 2rem; /* FR: Espacement entre chaque item.  TR: Her öğe arasında boşluk. */
-  justify-content: center; /* FR: Centre les items dans la barre.  TR: Öğeleri bar içinde ortalar. */
-}
-
-.navbar__item {
-  margin: auto 5rem;
-  display: inline-block;
-}
-
-.navbar__item a {
-  display: flex;
-  text-decoration: none;
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  color: var(--color-vert);
-  border-radius: 1rem;
-  transition: background-color 0.3s ease; /* FR: Transition douce au hover.  TR: Hover işlemine yumuşak geçiş. */
-}
-
-.navbar__item a:hover,
-.navbar__item a.active {
-  background-color: var(--color-vert);
-  color: var(--color-accent);
-}
-/*************8. MAIN BLOK******************************************/
-.main-content {
-  background-color: var(--color-blanccasse);
-
-  margin: 0 auto;
-  padding: 2rem 5%;
-}
 .section-form {
   display: flex;
   justify-content: center;
@@ -368,7 +103,7 @@ label {
 input,
 textarea,
 select {
-  border: 2px solid var(--color-bordeaux); /* Senin ana accent rengin */
+  border: 3px solid var(--color-beige); /* Senin ana accent rengin */
   height: 40px;
   padding: 8px;
   margin-top: 1px;
@@ -459,36 +194,25 @@ textarea {
   color: var(--color-bordeaux);
 }
 
-.error-txt {
-  color: var(--color-bordeaux);
-  font-size: 0.9rem;
-  text-align: left;
-  margin-left: 5px;
-  display: none;
-}
-.item.error + .error-txt {
-  display: block;
-}
-.error {
-  border: 2px solid rgba(138, 67, 67, 0.137);
-}
+
+
 
 .contact-infos {
   margin-top: 2em;
   margin-bottom: 2em;
-  /* isteğe bağlı: padding, border, vs. ekleyebilirsin */
+  
 }
 
 .info-alt-mail {
-  background: var(--color-blanccasse); /* Hafif pastel bir arka plan */
-  color: var(--color-bordeaux); /* Renk paletine uyumlu */
+  background: var(--color-blanccasse); 
+  color: var(--color-bordeaux); 
   border-left: 4px solid var(--color-bordeaux);
   border-right: 4px solid var(--color-bordeaux);
   margin: 2em 0 1.5em 0;
   padding: 1em 1.2em;
   border-radius: 8px;
   font-size: 1.08em;
-  box-shadow: 0 1px 6px 0 #8b1e3f15; /* Hafif gölge */
+  box-shadow: 0 1px 6px 0 #8b1e3f15; 
   line-height: 1.5;
   transition: box-shadow 0.18s;
 }
@@ -581,99 +305,6 @@ textarea {
 /************************************************************************************/
 
 /* ====== 13.FOOTER ====== */
-.footer {
-  background-color: var(--color-vert);
-  color: var(--color-accent);
-}
-
-/* === GRID yapısı === */
-.footer__container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Desktop için 6 sütun */
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  align-items: start;
-}
-
-/* === LOGO === */
-.footer__logo {
-  grid-column: 1;
-  justify-self: center;
-  
-}
-.footer__logo img {
-  max-width: 100px;
-  height: auto;
-  display: block;
-}
-
-/* === Her section ve telefon için ortak yapı === */
-.footer__section,
-.footer__phone {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* === Başlıklar === */
-.footer__section h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: bolder;
-  color: var(--color-beige);
-}
-
-/* === Link ve paragraflar === */
-.footer__section p,
-.footer__section a {
-  display: block;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: var(--color-accent);
-  text-decoration: none;
-}
-.footer__section a:hover {
-  color: var(--color-blanccasse);
-  text-decoration: underline;
-}
-
-/* === Liste yapısı === */
-.footer__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer__list li {
-  margin-bottom: 0.5rem;
-}
-
-/* === Telefon kısmı === */
-.footer__phone {
-  grid-column: 6;
-  align-items: center;
-}
-.footer__phone .phone-number {
-  color: var(--color-accent);
-  font-size: 0.9rem;
-  font-weight: bold;
-}
-
-/* === Tel ikonu isteğe bağlı === */
-.footer__phone .phone-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.3rem;
-}
-
-/* === Alt telif hakkı satırı === */
-.footer__copyright {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding-top: 2rem;
-  font-size: 1rem;
-  color: var(--color-accent);
-}
 
 /* ====== 14.RESPONSIVE Breakpoints ====== */
 
