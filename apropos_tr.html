@@ -3,13 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      GÖZLEMEVİ - Hakkımızda | Strasbourg'daki Türk Restoranının Tarihi & Ekibi
-    </title>
-    <meta
-      name="description"
-      content="Gözlemevi hakkında daha fazla bilgi edinin: hikayemiz, ekibimiz ve size Türk otantikliğini keşfetme tutkumuz."
-    />
+    <title>GÖZLEMEVİ - Hakkımızda | Strasbourg'daki Türk Restoranının Tarihi & Ekibi</title>
+    <meta name="description" content="Gözlemevi hakkında daha fazla bilgi edinin: hikayemiz, ekibimiz ve size Türk otantikliğini keşfetme tutkumuz."/>
 
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/commun.css" />
@@ -60,7 +55,7 @@
     </div>
 
     <!-- Başlık bölümü -->
-    <header class="site-header" role="banner">
+    <header class="site-header">
       <div class="header-container">
         <!-- Logo ve ana sayfa bağlantısı -->
         <div class="header-logo">
@@ -108,23 +103,23 @@
     <main id="main-content" class="main-content" >
       <!-- Hero Video Banner -->
       <section class="hero-banner" aria-label="Gözlemevi tanıtım videosu">
-        <video
+       <video
           autoplay
           muted
           loop
           playsinline
           class="hero-video"
-          src="assets/videos/gozleme.mp4"
-          type="video/mp4"
-          aria-label="Gözlemevi tanıtım videosu"
-        ></video>
+          aria-label="Vidéo de présentation du Gözlemevi"
+        >
+          <source src="assets/videos/gozleme.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
       </section>
 
       <!-- 1. "Gözlemevi" isminin anlamı -->
       <section
         id="name-meaning"
         class="meaning-section"
-        role="region"
         aria-labelledby="meaning-title"
       >
         <h2 id="meaning-title">"Gözlemevi" ismi</h2>
@@ -147,14 +142,13 @@
       <section
         id="history"
         class="history-section"
-        role="region"
         aria-labelledby="history-title"
       >
         <h2 id="history-title">Gözleme Tarihi</h2>
 
         <figure class="history-figure">
           <img
-            src="assets/img/commun/history.png"
+            src="assets/img/commun/history.png" width="600" height="400" loading="lazy"
             alt="Göçebe dönemi, Osmanlı entegrasyonu, UNESCO tanınırlığı, modern çağ"
             class="history-illustration"
           />
@@ -232,7 +226,7 @@
         <div class="team-grid">
           <div class="member">
             <img
-              src="assets/img/equipe/mukaddes.png"
+              src="assets/img/equipe/mukaddes.png" width="600" height="400" loading="lazy"
               alt="Mukaddes KUCUK - Kurucu & Şef"
             />
             <h4>Mukaddes KUCUK</h4>
@@ -245,7 +239,7 @@
           </div>
           <div class="member">
             <img
-              src="assets/img/equipe/vedat.png"
+              src="assets/img/equipe/vedat.png" width="600" height="400" loading="lazy"
               alt="Vedat KUCUK - Lojistik Sorumlusu"
             />
             <h4>Vedat KUCUK</h4>
@@ -256,7 +250,7 @@
           </div>
           <div class="member">
             <img
-              src="assets/img/equipe/ayse.png"
+              src="assets/img/equipe/ayse.png" width="600" height="400" loading="lazy"
               alt="Ayşe KUCUK - Sosyal Medya Yöneticisi"
             />
             <h4>Ayşe KUCUK</h4>
@@ -269,7 +263,7 @@
           </div>
           <div class="member">
             <img
-              src="assets/img/equipe/zeynep.png"
+              src="assets/img/equipe/zeynep.png" width="600" height="400" loading="lazy"
               alt="Zeynep KUCUK - Üretim Şefi"
             />
             <h4>Zeynep KUCUK</h4>
@@ -282,7 +276,7 @@
           </div>
           <div class="member">
             <img
-              src="assets/img/equipe/fatmanur.png"
+              src="assets/img/equipe/fatmanur.png" width="600" height="400" loading="lazy"
               alt="Fatmanur KUCUK - Üretim Şefi"
             />
             <h4>Fatmanur KUCUK</h4>
@@ -299,20 +293,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
       <div class="footer__container">
         <div class="footer__logo">
           <a href="index_tr.html" aria-label="Ana Sayfa">
             <img
-              src="assets/img/commun/logo_gozlemevi.webp"
-              alt="Gözlemevi Logosu"
-            />
+              src="assets/img/commun/logo_gozlemevi.webp" width="200" height="60" alt="Gözlemevi Logosu" />
           </a>
         </div>
-        <address class="footer__section">
-          <h3>Adres</h3>
-         <p>CFA CCI Alsace - Pole Strabourg Training <br>234 Av. de Colmar, 67021 Strasbourg</p>
-        </address>
+         <!-- 2) Adresse -->
+       <div class="footer__section">
+        <h3>Adresse</h3>
+      <address >
+        <p>CFA CCI Alsace - Pole Strabourg Training <br>234 Av. de Colmar, 67021 Strasbourg</p> 
+      </address>
+    </div>
         <div class="footer__section">
           <h3>Çalışma Saatleri</h3>
           <p>Her gün açıktır</p>

@@ -50,7 +50,7 @@
 
 
   <!-- Başlık bölümü -->
-  <header class="site-header" role="banner">
+  <header class="site-header">
   <div class="header-container">
     <!-- Logo ve ana sayfa bağlantısı -->
     <div class="header-logo">
@@ -97,15 +97,16 @@
   <main id="main-content" class="main-content">
      <!-- Promosyonlar bölümü -->
      <section class="promotions" aria-label="Promosyonlar">
-      <h2 class="visually-hidden">Promotions</h2>
       <article class="banniere">
+        <h2 class="visually-hidden">Promotions</h2>
         <p>Bu hafta %10 indirim fırsatından yararlanın!</p>
       </article>
-      </div>
+     
       <article class="banniere">
+        <h2 class="visually-hidden">Promotions</h2>
         <p>5 gözleme sipariş edin, 6. gözleme bizden hediye! <span aria-hidden="true">🎁</span> </p>
         <p><span aria-hidden="true">🎉 </span>Hemen faydalanın!</p>
-      </div>
+      </article>
     </section>
  
     <!-- 6) Hero tanıtım bölümü -->
@@ -172,20 +173,23 @@
 
   
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
       <div class="footer__container">
         <div class="footer__logo">
           <a href="index_tr.html" aria-label="Ana Sayfa">
             <img
-              src="assets/img/commun/logo_gozlemevi.webp"
+              src="assets/img/commun/logo_gozlemevi.webp" width="200" height="60"
               alt="Gözlemevi Logosu"
             />
           </a>
         </div>
-        <address class="footer__section">
-          <h3>Adres</h3>
-         <p>CFA CCI Alsace - Pole Strabourg Training <br>234 Av. de Colmar, 67021 Strasbourg</p>
-        </address>
+          <!-- 2) Adresse -->
+       <div class="footer__section">
+        <h3>Adresse</h3>
+      <address >
+        <p>CFA CCI Alsace - Pole Strabourg Training <br>234 Av. de Colmar, 67021 Strasbourg</p> 
+      </address>
+    </div>
         <div class="footer__section">
           <h3>Çalışma Saatleri</h3>
           <p>Her gün açıktır</p>

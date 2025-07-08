@@ -16,13 +16,13 @@
     />
 
     <!-- Reset CSS : annule les styles par défaut du navigateur   -->
-    
+
     <!-- Style principal : toutes les règles CSS personnalisées -->
 
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/commun.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
-   
+
     <!-- Google Fonts : importe les polices Open Sans et Poppins -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
@@ -31,12 +31,21 @@
   </head>
   <body>
     <!-- Lien d'accessibilité pour permettre aux utilisateurs clavier de passer directement au contenu principal -->
-    <a href="#main-content" class="visually-hidden focusable">Passer au contenu</a>
+    <a href="#main-content" class="visually-hidden focusable"
+      >Passer au contenu</a
+    >
 
     <!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
     <div class="top-bar">
       <!--  Bouton hamburger pour menu mobile -->
-      <button class="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu"><span aria-hidden="true">☰</span></button>
+      <button
+        class="hamburger"
+        aria-label="Menüyü aç"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
 
       <!--  Sélecteur de langue accessible -->
       <div
@@ -68,7 +77,7 @@
       </div>
     </div>
 
-    <header class="site-header" role="banner">
+    <header class="site-header">
       <div class="header-container">
         <!-- Logo et lien vers la page d'accueil -->
         <div class="header-logo">
@@ -114,17 +123,18 @@
     </header>
 
     <!--MAIN BLOK-->
-    <main id="main-content" class="main-content" >
+    <main id="main-content" class="main-content">
       <!-- Section Promotions -->
       <section class="promotions" aria-label="Promotions">
-        <h2 class="visually-hidden">Promotions</h2>
         <article class="banniere">
+          <h2 class="visually-hidden">Promotions</h2>
           <p>
-            Profitez de notre offre spéciale cette semaine :
-            <strong>-10%</strong> sur toutes les commandes !
+            Profitez de notre offre spéciale cette semaine : 10% sur toutes les
+            commandes !
           </p>
         </article>
         <article class="banniere">
+          <h2 class="visually-hidden">Promotions</h2>
           <p>
             <span aria-hidden="true">🎁</span> Commandez 5
             <span lang="tr"><em>gözleme</em></span> et obtenez le 6<sup>e</sup>
@@ -135,7 +145,6 @@
           </p>
         </article>
       </section>
-
       <!-- Section hero de présentation -->
       <section id="hero" aria-label="Présentation du restaurant">
         <!-- id utilisé en CSS et JS -->
@@ -148,15 +157,17 @@
           </p>
         </div>
         <div class="restaurant-image">
-        <img
-          src="assets/img/commun/restaurant.webp"
-          alt="Intérieur du restaurant décoré dans un style traditionnel en pierre"
-          loading="lazy"                     
-          class="anim-image" /> 
+          <img
+            src="assets/img/commun/restaurant.webp"
+            width="800"
+            height="600"
+            alt="Intérieur du restaurant décoré dans un style traditionnel en pierre"
+            loading="lazy"
+            class="anim-image"
+          />
           <!-- lazy : chargement différé pour performance -->
-       
-      </div>
-
+        </div>
+      </section>
       <!--  Introduction de presentation-->
       <section
         class="presentation-section"
@@ -189,7 +200,6 @@
             Le goût des traditions, le plaisir du partage.
           </p>
         </div>
-
         <figure class="image-content">
           <img
             class="rounded-image"
@@ -212,22 +222,29 @@
     </main>
 
     <!-- Footer du site -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
       <div class="footer__container">
         <!-- 1) Logo -->
         <div class="footer__logo">
           <a href="index.html" aria-label="Accueil">
             <img
               src="assets/img/commun/logo_gozlemevi.webp"
+              width="200"
+              height="60"
               alt="Logo Gözlemevi"
             />
           </a>
         </div>
         <!-- 2) Adresse -->
-        <address class="footer__section">
+        <div class="footer__section">
           <h3>Adresse</h3>
-         <p>CFA CCI Alsace - Pole Strabourg Training <br>234 Av. de Colmar, 67021 Strasbourg</p>
-        </address>
+          <address>
+            <p>
+              CFA CCI Alsace - Pole Strabourg Training <br />234 Av. de Colmar,
+              67021 Strasbourg
+            </p>
+          </address>
+        </div>
         <!-- 3) Heures d’ouverture -->
         <div class="footer__section">
           <h3>Heures d'ouverture</h3>
@@ -254,8 +271,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Page Instagram de Gözlemevi"
-                >Instagram</a
-              >
+                >Instagram
+              </a>
             </li>
           </ul>
         </div>
@@ -285,10 +302,10 @@
       </div>
     </footer>
 
-    <script src="assets/js/menu_tabs.js" ></script>
+    <script src="assets/js/menu_tabs.js"></script>
 
     <!-- Script JavaScript pour le menu hamburger -->
 
-    <script src="assets/js/hamburger_menu.js" ></script>
+    <script src="assets/js/hamburger_menu.js"></script>
   </body>
 </html>

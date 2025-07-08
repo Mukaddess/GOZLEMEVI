@@ -18,7 +18,7 @@
     <!-- Fichier de reset CSS : supprime les styles par défaut du navigateur pour une apparence cohérente -->
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/commun.css" />
-   
+
     <link rel="stylesheet" href="assets/css/contact.css" />
 
     <!-- Google Fonts : importe les polices utilisées dans le projet -->
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <header class="site-header" role="banner">
+    <header class="site-header">
       <div class="header-container">
         <!-- Logo et lien vers la page d'accueil -->
         <div class="header-logo">
@@ -181,8 +181,15 @@
                 name="email"
                 placeholder="exemple@domaine.com"
                 maxlength="100"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                title="Veuillez entrer une adresse e-mail valide (exemple@domaine.com)"
               />
-              <divid="email-error" class="error-txt" aria-live="polite" role="alert"></div>
+              <div
+                id="email-error"
+                class="error-txt"
+                aria-live="polite"
+                role="alert"
+              ></div>
             </div>
             <div class="phone">
               <label for="number"
@@ -247,16 +254,14 @@
               />
               J'accepte le traitement de mes données personnelles
               <span style="font-weight: bold">
-                (pour la gestion de la commande et la facturation)
-              </span>
-              conformément à la
+                (pour la gestion de la commande et la facturation) </span
+              >conformément à la
               <a
                 href="mentions_legales.html#privacy-policy-heading"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                politique de confidentialité </a
-              >.
+                >politique de confidentialité
+              </a>
             </label>
             <div class="error-txt" aria-live="polite"></div>
           </div>
@@ -278,16 +283,17 @@
           Vous pouvez aussi passer votre commande directement par e-mail&nbsp;:
           <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
         </div>
-
+        <!-- Google map-->
         <div class="carte-container">
           <h2>Nous trouver</h2>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6265.134426164976!2d7.741394976742292!3d48.555324221986005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c99945584c2d%3A0xafca96a9c756006!2sCFA%20CCI%20Alsace%20-%20Pole%20Strabourg%20Training!5e1!3m2!1str!2sfr!4v1749134641170!5m2!1str!2sfr" 
-            width="600" height="450" style="border:0;" 
-            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8740.928491389477!2d7.741394977450958!3d48.55532422198517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c99945584c2d%3A0xafca96a9c756006!2sCCI%20Campus%20Alsace%20-%20Site%20de%20Strasbourg!5e1!3m2!1sfr!2sfr!4v1751920666729!5m2!1sfr!2sfr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Adresse Gözlemevi"
           ></iframe>
         </div>
       </section>
@@ -301,15 +307,22 @@
           <a href="index.html" aria-label="Accueil">
             <img
               src="assets/img/commun/logo_gozlemevi.webp"
+              width="200"
+              height="60"
               alt="Logo Gözlemevi"
             />
           </a>
         </div>
         <!-- 2) Adresse -->
-        <address class="footer__section">
+        <div class="footer__section">
           <h3>Adresse</h3>
-          <p>CFA CCI Alsace - Pole Strabourg Training <br> 234 Av. de Colmar, 67021 Strasbourg</p>
-        </address>
+          <address>
+            <p>
+              CFA CCI Alsace - Pole Strabourg Training <br />234 Av. de Colmar,
+              67021 Strasbourg
+            </p>
+          </address>
+        </div>
         <!-- 3) Heures d’ouverture -->
         <div class="footer__section">
           <h3>Heures d'ouverture</h3>
