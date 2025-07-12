@@ -1,5 +1,5 @@
 
-.section-form {
+#section-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ form {
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
-  background-color: var(--color-blanccasse);
+  background-color: var(--color-crèmedouce);
   padding: 3rem 3rem;
   border-radius: 8px;
   box-shadow: var(--color-bordeaux) 0 2px 8px;
@@ -81,7 +81,7 @@ h2 {
   font-family: "Fira Mono", "Consolas", "Menlo", monospace;
   font-size: 0.97em;
   color: var(--color-vert);
-  background: var(--color-blanccasse);
+  background: var(--color-crèmedouce);
   border: 1px dashed;
   border-radius: 0.4em;
   padding: 0.5em 0.8em;
@@ -110,7 +110,7 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
   outline: none;
-  background: var(--color-blanccasse);
+  background: var(--color-crèmedouce);
   font-size: 1.1rem;
   transition: border 0.2s;
 }
@@ -153,7 +153,7 @@ textarea {
 .rgpd a:hover,
 .rgpd a:focus {
   color: var(--color-bordeaux); /* hover için vurgu rengi, paletinde varsa */
-  background: var(--color-blanccasse);
+  background: var(--color-crèmedouce);
   text-decoration: underline;
   outline: none;
 }
@@ -184,7 +184,7 @@ textarea {
   background-color:  #5a142a;;
   border: none;
   border-radius: 4px;
-  color:   #ffe184;
+  color:  var(--color-accent);
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
@@ -198,28 +198,23 @@ textarea {
 
 
 
-
-.contact-infos {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  
-}
-
-.info-alt-mail {
-  background: var(--color-blanccasse); 
+#info-alt-mail {
+  background: var(--color-crèmedouce); 
   color: var(--color-bordeaux); 
   border-left: 4px solid var(--color-bordeaux);
   border-right: 4px solid var(--color-bordeaux);
-  margin: 2em 0 1.5em 0;
+   box-shadow: var(--color-bordeaux) 0 2px 8px;
+  margin: 2em 0 1em 0;
   padding: 1em 1.2em;
   border-radius: 8px;
-  font-size: 1.08em;
-  box-shadow: 0 1px 6px 0 #8b1e3f15; 
-  line-height: 1.5;
-  transition: box-shadow 0.18s;
+  font-size: 0.9em;
+  width: 80%;
+  margin-left: 10%;
+ 
+
 }
 
-.info-alt-mail strong {
+#info-alt-mail strong {
   display: block;
   font-size: 1.08em;
   margin-bottom: 0.4em;
@@ -227,7 +222,7 @@ textarea {
   letter-spacing: 0.01em;
 }
 
-.info-alt-mail a {
+#info-alt-mail a {
   color: var(--color-vert);
   font-weight: 600;
   text-decoration: underline;
@@ -235,61 +230,53 @@ textarea {
   transition: color 0.2s;
 }
 
-.info-alt-mail a:hover,
-.info-alt-mail a:focus {
+#info-alt-mail a:hover,
+#info-alt-mail a:focus {
   color: var(--color-accent);
   text-decoration: underline;
   outline: none;
 }
 
-.carte-container {
+#map-section {
   margin: 2.2em 0 2.3em 0;
   padding: 1.4em 1em 1.2em 1em;
-  background: var(--color-blanccasse);
+  background: var(--color-crèmedouce);
   border: solid var(--color-bordeaux);
-  border-radius: 18px;
+  border-radius: 1em;
   box-shadow: 0 2px 14px 0 var(--color-bordeaux);
+  width: 80%;
+  margin-left: 10%;
 }
-.carte-container h2 {
-  font-family: var(--font-heading);
-  color: var(--color-vert);
-  font-weight: bolder;
-  font-size: 2rem;
+#map-section h2 {
+  font-size: 3rem;
   margin-bottom: 1em;
-  letter-spacing: 0.02em;
-  text-align: center;
+  
+}
+#map-section button{
+  background-color: var(--color-vert);
+  color: var(--color-accent);
+  padding: 0.8em;
+  font-size: 2em;
+  border-radius: 0.5em;
+  font-weight: bold;
+
+
+
 }
 
-.carte-container iframe {
+#map-section iframe {
   width: 100%;
   height: 340px;
-  border: var(--color-vert);
   border-radius: 14px;
-  box-shadow: 0 1px 6px 0 #00332f0c;
   margin-bottom: 0.8em;
   transition: box-shadow 0.2s;
 }
-.carte-container iframe:focus {
-  outline: 2px solid #d4a037;
-  box-shadow: 0 2px 16px 0 #38383733;
+#map-section iframe:focus {
+  outline: 2px solid var(--color-accent);
+  box-shadow: 0 2px 16px 0 var(--color-vert);
 }
 
-.carte-container a {
-  display: inline-block;
-  margin-top: 1em;
-  padding: 0.55em 1.3em;
-  background: #d4a037;
-  color: #fff;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1.08rem;
-  text-decoration: none;
-  transition: background 0.18s, color 0.18s;
-}
-.carte-container a:hover {
-  background: #00332f;
-  color: #fff;
-}
+
 
 /******12.BUTON RETOUR / Geri butonu */
 .btn-retour {
@@ -297,7 +284,7 @@ textarea {
   background-color: var(
     --color-bordeaux
   ); /* Couleur de fond / Arka plan rengi */
-  color: var(--color-blanccasse); /* Couleur du texte / Metin rengi */
+  color: var(--color-crèmedouce); /* Couleur du texte / Metin rengi */
   padding: 10px 20px; /* Espacement interne / İç boşluk */
   border-radius: 5px; /* Coins arrondis / Yuvarlak köşeler */
   text-decoration: none; /* Supprime le soulignement / Alt çizgiyi kaldırır */
@@ -316,6 +303,11 @@ textarea {
  
   .order-hint strong { font-size: 1rem; }
   .order-hint li { font-size: 0.8rem; }
+  #map-section button{
+  padding: 1em;
+  font-size: 1em;
+
+}
  
 }
 

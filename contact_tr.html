@@ -22,10 +22,10 @@
   <body>
     <!-- Erişilebilirlik için "içeriğe atla" bağlantısı -->
     <a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
-    <div class="top-bar">
+    <div id="top-bar">
       <!-- Mobil menü için hamburger butonu -->
       <button
-        class="hamburger"
+        id="hamburger"
         aria-label="Menüyü aç"
         aria-expanded="false"
         aria-controls="menu"
@@ -34,7 +34,7 @@
       </button>
 
       <!--Erişilebilir dil seçici -->
-      <div class="language-switcher" role="region" aria-label="Dil seçici">
+      <div id="language-switcher" role="region" aria-label="Dil seçici">
         <label for="lang-switch" class="visually-hidden">Dil seçin</label>
         <select
           id="lang-switch"
@@ -46,27 +46,28 @@
         </select>
         <noscript>
           <p>JavaScript devre dışı. Aşağıdaki linklerle dil seçebilirsiniz:</p>
-          <a href="index.html">Français</a> |
-          <a href="index_tr.html">Türkçe</a>
+         <a href="index.html" aria-label="Siteyi Fransızca görüntüle">Fransızca</a> |
+        <a href="index_tr.html" aria-label="Siteyi Türkçe görüntüle">Türkçe</a>
         </noscript>
       </div>
     </div>
 
-    <header class="site-header">
-      <div class="header-container">
-        <div class="header-logo">
-          <a href="index_tr.html" aria-label="Ana Sayfa">
+   <header id="site-header">
+      <div id="header-container">
+        <!-- Logo et lien vers la page d'accueil -->
+        <div id="header-logo">
+          <a href="index.html" aria-label="Accueil">
             <img
-              src="assets/img/commun/logo_gozlemevi.webp" 
-              alt="Gözlemevi Logosu"
+              src="assets/img/commun/logo_gozlemevi.webp"
+              alt="Logo Gözlemevi"
               width="200"
               height="60"
             />
           </a>
         </div>
-        <div class="header-text">
-          <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
-          <p class="slogan">Her lokmada geleneksel Türk lezzeti</p>
+        <div id="header-text">
+          <h1 id="site-name">GÖZLEM<span id="lettre">E</span>Vİ</h1>
+          <p id="slogan">Her lokmada Türk mutfağının özgün lezzeti</p>
         </div>
         <div class="phone-container">
           <span class="phone-icon" aria-hidden="true">📞</span>
@@ -78,7 +79,7 @@
           >
         </div>
       </div>
-      <nav class="navbar" aria-label="Ana menü">
+      <nav id="navbar" aria-label="Ana menü">
         <ul id="menu" class="navbar__list">
           <li class="navbar__item"><a href="index_tr.html">Anasayfa</a></li>
           <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>
@@ -92,7 +93,7 @@
 
     <!--MAIN BLOCK-->
    <main id="main-content" class="main-content">
-  <section class="section-form">
+  <section id="section-form">
     <form
       method="POST"
       action="https://formspree.io/f/xkgrlokd"
@@ -224,25 +225,22 @@
     </form>
   </section>
 
-  <section class="contact-infos">
-    <div class="info-alt-mail">
+  
+    <div id="info-alt-mail">
       <strong><span aria-hidden="true">⚠️</span> Formu doldurmak istemiyor musunuz?</strong><br />
       Siparişinizi ayrıca e-posta ile de iletebilirsiniz:
       <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
     </div>
 
-    <div class="carte-container">
+  <section id="map-section">
       <h2>Bizi Bulun</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6265.134426164976!2d7.741394976742292!3d48.555324221986005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c99945584c2d%3A0xafca96a9c756006!2sCFA%20CCI%20Alsace%20-%20Pole%20Strabourg%20Training!5e1!3m2!1str!2sfr!4v1749134641170!5m2!1str!2sfr" 
-        width="600" height="450" style="border:0;" 
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Gözlemevi Adresimiz"
-      ></iframe>
-    </div>
-  </section>
+       <button id="load-map" aria-label="Haritayı yükle"><span aria-hidden="true">📍</span> Haritayı Göster</button>
+   </section>
+    <!-- Bouton de retour -->
+      <div>
+        <a href="index.html" class="btn-retour">⬅ Retour à l'accueil</a>
+      </div>
+  
 </main>
 
     <!-- FOOTER -->
@@ -317,6 +315,8 @@
     </footer>
     <!-- JS dosyaları -->
     <script src="assets/js/contact_tr.js"></script>
+  
     <script src="assets/js/hamburger_menu.js"></script>
+    <script src="assets/js/map.js"></script>
   </body>
 </html>

@@ -141,7 +141,7 @@
   background-color: var(
     --color-bordeaux
   ); /* Couleur de fond / Arka plan rengi */
-  color: var(--color-blanccasse); /* Couleur du texte / Metin rengi */
+  color: var(--color-crèmedouce); /* Couleur du texte / Metin rengi */
   padding: 10px 20px; /* Espacement interne / İç boşluk */
   border-radius: 5px; /* Coins arrondis / Yuvarlak köşeler */
   text-decoration: none; /* Supprime le soulignement / Alt çizgiyi kaldırır */

@@ -34,22 +34,21 @@
     <a href="#main-content" class="visually-hidden focusable"
       >Passer au contenu</a
     >
-
     <!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
-    <div class="top-bar">
+    <div id="top-bar">
       <!--  Bouton hamburger pour menu mobile -->
       <button
-        class="hamburger"
+        id="hamburger"
         aria-label="Menüyü aç"
         aria-expanded="false"
         aria-controls="menu"
       >
         <span aria-hidden="true">☰</span>
       </button>
-
+      
       <!--  Sélecteur de langue accessible -->
       <div
-        class="language-switcher"
+        id="language-switcher"
         role="region"
         aria-label="Sélecteur de langue"
       >
@@ -71,16 +70,16 @@
             JavaScript est désactivé. Veuillez utiliser les liens ci-dessous
             pour choisir une langue :
           </p>
-          <a href="index.html">Français</a> |
-          <a href="index_tr.html">Türkçe</a>
+          <a href="index.html" aria-label="Afficher le site en français">Français</a> |
+          <a href="index_tr.html" aria-label="Afficher le site en turc">Türkçe</a>
         </noscript>
       </div>
     </div>
 
-    <header class="site-header">
-      <div class="header-container">
+    <header id="site-header">
+      <div id="header-container">
         <!-- Logo et lien vers la page d'accueil -->
-        <div class="header-logo">
+        <div id="header-logo">
           <a href="index.html" aria-label="Accueil">
             <img
               src="assets/img/commun/logo_gozlemevi.webp"
@@ -90,11 +89,10 @@
             />
           </a>
         </div>
-
         <!-- Nom du site et slogan -->
-        <div class="header-text">
-          <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
-          <p class="slogan">L'authenticité turque dans chaque bouchée</p>
+         <div id="header-text">
+          <h1 id="site-name" lang="tr">GÖZLEM<span id="lettre">E</span>Vİ</h1>
+          <p id="slogan">L'authenticité turque dans chaque bouchée</p>
         </div>
 
         <!-- Coordonnées téléphoniques -->
@@ -108,13 +106,12 @@
           >
         </div>
       </div>
-
       <!-- Navigation principale -->
-      <nav class="navbar" aria-label="Menu principal">
+      <nav id="navbar" aria-label="Menu principal">
         <ul id="menu" class="navbar__list">
-          <li class="navbar__item">
-            <a href="index.html" aria-current="page">Accueil</a>
-          </li>
+         
+          <li class="navbar__item"> <a href="index.html" aria-current="page">Accueil</a> </li>
+          
           <li class="navbar__item"><a href="menu.html">À la carte</a></li>
           <li class="navbar__item"><a href="apropos.html">À propos</a></li>
           <li class="navbar__item"><a href="contact.html">Contact</a></li>
@@ -122,7 +119,7 @@
       </nav>
     </header>
 
-    <!--MAIN BLOK-->
+    <!--PAGE ACCUEIL-->
     <main id="main-content" class="main-content">
       <!-- Section Promotions -->
       <section class="promotions" aria-label="Promotions">
@@ -145,6 +142,7 @@
           </p>
         </article>
       </section>
+
       <!-- Section hero de présentation -->
       <section id="hero" aria-label="Présentation du restaurant">
         <!-- id utilisé en CSS et JS -->
@@ -168,6 +166,7 @@
           <!-- lazy : chargement différé pour performance -->
         </div>
       </section>
+
       <!--  Introduction de presentation-->
       <section
         class="presentation-section"
@@ -200,6 +199,7 @@
             Le goût des traditions, le plaisir du partage.
           </p>
         </div>
+
         <figure class="image-content">
           <img
             class="rounded-image"
@@ -309,3 +309,4 @@
     <script src="assets/js/hamburger_menu.js"></script>
   </body>
 </html>
+

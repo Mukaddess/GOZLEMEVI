@@ -29,7 +29,8 @@
 }
 
 /* Styles pour le titre de la section */
-.menu-text {
+#menu-intro-title {
+  color: var(--color-vert);
   font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: bold;
@@ -73,7 +74,7 @@
 }
 
 /* 2. Yan yana layout (sekme + içerik) */
-.menu-layout {
+#menu-layout {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 2rem;
@@ -81,7 +82,7 @@
 }
 
 /* 3. Sekmeler (tabs) */
-.tabs {
+#tabs {
   display: grid;
 
   grid-template-rows: repeat(1, 1fr); /* 1 satır */
@@ -128,8 +129,7 @@
     auto-fill,
     minmax(300px, 1fr)
   ); /* Responsive grid */
-  /* FR: Remplit l'espace disponible avec des colonnes de 300px minimum. TR: 300px minimum genişliğinde kolonlar ile alanı doldurur. */
-  gap: 2rem; /* Boşluk */
+  /* FR: Remplit l'espace disponible avec des colonnes de 300px minimum. */
   margin-left: 150px;
 }
 
@@ -138,7 +138,7 @@
   display: grid;
   grid-template-columns: 1fr; /* Tek sütun */
   grid-template-rows: auto 1fr; /* İki satır */
-  background-color: #8b1e3f;
+  background-color: var(--color-bordeaux);
   width: 100%;
   max-width: 300px;
   padding: 20px;
@@ -190,7 +190,7 @@
   background-color: var(
     --color-bordeaux
   ); /* Couleur de fond / Arka plan rengi */
-  color: var(--color-blanccasse); /* Couleur du texte / Metin rengi */
+  color: var(--color-crèmedouce); /* Couleur du texte / Metin rengi */
   padding: 10px 20px; /* Espacement interne / İç boşluk */
   border-radius: 5px; /* Coins arrondis / Yuvarlak köşeler */
   text-decoration: none; /* Supprime le soulignement / Alt çizgiyi kaldırır */
@@ -223,8 +223,8 @@
   }
 
   /* 3. Sekmeler (tabs) */
-  .tabs {
-    grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+  #tabs {
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px; /* Butonlar arası boşluk */
     padding: 20px;
     margin-left: 300px;
@@ -272,10 +272,10 @@
   .menu-section {
     padding: 1rem 0.5rem;
   }
-  .menu-layout {
+  #menu-layout {
     padding: 0;
   }
-  .tabs {
+  #tabs {
     grid-template-columns: repeat(2, 1fr); /* 2 sütun */
     gap: 10px; /* Butonlar arası boşluk */
     padding: 10px;

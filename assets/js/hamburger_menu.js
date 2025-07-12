@@ -1,10 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburgerBtn = document.querySelector('.hamburger');
+  const hamburgerBtn = document.querySelector('#hamburger');
   const menu = document.getElementById('menu');
 
+// Koruyucu koşul: Eğer hamburger butonu veya menü bulunamazsa hata vermemek için işlemi durdurur.
+// Condition de protection : si le bouton hamburger ou le menu est introuvable, on arrête l'exécution pour éviter une erreur.
   if (!hamburgerBtn || !menu) {
-    console.warn("Impossible de trouver le bouton hamburger ou l’élément du menu.");
+    console.warn("Impossible de trouver le bouton hamburger ou l'élément du menu.");
     return;
   }
 

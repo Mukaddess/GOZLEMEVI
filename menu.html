@@ -7,11 +7,11 @@
     <!-- Rend la page responsive sur mobile et contrôle le zoom initial -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      GÖZLEMEVI - Carte de GözlemEvi à Strasbourg | Commande par téléphone
+      GÖZLEMEVI-A la Carte | GözlemEvi à Strasbourg|Commande par téléphone
     </title>
     <meta
       name="description"
-      content="GÖZLEMEVI à Strasbourg : savourez nos gözleme traditionnels (fromage, épinards) et nos créations originales (champignons, chocolat). Commande uniquement par téléphone au +33 7 61 07 96 68."
+      content="GÖZLEMEVI à Strasbourg : savourez nos gözleme traditionnels et nos créations originales.Commande uniquement par téléphone au +33 7 61 07 96 68."
     />
 
     <link rel="stylesheet" href="assets/css/reset.css" />
@@ -27,10 +27,10 @@
     >
 
     <!-- Barre supérieure : bouton hamburger + sélecteur de langue -->
-    <div class="top-bar">
+    <div id="top-bar">
       <!--  Bouton hamburger pour menu mobile -->
       <button
-        class="hamburger"
+        id="hamburger"
         aria-label="Menüyü aç"
         aria-expanded="false"
         aria-controls="menu"
@@ -62,16 +62,16 @@
             JavaScript est désactivé. Veuillez utiliser les liens ci-dessous
             pour choisir une langue :
           </p>
-          <a href="index.html">Français</a> |
-          <a href="index_tr.html">Türkçe</a>
+          <a href="index.html" aria-label="Afficher le site en français">Français</a> |
+          <a href="index_tr.html" aria-label="Afficher le site en turc">Türkçe</a>
         </noscript>
       </div>
     </div>
 
-    <header class="site-header">
-      <div class="header-container">
+    <header id="site-header">
+      <div id="header-container">
         <!-- Logo et lien vers la page d'accueil -->
-        <div class="header-logo">
+        <div id="header-logo">
           <a href="index.html" aria-label="Accueil">
             <img
               src="assets/img/commun/logo_gozlemevi.webp"
@@ -83,9 +83,9 @@
         </div>
 
         <!-- Nom du site et slogan -->
-        <div class="header-text">
-          <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
-          <p class="slogan">L'authenticité turque dans chaque bouchée</p>
+        <div id="header-text">
+          <h1 id="site-name" lang="tr">GÖZLEM<span id="lettre">E</span>Vİ</h1>
+          <p id="slogan">L'authenticité turque dans chaque bouchée</p>
         </div>
 
         <!-- Coordonnées téléphoniques -->
@@ -101,14 +101,10 @@
       </div>
 
       <!-- Navigation principale -->
-      <nav class="navbar" aria-label="Menu principal">
+      <nav id="navbar" aria-label="Menu principal">
         <ul id="menu" class="navbar__list">
-          <li class="navbar__item">
-            <a href="index.html">Accueil</a>
-          </li>
-          <li class="navbar__item">
-            <a href="menu.html" aria-current="page">À la carte</a>
-          </li>
+          <li class="navbar__item"> <a href="index.html">Accueil</a></li>
+          <li class="navbar__item"> <a href="menu.html" aria-current="page">À la carte</a></li>
           <li class="navbar__item"><a href="apropos.html">À propos</a></li>
           <li class="navbar__item"><a href="contact.html">Contact</a></li>
         </ul>
@@ -139,9 +135,9 @@
       </section>
       <!-- Introduction du menu -->
       <section class="menu-intro" aria-labelledby="menu-intro-title">
-        <h2 id="menu-intro-title" class="menu-text">Découvrez nos délices</h2>
+        <h2 id="menu-intro-title">Découvrez nos <strong>gözlemes faits maison</strong> à Strasbourg.</h2>
         <p class="menu-text_description">
-          <span class="lale-emoji" aria-hidden="true">🌷</span>
+          <span aria-hidden="true">🌷</span>
           Notre menu propose une grande variété de
           <span lang="tr"><em>gözleme</em></span
           >, <br />l'un des plats incontournables de la cuisine traditionnelle
@@ -181,15 +177,50 @@
       <!--menu grid  -->
       <section class="menu-section" aria-label="menu-section-heading">
         <!-- 1. Solda: Sekme navigasyonu -->
-        <div class="menu-layout"><nav class="tabs" role="tablist" aria-label="Menü Kategorileri">
-            <button class="tab" role="tab" id="tab-gozlemes" aria-controls="panel-gozlemes" aria-selected="true" data-target="panel-gozlemes">Gözlemes</button>
-            <button class="tab" role="tab" id="tab-salades" aria-controls="panel-salades" aria-selected="false" data-target="panel-salades">Salades</button>   
-            <button class="tab" role="tab" id="tab-boissons" aria-controls="panel-boissons" aria-selected="false" data-target="panel-boissons">Boissons</button>
-            <button class="tab" role="tab" id="tab-desserts" aria-controls="panel-desserts" aria-selected="false" data-target="panel-desserts">Desserts</button>
-        </nav>
+        <div id="menu-layout">
+          <nav id="tabs" role="tablist" aria-label="Menü Kategorileri">
+            <button
+              class="tab"
+              role="tab"
+              id="tab-gozlemes"
+              aria-controls="panel-gozlemes"
+              aria-selected="true"
+              data-target="panel-gozlemes"
+            >
+              Gözlemes
+            </button>
+            <button class="tab" role="tab"
+              id="tab-salades"
+              aria-controls="panel-salades"
+              aria-selected="false"
+              data-target="panel-salades"
+            >
+              Salades
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-boissons"
+              aria-controls="panel-boissons"
+              aria-selected="false"
+              data-target="panel-boissons"
+            >
+              Boissons
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-desserts"
+              aria-controls="panel-desserts"
+              aria-selected="false"
+              data-target="panel-desserts"
+            >
+              Desserts
+            </button>
+          </nav>
 
-          <!-- 2. Sağda: Tab panelleri -->
-          <div class="tab-panels">
+          <!-- : Contexte Menu -->
+          <div id="tab-panels">
             <!-- Gözleme Paneli -->
             <section
               id="panel-gozlemes"
@@ -197,7 +228,7 @@
               role="tabpanel"
               aria-labelledby="tab-gozlemes"
             >
-            <h2 class="visually-hidden">Gozlemes</h2>
+              <h2 class="visually-hidden">Gozlemes</h2>
               <div class="menu-grid">
                 <!-- Gözleme aux pommes de terre -->
                 <article class="menu-item">
@@ -233,7 +264,7 @@
                 <!-- Gözleme au yaourt -->
                 <article class="menu-item">
                   <figure>
-                    <h3 class="visually-hidden">Gözleme au yaourt</h3>
+                    <h3  id="titre-yaourt" class="visually-hidden">Gözleme au yaourt</h3>
                     <img
                       src="assets/img/menu/gozlemes/yaourt.webp"
                       width="300"
@@ -575,7 +606,7 @@
               role="tabpanel"
               aria-labelledby="tab-salades"
             >
-            <h2 class="visually-hidden">Salades</h2>
+              <h2 class="visually-hidden">Salades</h2>
               <div class="menu-grid">
                 <!-- Salade du berger -->
                 <article class="menu-item">
@@ -773,7 +804,7 @@
               role="tabpanel"
               aria-labelledby="tab-boissons"
             >
-            <h2 class="visually-hidden">Boissons</h2>
+              <h2 class="visually-hidden">Boissons</h2>
               <div class="menu-grid">
                 <!-- Ayran -->
                 <article class="menu-item">
@@ -1024,7 +1055,7 @@
               role="tabpanel"
               aria-labelledby="tab-desserts"
             >
-            <h2 class="visually-hidden">Desserts</h2>
+              <h2 class="visually-hidden">Desserts</h2>
               <div class="menu-grid">
                 <!-- Baklava -->
                 <article class="menu-item">

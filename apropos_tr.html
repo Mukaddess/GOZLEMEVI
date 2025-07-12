@@ -16,13 +16,14 @@
   </head>
   <body>
     <!-- Klavye kullanıcıları için erişilebilirlik bağlantısı -->
+
     <a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
 
     <!-- Üst çubuk: hamburger menü butonu + dil seçici -->
-    <div class="top-bar">
+    <div id="top-bar">
       <!-- Mobil menü için hamburger butonu -->
       <button
-        class="hamburger"
+        id="hamburger"
         aria-label="Menüyü aç"
         aria-expanded="false"
         aria-controls="menu"
@@ -31,7 +32,7 @@
       </button>
 
       <!--Erişilebilir dil seçici -->
-      <div class="language-switcher" role="region" aria-label="Dil seçici">
+      <div id="language-switcher" role="region" aria-label="Dil seçici">
         <label for="lang-switch" class="visually-hidden">Dil seç</label>
         <select
           id="lang-switch"
@@ -48,21 +49,21 @@
             JavaScript devre dışı. Lütfen aşağıdaki bağlantıları kullanarak dil
             seçin:
           </p>
-          <a href="apropos.html">Français</a> |
-          <a href="apropos_tr.html">Türkçe</a>
+         <a href="index.html" aria-label="Siteyi Fransızca görüntüle">Fransızca</a> |
+        <a href="index_tr.html" aria-label="Siteyi Türkçe görüntüle">Türkçe</a>
         </noscript>
       </div>
     </div>
 
     <!-- Başlık bölümü -->
-    <header class="site-header">
-      <div class="header-container">
-        <!-- Logo ve ana sayfa bağlantısı -->
-        <div class="header-logo">
-          <a href="index_tr.html" aria-label="Ana Sayfa">
+    <header id="site-header">
+      <div id="header-container">
+        <!-- Logo et lien vers la page d'accueil -->
+        <div id="header-logo">
+          <a href="index.html" aria-label="Accueil">
             <img
               src="assets/img/commun/logo_gozlemevi.webp"
-              alt="Gözlemevi Logosu"
+              alt="Logo Gözlemevi"
               width="200"
               height="60"
             />
@@ -70,9 +71,9 @@
         </div>
 
         <!-- Site adı ve slogan -->
-        <div class="header-text">
-          <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
-          <p class="slogan">Her lokmada Türk mutfağının özgün lezzeti</p>
+        <div id="header-text">
+          <h1 id="site-name">GÖZLEM<span id="lettre">E</span>Vİ</h1>
+          <p id="slogan">Her lokmada Türk mutfağının özgün lezzeti</p>
         </div>
 
         <!-- Telefon bilgisi -->
@@ -88,7 +89,7 @@
       </div>
 
       <!-- Ana navigasyon -->
-      <nav class="navbar" aria-label="Ana Menü">
+      <nav id="navbar" aria-label="Ana Menü">
         <ul id="menu" class="navbar__list">
           <li class="navbar__item"><a href="index_tr.html">Ana Sayfa</a></li>
           <li class="navbar__item"><a href="menu_tr.html">Menü</a></li>

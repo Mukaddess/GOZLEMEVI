@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GÖZLEMEVİ - Strasbourg GözlemEvi Menüsü | Telefonla Sipariş</title>
+    <title>GÖZLEMEVİ-Strasbourg GözlemEvi Menüsü|Telefonla Sipariş</title>
     <meta
       name="description"
-      content="GÖZLEMEVİ Strasbourgگda: geleneksel gözlemelerimizi (peynir, ıspanak) ve özgün lezzetlerimizi (mantar, çikolata) tadın. Siparişler yalnızca telefonla alınmaktadır: +33 7 61 07 96 68."
+      content="GÖZLEMEVİ Strasbourgda:Geleneksel gözlemelerimizi ve özgün lezzetlerimizi tadın.Siparişler yalnızca telefonla alınmaktadır: +33 7 61 07 96 68."
     />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/commun.css" />
@@ -21,10 +21,10 @@
 
   <body>
     <a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
-    <div class="top-bar">
+    <div id="top-bar">
       <!-- Mobil menü için hamburger butonu -->
       <button
-        class="hamburger"
+        id="hamburger"
         aria-label="Menüyü aç"
         aria-expanded="false"
         aria-controls="menu"
@@ -33,15 +33,15 @@
       </button>
 
       <!--Erişilebilir dil seçici -->
-      <div class="language-switcher" role="region" aria-label="Dil seçici">
+      <div id="language-switcher" role="region" aria-label="Dil seçici">
         <label for="lang-switch" class="visually-hidden">Dil seç</label>
         <select
           id="lang-switch"
           onchange="window.location.href = this.value;"
           aria-label="Dil seçimi"
         >
-          <option value="index.html">Français</option>
-          <option value="index_tr.html" selected>Türkçe</option>
+         <a href="index.html" aria-label="Siteyi Fransızca görüntüle">Fransızca</a> |
+        <a href="index_tr.html" aria-label="Siteyi Türkçe görüntüle">Türkçe</a>
         </select>
 
         <!-- JavaScript kapalıysa gösterilecek alternatif -->
@@ -57,14 +57,14 @@
     </div>
 
     <!-- Başlık bölümü -->
-    <header class="site-header">
-      <div class="header-container">
-        <!-- Logo ve ana sayfa bağlantısı -->
-        <div class="header-logo">
-          <a href="index_tr.html" aria-label="Ana Sayfa">
+    <header id="site-header">
+      <div id="header-container">
+        <!-- Logo et lien vers la page d'accueil -->
+        <div id="header-logo">
+          <a href="index.html" aria-label="Accueil">
             <img
               src="assets/img/commun/logo_gozlemevi.webp"
-              alt="Gözlemevi Logosu"
+              alt="Logo Gözlemevi"
               width="200"
               height="60"
             />
@@ -72,9 +72,9 @@
         </div>
 
         <!-- Site adı ve slogan -->
-        <div class="header-text">
-          <h1 class="site-name">GÖZLEM<span class="lettre">E</span>Vİ</h1>
-          <p class="slogan">Her lokmada Türk mutfağının özgün lezzeti</p>
+        <div id="header-text">
+          <h1 id="site-name">GÖZLEM<span id="lettre">E</span>Vİ</h1>
+          <p id="slogan">Her lokmada Türk mutfağının özgün lezzeti</p>
         </div>
 
         <!-- Telefon bilgisi -->
@@ -90,7 +90,7 @@
       </div>
 
       <!-- Ana navigasyon -->
-      <nav class="navbar" aria-label="Ana Menü">
+      <nav id="navbar" aria-label="Ana Menü">
         <ul id="menu" class="navbar__list">
           <li class="navbar__item"><a href="index_tr.html">Ana Sayfa</a></li>
           <li class="navbar__item">
@@ -123,7 +123,7 @@
 
       <!-- Menü tanıtımı -->
       <section aria-labelledby="menu-intro-title" class="menu-intro">
-        <h2 id="menu-intro-title" class="menu-text">Lezzetlerimizi Keşfedin</h2>
+        <h2 id="menu-intro-title">Lezzetlerimizi Keşfedin</h2>
         <p class="menu-text_description">
           <span class="lale-emoji" aria-hidden="true">🌷</span>
           Menümüzde <em>gözleme</em> başta olmak üzere geleneksel Türk
@@ -156,8 +156,8 @@
       <!-- Menü Grid -->
       <section class="menu-section" aria-label="menu-section-heading">
         <!-- 1. Gauche:  Navigasyonu -->
-        <div class="menu-layout">
-          <nav class="tabs" role="tablist" aria-label="Menü Kategorileri">
+        <div id="menu-layout">
+          <nav id="tabs" role="tablist" aria-label="Menü Kategorileri">
             <button
               class="tab"
               role="tab"
@@ -201,7 +201,7 @@
           </nav>
 
           <!-- 2. Sağda: Sekme Panelleri -->
-          <div class="tab-panels">
+          <div id="tab-panels">
             <!-- Gözleme Paneli -->
             <section
               id="panel-gozlemes"
