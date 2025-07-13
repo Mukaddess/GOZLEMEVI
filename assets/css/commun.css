@@ -268,9 +268,8 @@ select:focus {
 }
 
     /***********FOOTER*****************************/
-.footer {
+#footer {
   background-color: var(--color-vert);
-  color: var(--color-accent);
 }
 
 /* === GRID yapısı === */
