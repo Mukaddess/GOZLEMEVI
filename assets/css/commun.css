@@ -91,7 +91,7 @@ select:focus {
   background-color: transparent; /* Arka plan varsa görünmesin */
 }
 
-#menu.active {
+#navbar_menu.active {
   display: block !important;
 }
 /* ====== 5. Language Switcher ====== */

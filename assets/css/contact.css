@@ -122,6 +122,16 @@ textarea {
   width: 100%;
 }
 
+.order-datetime {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+
+
+
 .buttons {
   display: flex;
   flex-direction: row;
@@ -196,6 +206,12 @@ textarea {
   color: var(--color-bordeaux);
 }
 
+
+.status-area {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
 
 
 #info-alt-mail {

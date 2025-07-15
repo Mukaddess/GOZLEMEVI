@@ -40,7 +40,7 @@
         id="hamburger"
         aria-label="Menüyü aç"
         aria-expanded="false"
-        aria-controls="menu"
+        aria-controls="navbar_menu"
       >
         <span aria-hidden="true">☰</span>
       </button>
@@ -113,7 +113,7 @@
 
       <!-- Navigation principale -->
       <nav id="navbar" aria-label="Menu principal">
-        <ul id="menu" class="navbar__list">
+        <ul id="navbar_menu" class="navbar__list">
           <li class="navbar__item"><a href="index.html">Accueil</a></li>
           <li class="navbar__item"><a href="menu.html">À la carte</a></li>
           <li class="navbar__item"><a href="apropos.html">À propos</a></li>
@@ -233,6 +233,31 @@
                   À retirer le 23/06 à 18h
                 </div>
               </div>
+
+              <div class="order-datetime">
+                <label for="date"
+                  >Date souhaitée <span class="star">*</span></label
+                >
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  class="item"
+                  required
+                />
+                <label for="time"
+                  >Heure souhaitée <span class="star">*</span></label
+                >
+                <input
+                  type="time"
+                  id="time"
+                  name="time"
+                  class="item"
+                  required
+                  min="08:00"
+                  max="22:00"
+                />
+              </div>
               <textarea
                 class="item"
                 id="message"
@@ -279,16 +304,15 @@
         </form>
       </section>
 
-    
-        <div id="info-alt-mail">
-          <strong
-            ><span aria-hidden="true">⚠️</span> Vous ne souhaitez pas remplir ce
-            formulaire&nbsp;?</strong
-          ><br />
-          Vous pouvez aussi passer votre commande directement par e-mail&nbsp;:
-          <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
-        </div>
-     
+      <div id="info-alt-mail">
+        <strong
+          ><span aria-hidden="true">⚠️</span> Vous ne souhaitez pas remplir ce
+          formulaire&nbsp;?</strong
+        ><br />
+        Vous pouvez aussi passer votre commande directement par e-mail&nbsp;:
+        <a href="mailto:gozlemevi@gmail.com">gozlemevi@gmail.com</a>
+      </div>
+
       <!-- Google map-->
       <section id="map-section">
         <h2>Nous trouver</h2>

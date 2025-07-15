@@ -130,7 +130,7 @@
     minmax(300px, 1fr)
   ); /* Responsive grid */
   /* FR: Remplit l'espace disponible avec des colonnes de 300px minimum. */
-  margin-left: 150px;
+  margin-left: 100px;
 }
 
 /* 6. Kart stili */

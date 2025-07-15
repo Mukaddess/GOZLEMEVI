@@ -32,7 +32,7 @@
         id="hamburger"
         aria-label="Menüyü aç"
         aria-expanded="false"
-        aria-controls="menu"
+        aria-controls="navbar_menu"
       >
         <span aria-hidden="true">☰</span>
       </button>
@@ -100,7 +100,7 @@
 
       <!-- Navigation principale -->
       <nav id="navbar" aria-label="Menu principal">
-        <ul id="menu" class="navbar__list">
+        <ul id="navbar_menu" class="navbar__list">
           <li class="navbar__item"><a href="index.html">Accueil</a></li>
           <li class="navbar__item"><a href="menu.html">À la carte</a></li>
           <li class="navbar__item">
@@ -114,6 +114,7 @@
     <main id="main-content" class="main-content">
       <!-- Hero Video Banner -->
       <section class="hero-banner" aria-label="Présentation du Gözlemevi">
+        <h2 class="visually-hidden">Vidéo de présentation</h2>
         <video
           autoplay
           muted

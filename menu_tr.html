@@ -21,32 +21,48 @@
 
   <body>
     <!-- Klavye kullanıcıları için erişilebilirlik bağlantısı -->
-<a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
+    <a href="#main-content" class="visually-hidden focusable">İçeriğe geç</a>
 
-<!-- Üst çubuk: hamburger menü butonu + dil seçici -->
-<div id="top-bar">
-  <!-- Mobil menü için hamburger butonu -->
-  <button id="hamburger"  aria-label="Menüyü aç"  aria-expanded="false"  aria-controls="menu"><span aria-hidden="true">☰</span></button>
+    <!-- Üst çubuk: hamburger menü butonu + dil seçici -->
+    <div id="top-bar">
+      <!-- Mobil menü için hamburger butonu -->
+      <button
+        id="hamburger"
+        aria-label="Menüyü aç"
+        aria-expanded="false"
+        aria-controls="navbar_menu"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
 
-  <!--Erişilebilir dil seçici -->
-  <div id="language-switcher" role="region" aria-label="Dil seçici">
-    <label for="lang-switch" class="visually-hidden">Dil seç</label>
-    <select id="lang-switch"  onchange="window.location.href = this.value;"  aria-label="Dil seçimi">
-      <option value="index.html">Français</option>
-      <option value="index_tr.html" selected>Türkçe</option>
-    </select>
+      <!--Erişilebilir dil seçici -->
+      <div id="language-switcher" role="region" aria-label="Dil seçici">
+        <label for="lang-switch" class="visually-hidden">Dil seç</label>
+        <select
+          id="lang-switch"
+          onchange="window.location.href = this.value;"
+          aria-label="Dil seçimi"
+        >
+          <option value="index.html">Français</option>
+          <option value="index_tr.html" selected>Türkçe</option>
+        </select>
 
-    <!-- JavaScript kapalıysa gösterilecek alternatif -->
-    <noscript>
-      <p>
-        JavaScript devre dışı. Lütfen aşağıdaki bağlantıları kullanarak dil
-        seçin:
-      </p>
-      <a href="index.html" aria-label="Siteyi Fransızca görüntüle">Fransızca</a> |
-      <a href="index_tr.html" aria-label="Siteyi Türkçe görüntüle">Türkçe</a>
-    </noscript>
-  </div>
-</div>
+        <!-- JavaScript kapalıysa gösterilecek alternatif -->
+        <noscript>
+          <p>
+            JavaScript devre dışı. Lütfen aşağıdaki bağlantıları kullanarak dil
+            seçin:
+          </p>
+          <a href="index.html" aria-label="Siteyi Fransızca görüntüle"
+            >Fransızca</a
+          >
+          |
+          <a href="index_tr.html" aria-label="Siteyi Türkçe görüntüle"
+            >Türkçe</a
+          >
+        </noscript>
+      </div>
+    </div>
 
     <!-- Başlık bölümü -->
     <header id="site-header">
@@ -83,7 +99,7 @@
 
       <!-- Ana navigasyon -->
       <nav id="navbar" aria-label="Ana Menü">
-        <ul id="menu" class="navbar__list">
+        <ul id="navbar_menu" class="navbar__list">
           <li class="navbar__item"><a href="index_tr.html">Ana Sayfa</a></li>
           <li class="navbar__item">
             <a href="menu_tr.html" aria-current="page">Menü</a>
@@ -1192,24 +1208,29 @@
     </main>
 
     <!-- FOOTER -->
-  
+
     <footer id="footer">
       <div class="footer__container">
         <div class="footer__logo">
           <a href="index_tr.html" aria-label="Ana Sayfa">
             <img
-              src="assets/img/commun/logo_gozlemevi.webp" width="200" height="60"
+              src="assets/img/commun/logo_gozlemevi.webp"
+              width="200"
+              height="60"
               alt="Gözlemevi Logosu"
             />
           </a>
         </div>
-          <!-- 2) Adresse -->
-       <div class="footer__section">
-        <h3>Adresse</h3>
-      <address >
-        <p>CFA CCI Alsace - Pole Strabourg Training <br>234 Av. de Colmar, 67021 Strasbourg</p> 
-      </address>
-    </div>
+        <!-- 2) Adresse -->
+        <div class="footer__section">
+          <h3>Adresse</h3>
+          <address>
+            <p>
+              CFA CCI Alsace - Pole Strabourg Training <br />234 Av. de Colmar,
+              67021 Strasbourg
+            </p>
+          </address>
+        </div>
         <div class="footer__section">
           <h3>Çalışma Saatleri</h3>
           <p>Her gün açıktır</p>
